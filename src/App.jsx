@@ -58,7 +58,7 @@ export default function App() {
                   <div className="dropdownWrap">
                     <button className="menuButton">
                       <span>{item}</span>
-                      <span className="chevron">▾</span>
+                      <span className="chevron">▼</span>
                     </button>
 
                     <div className="dropdown">
@@ -76,14 +76,16 @@ export default function App() {
             ))}
           </ul>
 
-          <a href="#" className="logoButton">
-            תומי דניאלי
+          <a href="#" className="logoLink" aria-label="תומי דניאלי">
+            <img src="/images/logo.png" alt="תומי דניאלי" />
           </a>
         </nav>
       </header>
 
       <main>
-        <section className="heroPlaceholder" />
+        <section className="hero">
+          <img src="/images/hero-banner.png" alt="תומי דניאלי - מיישרים קו" />
+        </section>
 
         <section className="intro">
           <h1>לישראל מגיעה הנהגה מעולה.</h1>
