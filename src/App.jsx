@@ -77,14 +77,14 @@ export default function App() {
           </ul>
 
           <a href="#" className="logoLink" aria-label="תומי דניאלי">
-            <img src="/images/logo.png" alt="תומי דניאלי" />
+            <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="תומי דניאלי" />
           </a>
         </nav>
       </header>
 
       <main>
         <section className="hero">
-          <img src="/images/hero-banner.png" alt="תומי דניאלי - מיישרים קו" />
+          <img src={`${import.meta.env.BASE_URL}images/hero-banner.png`} alt="תומי דניאלי - מיישרים קו" />
         </section>
 
         <section className="intro">
