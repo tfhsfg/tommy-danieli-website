@@ -1,122 +1,134 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+const menuItems = ["הבית", "יישור קו", "עליי", "אירועים", "שותפים", "תכנית שנתית"];
 
+const dropdownItems = [
+  "חוק המשרתים",
+  "מערכת החינוך",
+  "שיקום פצועי צה״ל וכוחות הביטחון",
+  "חוק קרית שמונה",
+  "כל התוכניות",
+];
+
+const cards = [
+  {
+    title: "חוק המשרתים של בנט",
+    text: "גיוס שוויוני לכולם, חיזוק צה״ל והבטחת ביטחון ישראל.",
+  },
+  {
+    title: "אחדות ישראל היא משימה לאומית",
+    text: "נחזק את החוסן החברתי ונבנה חברה מאוחדת.",
+  },
+  {
+    title: "ישראל יקרה לנו גם בכיס",
+    text: "ננהל כלכלה חופשית, נוריד יוקר מחיה ונדאג לעתיד כלכלי יציב.",
+  },
+  {
+    title: "מדינה יהודית, דמוקרטית וליברלית",
+    text: "נשמור על הערכים ועל אופייה של ישראל כמדינה חזקה וחופשית.",
+  },
+];
+
+function ScaleIcon() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    <svg viewBox="0 0 120 120" className="scaleIcon" aria-hidden="true">
+      <path d="M60 18v80" />
+      <path d="M34 98h52" />
+      <path d="M45 18h30" />
+      <circle cx="60" cy="18" r="8" />
+      <path d="M60 28L28 42" />
+      <path d="M60 28l32 14" />
+      <path d="M28 42l-18 34h36L28 42z" />
+      <path d="M92 42L74 76h36L92 42z" />
+      <path d="M10 76c4 10 32 10 36 0" />
+      <path d="M74 76c4 10 32 10 36 0" />
+    </svg>
+  );
 }
 
-export default App
+export default function App() {
+  return (
+    <div className="site" dir="rtl">
+      <header className="header">
+        <nav className="nav">
+          <ul className="menu">
+            {menuItems.map((item) => (
+              <li key={item} className="menuItem">
+                {item === "יישור קו" ? (
+                  <div className="dropdownWrap">
+                    <button className="menuButton">
+                      <span>{item}</span>
+                      <span className="chevron">▾</span>
+                    </button>
+
+                    <div className="dropdown">
+                      {dropdownItems.map((dropItem) => (
+                        <a href="#" key={dropItem}>
+                          {dropItem}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <a href="#">{item}</a>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <a href="#" className="logoButton">
+            תומי דניאלי
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <section className="heroPlaceholder" />
+
+        <section className="intro">
+          <h1>לישראל מגיעה הנהגה מעולה.</h1>
+          <p className="subtitle">ימנית, ציונית וליברלית</p>
+
+          <div className="cardsGrid">
+            {cards.map((card) => (
+              <article className="card" key={card.title}>
+                <ScaleIcon />
+                <div className="cardText">
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <p className="bodyText">
+            ישראל הייתה לא מנוהלת יותר מדי שנים.
+            <br />
+            יחד, בכוחנו להחזיר את המדינה האהובה שלנו למסלול.
+            <br />
+            יחד, בכוחנו להחזיר את המדינה האהובה שלנו למסלול.
+          </p>
+        </section>
+
+        <section className="videoPlaceholder">
+          <div className="playButton">▶</div>
+        </section>
+      </main>
+
+      <footer className="footer">
+        <div className="socials">
+          <a href="#" aria-label="Email">✉</a>
+          <a href="#" aria-label="Phone">☎</a>
+          <a href="#" aria-label="WhatsApp">☏</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+
+        <div className="footerLine">
+          <span>058-5657241</span>
+          <span>© כל הזכויות שמורות לתומי דניאלי 2026</span>
+        </div>
+      </footer>
+    </div>
+  );
+}
