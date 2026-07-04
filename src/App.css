@@ -154,7 +154,7 @@ a {
 
 .menuItem > a:hover,
 .menuButton:hover {
-  border-bottom-color: var(--red);
+  border-bottom-color: var(--primary);
 }
 
 .chevron {
@@ -162,8 +162,8 @@ a {
   font-size: 15px;
   line-height: 1;
   position: relative;
-  top: 0px;
-  margin-right: 4px;
+  top: -4px;
+  margin-right: 8px;
 }
 
 .dropdownWrap {
@@ -363,7 +363,7 @@ a {
 .timeline {
   position: relative;
   width: 100%;
-  max-width: 1120px;
+  max-width: 1220px;
   margin-top: 64px;
   --shift-scale: 1;
 }
@@ -421,18 +421,18 @@ a {
   top: 50%;
   transform: translateY(-50%);
   font-family: "Heebo", Arial, sans-serif;
-  font-size: 22px;
+  font-size: 38px;
   font-weight: 800;
   color: var(--primary);
   white-space: nowrap;
 }
 
 .timelineYear.yearLeft {
-  right: calc(100% + 28px);
+  right: calc(100% + 58px);
 }
 
 .timelineYear.yearRight {
-  left: calc(100% + 28px);
+  left: calc(100% + 58px);
 }
 
 .timelineCard {
