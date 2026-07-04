@@ -1033,3 +1033,203 @@ a {
     text-align: center;
   }
 }
+
+/* ==========================================
+   דף מערכת החינוך
+   ========================================== */
+
+.eduPage {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 20px;
+}
+
+.eduHero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.eduSection {
+  margin-bottom: 56px;
+}
+
+.eduSectionTitle {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.eduProblemSolutionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.eduProblemSolutionCol {
+  min-width: 0;
+}
+
+.eduProblemList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eduProblemItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px 22px;
+  box-shadow: var(--shadow);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.eduProblemIcon {
+  color: var(--red);
+  font-size: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.eduPillars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.eduPillarCard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 26px 28px;
+  box-shadow: var(--shadow);
+}
+
+.eduPillarNumber {
+  flex-shrink: 0;
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--placeholder);
+  opacity: 0.5;
+}
+
+.eduPillarTitle {
+  margin: 0 0 8px;
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.eduPillarDesc {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.eduGoalsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.eduGoalCard {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  padding: 26px 22px;
+  text-align: center;
+}
+
+.eduGoalCard h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.eduGoalCard p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.92;
+}
+
+.eduFaq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eduFaqItem {
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px 22px;
+  box-shadow: var(--shadow);
+}
+
+.eduFaqItem summary {
+  cursor: pointer;
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 17px;
+  list-style: none;
+}
+
+.eduFaqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.eduFaqItem summary::before {
+  content: "+";
+  display: inline-block;
+  margin-left: 10px;
+  color: var(--red);
+  font-weight: 900;
+}
+
+.eduFaqItem[open] summary::before {
+  content: "-";
+}
+
+.eduFaqItem p {
+  margin: 14px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .eduGoalsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .eduProblemSolutionGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .eduProblemSolutionCol {
+    margin-bottom: 40px;
+  }
+
+  .eduProblemSolutionCol:last-child {
+    margin-bottom: 0;
+  }
+
+  .eduPillarCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

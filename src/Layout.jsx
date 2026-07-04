@@ -11,11 +11,11 @@ const menuItems = [
 ];
 
 const dropdownItems = [
-  "חוק המשרתים",
-  "מערכת החינוך",
-  "שיקום פצועי צה״ל וכוחות הביטחון",
-  "חוק קרית שמונה",
-  "כל התוכניות",
+  { label: "חוק המשרתים" },
+  { label: "מערכת החינוך", to: "/education" },
+  { label: "שיקום פצועי צה״ל וכוחות הביטחון" },
+  { label: "חוק קרית שמונה" },
+  { label: "כל התוכניות", to: "/plans" },
 ];
 
 export default function Layout() {
@@ -39,11 +39,17 @@ export default function Layout() {
                     </button>
 
                     <div className="dropdown">
-                      {dropdownItems.map((dropItem) => (
-                        <a href="#" key={dropItem}>
-                          {dropItem}
-                        </a>
-                      ))}
+                      {dropdownItems.map((dropItem) =>
+                        dropItem.to ? (
+                          <Link to={dropItem.to} key={dropItem.label}>
+                            {dropItem.label}
+                          </Link>
+                        ) : (
+                          <a href="#" key={dropItem.label}>
+                            {dropItem.label}
+                          </a>
+                        )
+                      )}
                     </div>
                   </div>
                 ) : item.to ? (
