@@ -3,40 +3,40 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 const milestones = [
   {
     id: 1,
+    year: "2010",
     title: "כותרת לדוגמה 1",
-    text: "טקסט placeholder שמתאר שלב מוקדם בחיים. יוחלף בתוכן האמיתי בהמשך.",
     details:
       "כאן יופיע הסבר מורחב ומפורט יותר על השלב הזה בחיים. אפשר להוסיף כמה פסקאות, תאריכים ודגשים חשובים שירצה תומי לשתף עם המבקרים באתר.",
     shift: 260,
   },
   {
     id: 2,
+    year: "2014",
     title: "כותרת לדוגמה 2",
-    text: "טקסט placeholder נוסף שמתאר שלב אחר בחיים. יוחלף בתוכן האמיתי בהמשך.",
     details:
       "כאן יופיע הסבר מורחב ומפורט יותר על השלב הזה בחיים. אפשר להוסיף כמה פסקאות, תאריכים ודגשים חשובים שירצה תומי לשתף עם המבקרים באתר.",
     shift: -280,
   },
   {
     id: 3,
+    year: "2017",
     title: "כותרת לדוגמה 3",
-    text: "טקסט placeholder נוסף שמתאר שלב אחר בחיים. יוחלף בתוכן האמיתי בהמשך.",
     details:
       "כאן יופיע הסבר מורחב ומפורט יותר על השלב הזה בחיים. אפשר להוסיף כמה פסקאות, תאריכים ודגשים חשובים שירצה תומי לשתף עם המבקרים באתר.",
     shift: 300,
   },
   {
     id: 4,
+    year: "2020",
     title: "כותרת לדוגמה 4",
-    text: "טקסט placeholder נוסף שמתאר שלב אחר בחיים. יוחלף בתוכן האמיתי בהמשך.",
     details:
       "כאן יופיע הסבר מורחב ומפורט יותר על השלב הזה בחיים. אפשר להוסיף כמה פסקאות, תאריכים ודגשים חשובים שירצה תומי לשתף עם המבקרים באתר.",
     shift: -260,
   },
   {
     id: 5,
+    year: "2023",
     title: "כותרת לדוגמה 5",
-    text: "טקסט placeholder אחרון שמתאר את השלב הנוכחי. יוחלף בתוכן האמיתי בהמשך.",
     details:
       "כאן יופיע הסבר מורחב ומפורט יותר על השלב הזה בחיים. אפשר להוסיף כמה פסקאות, תאריכים ודגשים חשובים שירצה תומי לשתף עם המבקרים באתר.",
     shift: 280,
@@ -166,13 +166,17 @@ export default function AboutMe() {
                     dotRefs.current[index] = el;
                   }}
                 />
+                <span
+                  className={`timelineYear ${isRight ? "yearLeft" : "yearRight"}`}
+                >
+                  {milestone.year}
+                </span>
                 <button
                   type="button"
                   className="timelineCard"
                   onClick={(event) => openMilestone(milestone, event)}
                 >
                   <h2>{milestone.title}</h2>
-                  <p>{milestone.text}</p>
                   <span className="timelineCardHint">לחצו לפרטים נוספים</span>
                 </button>
               </div>
