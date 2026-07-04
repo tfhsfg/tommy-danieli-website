@@ -62,19 +62,19 @@ export default function Layout() {
 
       <footer className="footer">
         <div className="socials">
-          <a href="mailto:tomdanieli2009@gmail.com" aria-label="Email">
+          <a href="mailto:tomdanieli2009@gmail.com" aria-label="Email" target="_blank" rel="noopener noreferrer">
             <i className="fa-solid fa-envelope"></i>
           </a>
-          <a href="tel:+972585657241" aria-label="Phone">
+          <a href="tel:+972585657241" aria-label="Phone" target="_blank" rel="noopener noreferrer">
             <i className="fa-solid fa-phone"></i>
           </a>
-          <a href="https://wa.link/4oxkwt" aria-label="WhatsApp">
+          <a href="https://wa.link/4oxkwt" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-whatsapp"></i>
           </a>
-          <a href="https://www.instagram.com/tommy.danieli/" aria-label="Instagram">
+          <a href="https://www.instagram.com/tommy.danieli/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/in/tommy-danieli-258a47237/" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/tommy-danieli-258a47237/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-linkedin-in"></i>
           </a>
         </div>
