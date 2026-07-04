@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <img src={`${import.meta.env.BASE_URL}public/images/hero-banner.png`} alt="תומי דניאלי - מיישרים קו" />
+        <img src={`https://raw.githubusercontent.com/tfhsfg/tommy-danieli-website/refs/heads/main/public/images/hero-banner.png`} alt="תומי דניאלי - מיישרים קו" />
       </section>
 
       <section className="almoni">
