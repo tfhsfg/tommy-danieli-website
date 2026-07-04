@@ -3,8 +3,8 @@ import "./App.css";
 
 const menuItems = [
   { label: "הבית", to: "/" },
-  { label: "יישור קו" },
   { label: "עליי", to: "/aboutme" },
+  { label: "יישור קו" },
   { label: "אירועים" },
   { label: "שותפים" },
   { label: "תכנית שנתית" },
