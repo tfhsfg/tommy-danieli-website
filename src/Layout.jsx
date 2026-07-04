@@ -22,7 +22,12 @@ export default function Layout() {
   return (
     <div className="site" dir="rtl">
       <header className="header">
-        <nav className="nav">
+        <nav
+          className="nav"
+          style={{
+            "--nav-underline": `url(${import.meta.env.BASE_URL}images/line.png)`,
+          }}
+        >
           <ul className="menu">
             {menuItems.map((item) => (
               <li key={item.label} className="menuItem">

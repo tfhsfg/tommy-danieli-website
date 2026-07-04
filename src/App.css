@@ -149,12 +149,28 @@ a {
   font-weight: 800;
   cursor: pointer;
   color: var(--text);
-  border-bottom: 3px solid transparent;
+  position: relative;
 }
 
-.menuItem > a:hover,
-.menuButton:hover {
-  border-bottom-color: var(--primary);
+.menuItem > a::after,
+.menuButton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  height: 10px;
+  background-image: var(--nav-underline);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transform: rotate(3deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.menuItem > a:hover::after,
+.menuButton:hover::after {
+  opacity: 1;
 }
 
 .chevron {
