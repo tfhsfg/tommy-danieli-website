@@ -37,10 +37,25 @@ jobs:
       - name: Build
         run: npm run build
 
+      # שלב חכם שמזהה אוטומטית אם נוצרה תיקיית dist, build או public
+      - name: Find build output
+        id: find_output
+        run: |
+          for d in dist build public out; do
+            if [ -d "$d" ]; then
+              echo "output=$d" >> $GITHUB_OUTPUT
+              echo "Found build output: $d"
+              exit 0
+            fi
+          done
+          echo "No known build output found" >&2
+          exit 1
+
+      # העלאת התיקייה האמיתית שנמצאה בשלב הקודם
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ${{ steps.find_output.outputs.output }}
 
   deploy:
     environment:
