@@ -108,12 +108,11 @@ export default function Home() {
         </div>
 
         <div className="readMoreContainer">
-          <button className="readMoreButton almoni">
+          <a href="/tommy-danieli-website/#/plans" className="readMoreButton almoni">
             לקריאה עוד
-          </button>
+          </a>
         </div>
       </section>
-
       {/* אזור הוידאו המעודכן עם נגן יוטיוב המוטמע כהלכה */}
       <section className="videoPlaceholder">
         <iframe
