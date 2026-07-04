@@ -363,7 +363,7 @@ a {
 .timeline {
   position: relative;
   width: 100%;
-  max-width: 1040px;
+  max-width: 1120px;
   margin-top: 64px;
   --shift-scale: 1;
 }
@@ -381,7 +381,7 @@ a {
   z-index: 1;
   display: flex;
   justify-content: center;
-  margin-bottom: 64px;
+  margin-bottom: 160px;
 }
 
 .timelineItem:last-child {
@@ -391,7 +391,7 @@ a {
 .timelineCardWrap {
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 340px;
   transform: translateX(calc(var(--shift, 0px) * var(--shift-scale, 1)));
 }
 
@@ -441,11 +441,11 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 108px;
+  min-height: 132px;
   background: #fff;
   border: 1px solid rgba(0, 59, 137, 0.15);
   border-radius: 12px;
-  padding: 20px 24px;
+  padding: 28px 32px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   font: inherit;
   text-align: center;
@@ -466,6 +466,7 @@ a {
   margin: 0;
   color: var(--primary);
   font-size: 28px;
+  font-weight: 800;
   line-height: 1.25;
 }
 
@@ -503,7 +504,7 @@ a {
   }
 
   .timelineCardWrap {
-    max-width: 220px;
+    max-width: 250px;
   }
 
   .timelineYear {
