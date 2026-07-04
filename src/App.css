@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap");
 
+@font-face {
+  font-family: 'almoni';
+  /* בהנחה שהעברת את הקובץ לאותה תיקייה של ה-CSS, השתמש בנתיב יחסי: */
+  src: url('/Users/tommydanieli/Downloads/almoni-tzar-bold-aaa.otf') format('opentype'); 
+  font-style: normal;
+}
+
 :root {
   --primary: #003b89;
   --placeholder: #045dd1;
@@ -8,6 +15,62 @@
   --text: #111827;
   --red: #eb0d0d;
   --shadow: 0 8px 20px rgba(17, 24, 39, 0.16);
+}
+
+/* קלאס לפונט אלמוני (שהוא כבר בולד מתוכו) */
+.almoni {
+  font-family: 'almoni', "Heebo", Arial, sans-serif;
+}
+
+/* דחיפת כותרת ה-h1 הספציפית הזו למטה, מבלי לפגוע באלמנטים אחרים */
+.almoni h1.brand-blue {
+  margin-top: 80px;    /* רווח מעל הכותרת */
+  margin-bottom: 10px; /* רווח מתחת לכותרת */
+}
+
+/* קלאס לצבע הכחול מהמערכת */
+.brand-blue {
+  color: var(--primary);
+}
+
+/* מיקום הקונטיינר של הכפתור והוספת רווח מלמטה */
+.readMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;    /* מרחק מהכרטיסיות שמעליו */
+  margin-bottom: 40px; /* הוספנו רווח של 40 פיקסלים למטה כדי להתרחק מהסרטון */
+  padding: 0 20px;   
+}
+
+/* עיצוב הכפתור - קטן בחצי מדויק */
+.readMoreButton {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  
+  /* הוקטן בחצי: 13 פיקסלים למעלה/למטה, 80 פיקסלים מימין/משמאל */
+  padding: 13px 80px; 
+  
+  /* הגופן הוקטן בחצי: מ-36 פיקסלים ל-18 פיקסלים */
+  font-size: 18px;       
+  font-weight: 800;       
+  letter-spacing: 0.5px;    
+  border-radius: 8px;    /* עיגול פינות מעודן יותר שמתאים לגודל החדש */
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 59, 137, 0.15); /* צל פרופורציונלי */
+  transition: all 0.2s ease-in-out;
+}
+
+/* אפקטים לכפתור */
+.readMoreButton:hover {
+  background-color: var(--placeholder);
+  box-shadow: 0 12px 28px rgba(4, 93, 209, 0.35);
+  transform: translateY(-2px); /* הרמה קלה בריחוף */
+}
+
+.readMoreButton:active {
+  transform: translateY(1px) scale(0.98); /* לחיצה קטנה פנימה */
+  box-shadow: 0 4px 12px rgba(0, 59, 137, 0.2);
 }
 
 * {
@@ -324,6 +387,12 @@ a {
 /* Mobile */
 
 @media (max-width: 900px) {
+  /* מובייל: התאמת גודל הכפתור למסכים קטנים שלא ייצא מהגבולות */
+  .readMoreButton {
+    padding: 18px 60px;
+    font-size: 24px;
+  }
+  
   .header {
     height: auto;
   }

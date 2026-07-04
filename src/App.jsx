@@ -87,9 +87,14 @@ export default function App() {
           <img src={`${import.meta.env.BASE_URL}images/hero-banner.png`} alt="תומי דניאלי - מיישרים קו" />
         </section>
 
-        <section className="intro">
-          <h1>לישראל מגיעה הנהגה מעולה.</h1>
-          <p className="subtitle">ימנית, ציונית וליברלית</p>
+        <section className="almoni">
+          <h1 className="almoni brand-blue">
+            <strong>הגיע הזמן ליישר קו.</strong>
+          </h1>
+          
+          <p className="subtitle brand-blue" style={{ visibility: "hidden" }}>
+            ימנית, ציונית וליברלית
+          </p>
 
           <div className="cardsGrid">
             {cards.map((card) => (
@@ -103,13 +108,11 @@ export default function App() {
             ))}
           </div>
 
-          <p className="bodyText">
-            ישראל הייתה לא מנוהלת יותר מדי שנים.
-            <br />
-            יחד, בכוחנו להחזיר את המדינה האהובה שלנו למסלול.
-            <br />
-            יחד, בכוחנו להחזיר את המדינה האהובה שלנו למסלול.
-          </p>
+          <div className="readMoreContainer">
+            <button className="readMoreButton almoni">
+              לקריאה עוד
+            </button>
+          </div>
         </section>
 
         <section className="videoPlaceholder">
