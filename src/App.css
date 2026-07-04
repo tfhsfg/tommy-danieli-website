@@ -743,6 +743,131 @@ a {
 }
 
 /* ==========================================
+   דף תוכניות - כרטיסיות מצע רוחביות (סגנון בנט)
+   ========================================== */
+
+.plansPage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.plansHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* קונטיינר מרכזי שמחזיק את כל 8 הקוביות */
+.plansContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* רווח בין כרטיס לכרטיס */
+  direction: rtl; /* עבודה מימין לשמאל */
+}
+
+/* מבנה הכרטיסייה הרוחבית */
+.planCard {
+  display: flex;
+  background: #ffffff;
+  border-radius: 4px; /* פינות ישרות יחסית כמו בעיצוב המקור */
+  box-shadow: 0 4px 20px rgba(17, 24, 39, 0.08);
+  overflow: hidden;
+  width: 100%;
+  min-height: 280px;
+}
+
+/* חלק ימין: קוביית האייקון הכחולה */
+.planCardIconSide {
+  flex: 3; /* לוקח בערך 25%-30% מהרוחב */
+  background-color: var(--primary); /* משתמש בכחול הכהה מהאתר שלך */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* עיצוב האייקון הלבן בתוך הריבוע הכחול */
+.planIcon {
+  color: #ffffff;
+  font-size: 64px; /* גודל האייקון */
+  opacity: 0.9;
+}
+
+/* חלק שמאל: אזור הטקסט הלבן */
+.planCardTextSide {
+  flex: 9; /* לוקח את שאר הרוחב */
+  padding: 32px 40px;
+  text-align: right;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* כפתור/תגית "פרטים נוספים בקרוב" בפינה השמאלית */
+.upcomingBadge {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 50px; /* פינות עגולות לחלוטין */
+  opacity: 0.95;
+}
+
+/* כותרת הכרטיסייה */
+.planCardTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-top: 0;
+  margin-bottom: 12px;
+  max-width: 75%; /* מונע מהכותרת להתנגש בתגית שבצד שמאל */
+}
+
+/* פסקת התיאור הראשית */
+.planCardDesc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0 0 16px 0;
+}
+
+/* קו הפרדה דק */
+.planDivider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+/* בלוק המטרה התחתון */
+.planTargetArea {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* כותרת ה"מטרה" */
+.planTargetLabel {
+  font-size: 16px;
+  font-weight: 800;
+  color: #000000;
+}
+
+/* טקסט ה"מטרה" */
+.planTargetText {
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--text);
+  margin: 0;
+}
+
+/* ==========================================
    התאמה מלאה למובייל וטאבלטים (רספונסיביות)
    ========================================== */
 @media (max-width: 900px) {
