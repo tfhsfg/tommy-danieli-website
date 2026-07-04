@@ -25,7 +25,7 @@ export default function Layout() {
         <nav
           className="nav"
           style={{
-            "--nav-underline": `url(${import.meta.env.BASE_URL}images/line.png)`,
+            "--nav-underline": `url(${import.meta.env.BASE_URL}images/line.svg)`,
           }}
         >
           <ul className="menu">
