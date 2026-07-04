@@ -84,7 +84,7 @@ export default function App() {
 
       <main>
         <section className="hero">
-          <img src={`${import.meta.env.BASE_URL}/Users/tommydanieli/Documents/GitHub/tommy-danieli-website/public/images/hero-banner.png`} alt="תומי דניאלי - מיישרים קו" />
+          <img src={`${import.meta.env.BASE_URL}public/images/hero-banner.png`} alt="תומי דניאלי - מיישרים קו" />
         </section>
 
         <section className="almoni">
