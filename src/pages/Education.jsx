@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const problems = [
@@ -70,6 +71,29 @@ const faqs = [
   },
 ];
 
+function FaqItem({ q, a }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className={`eduFaqItem${open ? " eduFaqItemOpen" : ""}`}>
+      <button
+        type="button"
+        className="eduFaqSummary"
+        aria-expanded={open}
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        <span>{q}</span>
+        <i className="fa-solid fa-chevron-down eduFaqChevron"></i>
+      </button>
+      <div className="eduFaqAnswerWrap">
+        <div className="eduFaqAnswerInner">
+          <p>{a}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Education() {
   return (
     <section className="eduPage almoni">
@@ -107,8 +131,7 @@ export default function Education() {
         </div>
       </div>
 
-      <div className="eduSection">
-        <h2 className="eduSectionTitle brand-blue">איך נדע שהצלחנו?</h2>
+      <div className="eduSection precentageSection">
         <div className="eduGoalsGrid">
           {goals.map((g, i) => (
             <div className="eduGoalCard" key={i}>
@@ -123,10 +146,7 @@ export default function Education() {
         <h2 className="eduSectionTitle brand-blue">שאלות ותשובות</h2>
         <div className="eduFaq">
           {faqs.map((f, i) => (
-            <details className="eduFaqItem" key={i}>
-              <summary>{f.q}</summary>
-              <p>{f.a}</p>
-            </details>
+            <FaqItem key={i} q={f.q} a={f.a} />
           ))}
         </div>
       </div>
