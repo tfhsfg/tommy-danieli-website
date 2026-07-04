@@ -62,14 +62,13 @@ export default function Layout() {
 
       <footer className="footer">
         <div className="socials">
-          <a href="mailto:tomdanieli2009@gmail.com" aria-label="Email">
+          <a href="mailto:tomdanieli2009@gmail.com" aria-label="Email" target="_blank" rel="noopener noreferrer">
             <i className="fa-solid fa-envelope"></i>
           </a>
-          <a href="tel:+972585657241" aria-label="Phone">
+          <a href="tel:+972585657241" aria-label="Phone" target="_blank" rel="noopener noreferrer">
             <i className="fa-solid fa-phone"></i>
           </a>
-          
-          {/* הוספת target="_blank" ו-rel="noopener noreferrer" לפתיחה בטאב חדש ומאובטח */}
+          {/* הוספת target="_blank" ו.rel="noopener noreferrer" לפתיחה בטאב חדש ומאובטח */}
           <a href="https://wa.link/4oxkwt" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <i className="fa-brands fa-whatsapp"></i>
           </a>
@@ -77,6 +76,8 @@ export default function Layout() {
             <i className="fa-brands fa-instagram"></i>
           </a>
           <a href="https://www.linkedin.com/in/tommy-danieli-258a47237/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i className="fa-brands fa-linkedin-in"></i>
+          </a>
             <i className="fa-brands fa-linkedin-in"></i>
           </a>
         </div>
