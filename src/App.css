@@ -741,3 +741,36 @@ a {
     gap: 12px;
   }
 }
+
+/* ==========================================
+   התאמה מלאה למובייל וטאבלטים (רספונסיביות)
+   ========================================== */
+@media (max-width: 900px) {
+  .planCard {
+    flex-direction: column; /* הופך לכרטיס אנכי במקום רוחבי */
+    min-height: auto;
+  }
+
+  .planCardIconSide {
+    padding: 30px; /* מקטין את קוביית האייקון */
+  }
+
+  .planIcon {
+    font-size: 48px;
+  }
+
+  .planCardTextSide {
+    padding: 24px;
+    padding-top: 45px; /* מפנה מקום לתגית "בקרוב" שתצוף מעל */
+  }
+
+  .upcomingBadge {
+    top: 16px;
+    left: 16px;
+  }
+
+  .planCardTitle {
+    max-width: 100%;
+    font-size: 22px;
+  }
+}
