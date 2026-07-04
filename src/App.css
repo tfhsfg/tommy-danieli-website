@@ -154,7 +154,7 @@ a {
 
 .menuItem > a:hover,
 .menuButton:hover {
-  border-bottom-color: var(--primary);
+  border-bottom-color: var(--red);
 }
 
 .chevron {
@@ -162,8 +162,8 @@ a {
   font-size: 15px;
   line-height: 1;
   position: relative;
-  top: -4px;
-  margin-right: 8px;
+  top: 0px;
+  margin-right: 4px;
 }
 
 .dropdownWrap {
