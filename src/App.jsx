@@ -77,7 +77,7 @@ export default function App() {
           </ul>
 
           <a href="#" className="logoLink" aria-label="תומי דניאלי">
-            <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="תומי דניאלי" />
+            <img style={{ marginTop: "10px" }} src={`${import.meta.env.BASE_URL}images/logo.png`} alt="תומי דניאלי" />
           </a>
         </nav>
       </header>
