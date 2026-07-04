@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap");
-
-@font-face {
-  font-family: 'almoni';
-  /* בהנחה שהעברת את הקובץ לאותה תיקייה של ה-CSS, השתמש בנתיב יחסי: */
-  src: url('/Users/tommydanieli/Downloads/almoni-tzar-bold-aaa.otf') format('opentype'); 
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap");
 
 :root {
   --primary: #003b89;
