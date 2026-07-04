@@ -363,7 +363,7 @@ a {
 .timeline {
   position: relative;
   width: 100%;
-  max-width: 720px;
+  max-width: 1040px;
   margin-top: 64px;
   --shift-scale: 1;
 }
@@ -467,9 +467,21 @@ a {
   transform: translateY(0);
 }
 
+@media (max-width: 1024px) {
+  .timeline {
+    --shift-scale: 0.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    --shift-scale: 0.35;
+  }
+}
+
 @media (max-width: 640px) {
   .timeline {
-    --shift-scale: 0.2;
+    --shift-scale: 0.15;
   }
 
   .timelineCardWrap {
