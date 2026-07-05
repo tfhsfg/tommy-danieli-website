@@ -17,7 +17,6 @@ const dropdownItems = [
   { label: "מיישרים קו בוועדה", to: "/committee" },
   { label: "חוק קרית שמונה" },
   { label: "כל התוכניות", to: "/plans" },
-  { label: "כל SDS", to: "/plans" },
 ];
 
 export default function Layout() {
