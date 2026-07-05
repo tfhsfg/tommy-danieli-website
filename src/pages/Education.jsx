@@ -12,17 +12,17 @@ const problems = [
 const pillars = [
   {
     id: "01",
-    title: "תוכנית היערכות ואכיפת הקלות חירום",
+    title: "תוכנית היערכות לאומית לחירום",
     desc: "בניית מנגנון הגנה פדגוגי גמיש ומותאם אישית בזמני משבר. נעבור למודל המאפשר לתלמיד לבחור את דרך צריכת החומר שלו – בין אם בטקסט, בפודקאסט או במדיה חזותית – כדי למנוע פערים לימודיים בחירום.",
   },
   {
     id: "02",
-    title: "קידום שיעורי אוריינות מדיה ושיח אזרחי",
+    title: "שיעורי אוריינות מדיה ושיח אזרחי",
     desc: "נכניס ארגז כלים מעשי לעולם האמיתי בתוך מערכת השעות: נשלב תכני אוריינות מדיה וחשיבה ביקורתית להתמודדות עם פייק ניוז, ונקדם חינוך פוליטי ואזרחי אקטיבי לניהול שיח דמוקרטי ומכבד.",
   },
   {
     id: "03",
-    title: "מהפכת אירועי ההערכה – משינון לחשיבה",
+    title: "שינוי אירועי ההערכה משינון לחשיבה",
     desc: "נממש את מסקנות ועדת שפירא ונרחיב את תוכנית 720 כדי להעניק אוטונומיה פדגוגית אמיתית לבתי הספר ולעבור להערכה חלופית, יצירתית ורב-ממדית במקום מרוץ הבגרויות המתיש והיבש.",
   },
 ];
@@ -97,24 +97,25 @@ function FaqItem({ q, a }) {
 
 export default function Education() {
   return (
-    <section className="eduPage almoni">
-      <div className="eduTopImages">
-        <div className="eduTopImageLarge">
-          <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src={`https://fastly.picsum.photos/id/336/1000/600.jpg?hmac=lT6Ac0boYjztwD03xvbfl-ekNYSXh-d78c0XX9s9YAE`} draggable={false} alt="תוכנית מערכת החינוך" />
+    <section className="eduPage almoni" dir="rtl">
+      
+      {/* 1. באנר עליון (Hero) חדש בסגנון הוועדה */}
+      <section className="eduHeroBennett">
+        <div className="eduHeroContent">
+          <div className="eduHeroBadge">
+            <span className="eduHeroBadgeText">תוכנית בנט לתיקון ישראל ✶ מערכת החינוך</span>
+          </div>
+          <h1 className="eduHeroTitle">התוכנית למערכת החינוך</h1>
+          <p className="eduHeroSub">
+            חינוך איכותי ושוויוני לכל ילד וילדה בישראל. <br />
+            מיישרים קו עם העתיד - עוברים ללמידה רלוונטית, גמישה וערכית.
+          </p>
+          <a href="#problem-section" className="bennettBtn">אני רוצה לשמוע עוד</a>
         </div>
-        <div className="eduTopImageSmall">
-          <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src={`https://fastly.picsum.photos/id/17/1000/200.jpg?hmac=NN8eOku060bz_6uZiti477rN0VXwGMr3aMwTPpaCV2I`} draggable={false} alt="תוכנית מערכת החינוך" />
-        </div>
-      </div>
+      </section>
 
-      <div className="eduHero">
-        <h1 className="brand-blue">התוכנית למערכת החינוך</h1>
-        <p className="subtitle">חינוך איכותי ושוויוני לכל ילד וילדה בישראל</p>
-        <hr style={{ border: "none", borderTop: "1px solid rgb(0, 59, 137)", margin: "20px 0" }}></hr>
-        <br></br>
-      </div>
-
-      <div className="eduSection eduProblemSolutionGrid">
+      {/* 2. מה הבעיה ומה הפתרון */}
+      <div className="eduSection eduProblemSolutionGrid" id="problem-section">
         <div className="eduProblemSolutionCol">
           <h2 className="eduSectionTitle brand-blue">מה הבעיה?</h2>
           <ul className="eduProblemList">
@@ -143,17 +144,19 @@ export default function Education() {
         </div>
       </div>
 
+      {/* 3. אחוזים ונתונים סטטיסטיים */}
       <div className="eduSection precentageSection">
         <div className="eduGoalsGrid">
           {precentage.map((g, i) => (
             <div className="eduGoalCard" key={i}>
-              <h1 style={{ fontWeight: 900 }}>{g.title}</h1>
+              <h1 style={{ fontWeight: 900, fontSize: "42px", margin: "0 0 10px 0" }}>{g.title}</h1>
               <p>{g.desc}</p>
             </div>
           ))}
         </div>
       </div>
 
+      {/* 4. מדדי הצלחה */}
       <div className="eduSection eduSuccessSection">
         <h2 className="eduGoalsTitle">איך נדע שהצלחנו</h2>
         <div className="eduGoalsList">
@@ -167,6 +170,7 @@ export default function Education() {
         </div>
       </div>
 
+      {/* 5. יישום הרפורמה עם רכיב ה-FAQ (אקורדיון) */}
       <div className="eduSection">
         <h2 className="eduSectionTitle brand-blue">איך איישם את הרפורמה כיו"ר הוועדה האתית-משפטית?</h2>
         <p className="eduSectionDesc">רפורמות בחינוך לא קורות מעצמן – הן קורות כשמפעילים לחץ משפטי, אכיפה קשוחה ובקרה הדוקה מהשטח. נתוני מחקר "רואים את הנוער 2026" חושפים משבר אמון עמוק: רק 21.5% מהנוער סומכים על מקבלי ההחלטות במדינה.</p>
@@ -180,6 +184,7 @@ export default function Education() {
         </div>
       </div>
 
+      {/* כפתור תחתון לחזרה לכל התוכניות */}
       <div className="readMoreContainer">
         <Link to="/plans" className="readMoreButton">
           לכל התוכניות

@@ -6,7 +6,7 @@ import "./Layout.css";
 const menuItems = [
   { label: "הבית", to: "/" },
   { label: "עליי", to: "/aboutme" },
-  { label: "יישור קו", to: "/plans" },
+  { label: "מיישרים קו", to: "/plans" },
   { label: "אירועים", to: "/events" },
   { label: "שותפים", to: "/partners" },
   { label: "תכנית שנתית", to: "/annual-plan" },
@@ -67,7 +67,7 @@ export default function Layout() {
           <ul className={`menu ${isMenuOpen ? "menuActive" : ""}`}>
             {menuItems.map((item) => (
               <li key={item.label} className="menuItem">
-                {item.label === "יישור קו" ? (
+                {item.label === "מיישרים קו" ? (
                   <div className={`dropdownWrap ${isDropdownOpen ? "dropdownActive" : ""}`}>
                     {/* כאן שינינו ל-a רגיל כדי לשמור על מבנה ה-CSS המקורי של המחשב ללא פגיעה בחץ */}
                     <a 

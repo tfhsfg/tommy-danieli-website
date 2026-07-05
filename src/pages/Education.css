@@ -9,51 +9,77 @@
   padding: 60px 20px 20px;
 }
 
-.eduTopImages {
+/* --- Hero Bennett Style for Education --- */
+.eduHeroBennett {
+  background: linear-gradient(to left, rgba(0, 59, 137, 0.98) 40%, rgba(17, 24, 39, 0.75)), 
+              url('https://www.office24.co.il/images/itempics/cat1_71.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  padding: 60px 10%;
+  color: #ffffff;
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  margin-top: -60px;
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  margin-top: -60px; /* נצמד ל-Header הראשי */
+  margin-bottom: 60px;
 }
 
-.eduTopImageLarge,
-.eduTopImageSmall {
-  width: 100%;
-  background: repeating-linear-gradient(
-    45deg,
-    #e3efff,
-    #e3efff 12px,
-    #d3e3fa 12px,
-    #d3e3fa 24px
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  font-weight: 700;
+.eduHeroContent {
+  max-width: 800px;
+  text-align: right;
+}
+
+.eduHeroBadge {
+  border-top: 2px solid #045dd1;
+  border-bottom: 2px solid #045dd1;
+  padding: 6px 12px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.eduHeroBadgeText {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.eduHeroTitle {
+  font-size: 54px;
+  color: #ffffff !important;
+  font-weight: 900;
+  margin: 10px 0 20px 0;
+  line-height: 1.15;
+}
+
+.eduHeroSub {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 35px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+}
+
+/* כפתור מעוצב בסגנון התוכנית */
+.eduPage .bennettBtn {
+  background-color: #003b89;
+  color: #ffffff;
+  border: none;
+  padding: 13px 60px;
   font-size: 18px;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
 }
 
-.eduTopImageLarge {
-  height: 600px;
-}
-
-.eduTopImageSmall {
-  height: 200px;
-}
-
-@media (max-width: 900px) {
-  .eduTopImageLarge {
-    height: 320px;
-  }
-
-  .eduTopImageSmall {
-    height: 120px;
-  }
+.eduPage .bennettBtn:hover {
+  background-color: #045dd1;
+  transform: translateY(-2px);
 }
 
 .eduHero {
@@ -70,6 +96,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: start;
+  scroll-margin-top: 100px; /* מרווח יפה כשהכפתור גולל למטה */
 }
 
 .eduProblemSolutionCol {
@@ -240,7 +267,76 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
+/* אקורדיון שאלות ותשובות (FAQ) */
+.eduFaq {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.eduFaqItem {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.eduFaqSummary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary);
+  cursor: pointer;
+  text-align: right;
+}
+
+.eduFaqMarker {
+  font-size: 22px;
+  color: var(--red);
+}
+
+.eduFaqAnswerWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.2s ease-out;
+}
+
+.eduFaqItemOpen .eduFaqAnswerWrap {
+  grid-template-rows: 1fr;
+}
+
+.eduFaqAnswerInner {
+  overflow: hidden;
+}
+
+.eduFaqAnswerInner p {
+  margin: 0;
+  padding: 0 24px 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* רספונסיביות ומובייל */
 @media (max-width: 900px) {
+  .eduHeroTitle {
+    font-size: 36px;
+  }
+  
+  .eduHeroBennett {
+    padding: 40px 20px;
+    min-height: 400px;
+    margin-bottom: 40px;
+  }
+
   .eduGoalsGrid {
     grid-template-columns: 1fr;
   }
@@ -259,8 +355,8 @@
   }
 
   .eduPillarCard {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    gap: 10px;
+    gap: 16px;
   }
 }
