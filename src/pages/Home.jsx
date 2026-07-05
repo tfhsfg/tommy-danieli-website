@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 // 1. הגדרת הכרטיסיות עם הטקסטים המעודכנים ואייקונים מותאמים
@@ -6,22 +7,26 @@ const cards = [
   {
     title: "מיישרים קו בחינוך",
     text: "בונים תוכנית לאומית בחירום, קידום שיעורי אוריינות מדיה ושיח אזרחי, ושינוי אירועי ההערכה משינון לחשיבה.",
-    icon: "education"
+    icon: "education",
+    to: "/education"
   },
   {
     title: "מיישרים קו בוועדה",
     text: "הופכים את הוועדה למקום עבודה ממוקד ובעל מנהיגות משותפת. מייצרים תרבות של אמון ומקנים מיומנויות מעשיות למאה ה21",
-    icon: "committee"
+    icon: "committee",
+    to: "/committee"
   },
   {
     title: "מיישרים קו במורחבת",
     text: "ניצר תהליכי עומק של הכשרה מקצועית, מיפוי צרכים, והטמעה רחבה של השפה הארגונית והתקינות המועצתית.",
-    icon: "professional"
+    icon: "professional",
+    to: "/"
   },
   {
     title: "מיישרים קו בתקנון העל",
     text: "מובילים מהלך היסטורי לפתיחת תקנון העל. מתאימים את התקנון לשטח בשותפות מלאה ומנגישים אותו לכלל הגלגלים.",
-    icon: "regulation"
+    icon: "regulation",
+    to: "/regulations"
   },
 ];
 
@@ -98,13 +103,13 @@ export default function Home() {
 
         <div className="cardsGrid">
           {cards.map((card) => (
-            <article className="card" key={card.title}>
+            <Link className="card" to={card.to} key={card.title}>
               <CardIcon type={card.icon} />
               <div className="cardText">
                 <h3>{card.title}</h3>
                 <p>{card.text}</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
 

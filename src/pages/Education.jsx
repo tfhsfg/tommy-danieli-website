@@ -135,7 +135,7 @@ export default function Education() {
                 <span className="eduPillarNumber">{p.id}</span>
                 <div>
                   <h3 className="eduPillarTitle">{p.title}</h3>
-                  <p className="eduPillarDesc">{p.desc}</p>
+                  <p className="eduPillarDesc" style={{ padding: "4.6px 0" }}>{p.desc}</p>
                 </div>
               </div>
             ))}
@@ -147,7 +147,7 @@ export default function Education() {
         <div className="eduGoalsGrid">
           {precentage.map((g, i) => (
             <div className="eduGoalCard" key={i}>
-              <h3>{g.title}</h3>
+              <h1><bold>{g.title}</bold></h1>
               <p>{g.desc}</p>
             </div>
           ))}
