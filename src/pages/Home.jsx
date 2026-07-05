@@ -1,4 +1,5 @@
 import React from "react";
+import "./Home.css";
 
 // 1. הגדרת הכרטיסיות עם הטקסטים המעודכנים ואייקונים מותאמים
 const cards = [

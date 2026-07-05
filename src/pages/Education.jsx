@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Education.css";
 
 const problems = [
   "הפער בין הכיתה לעולם האמיתי רק גדל. מערכת החינוך הנוכחית מתעקשת לפעול בשיטות מיושנות של המאה ה-19, בעוד הנוער נאלץ להתמודד לבדו עם אתגרי המאה ה-21.",

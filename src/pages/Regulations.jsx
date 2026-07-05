@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Regulations.css";
 
 // מערך השאלות והתשובות במבנה הנתונים החדש שלך (q ו-a)
 const faqs = [

@@ -1,0 +1,167 @@
+/* ==========================================
+   דף תוכניות - כרטיסיות מצע רוחביות (סגנון בנט המעודכן)
+   ========================================== */
+
+.plansPage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.plansHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.plansContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  direction: rtl;
+}
+
+.planCard {
+  display: flex;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(17, 24, 39, 0.06);
+  overflow: hidden;
+  width: 100%;
+  min-height: 260px;
+}
+
+/* חלק ימין: קוביית האייקון הכחולה */
+.planCardIconSide {
+  flex: 3;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.planIcon {
+  color: #ffffff;
+  font-size: 68px;
+  opacity: 0.95;
+}
+
+/* חלק שמאל: אזור הטקסט והתוכן */
+.planCardTextSide {
+  flex: 9;
+  padding: 35px 40px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.planCardTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.planCardDesc {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0 0 20px 0;
+}
+
+.planDivider {
+  border: 0;
+  border-top: 2px solid #e5e7eb;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+/* אזור תחתון המחלק את המטרה והכפתור */
+.planFooterArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-top: auto;
+}
+
+.planTargetArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.planTargetLabel {
+  font-size: 16px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.planTargetText {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0;
+}
+
+/* כפתור "למידע המלא" הירוק בסגנון בנט */
+.readMoreGreenBtn {
+  background-color: #00b087;
+  color: #ffffff;
+  border: none;
+  padding: 12px 36px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.readMoreGreenBtn:hover {
+  background-color: #009673;
+}
+
+.readMoreGreenBtn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================
+   רספונסיביות למובייל וטאבלטים
+   ========================================== */
+@media (max-width: 900px) {
+  .planCard {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .planCardIconSide {
+    padding: 30px;
+  }
+
+  .planIcon {
+    font-size: 52px;
+  }
+
+  .planCardTextSide {
+    padding: 24px;
+  }
+
+  .planCardTitle {
+    font-size: 24px;
+  }
+
+  .planFooterArea {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .readMoreGreenBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

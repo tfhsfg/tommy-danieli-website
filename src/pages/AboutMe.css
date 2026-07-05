@@ -1,0 +1,283 @@
+/* About Me */
+
+.aboutMe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 24px;
+}
+
+.aboutMeContent {
+  width: 100%;
+  max-width: 860px;
+  text-align: center;
+}
+
+.aboutMeContent h1 {
+  margin: 0 0 24px;
+  font-size: 44px;
+}
+
+.bodyText {
+  margin: 34px auto 0;
+  color: var(--text);
+  font-size: 24px;
+  line-height: 1.55;
+  font-weight: 800;
+}
+
+/* Timeline */
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1220px;
+  margin-top: 64px;
+  --shift-scale: 1;
+}
+
+.timelineLine {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.timelineItem {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 160px;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineCardWrap {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  transform: translateX(calc(var(--shift, 0px) * var(--shift-scale, 1)));
+}
+
+.timelineDot {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px rgba(0, 59, 137, 0.35);
+  z-index: 2;
+}
+
+.timelineDot.dotLeft {
+  left: -10px;
+}
+
+.timelineDot.dotRight {
+  right: -10px;
+}
+
+.timelineYear {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Heebo", Arial, sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.timelineYear.yearLeft {
+  right: calc(100% + 58px);
+}
+
+.timelineYear.yearRight {
+  left: calc(100% + 58px);
+}
+
+.timelineCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 132px;
+  background: #fff;
+  border: 1px solid rgba(0, 59, 137, 0.15);
+  border-radius: 12px;
+  padding: 28px 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  font: inherit;
+  text-align: center;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.timelineCard:hover,
+.timelineCard:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgba(0, 59, 137, 0.35);
+  box-shadow: 0 16px 32px rgba(0, 59, 137, 0.14);
+  outline: none;
+}
+
+.timelineCard h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.timelineCardHint {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--primary);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.timelineCard:hover .timelineCardHint,
+.timelineCard:focus-visible .timelineCardHint {
+  opacity: 0.75;
+  transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  .timeline {
+    --shift-scale: 0.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    --shift-scale: 0.35;
+  }
+}
+
+@media (max-width: 640px) {
+  .timeline {
+    --shift-scale: 0.15;
+  }
+
+  .timelineCardWrap {
+    max-width: 250px;
+  }
+
+  .timelineYear {
+    font-size: 15px;
+  }
+
+  .timelineYear.yearLeft {
+    right: calc(100% + 8px);
+  }
+
+  .timelineYear.yearRight {
+    left: calc(100% + 8px);
+  }
+}
+
+/* Timeline modal */
+
+.timelineModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 40, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 100;
+  animation: timelineOverlayIn 0.2s ease;
+}
+
+.timelineModal {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  animation: timelineModalIn 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timelineModal h2 {
+  margin: 0 0 16px;
+  color: var(--primary);
+  font-size: 26px;
+}
+
+.timelineModal p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.timelineModalClose {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 59, 137, 0.08);
+  color: var(--primary);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.timelineModalClose:hover,
+.timelineModalClose:focus-visible {
+  background: rgba(0, 59, 137, 0.16);
+  transform: scale(1.08);
+  outline: none;
+}
+
+@keyframes timelineOverlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes timelineModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .bodyText {
+    font-size: 19px;
+  }
+}

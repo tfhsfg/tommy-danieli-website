@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import "./App.css";
+import "./Layout.css";
 
 const menuItems = [
   { label: "הבית", to: "/" },

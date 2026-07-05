@@ -1,0 +1,109 @@
+/* Hero */
+
+.hero {
+  width: 100%;
+  background: var(--placeholder);
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Cards */
+
+.cardsGrid {
+  width: 940px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 26px;
+}
+
+.card {
+  min-height: 132px;
+  background: var(--primary);
+  color: #fff;
+  padding: 22px 28px;
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 24px;
+  align-items: center;
+  text-align: right;
+}
+
+.scaleIcon {
+  width: 82px;
+  height: 82px;
+  stroke: #fff;
+  stroke-width: 6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cardText h3 {
+  margin: 0 0 9px;
+  font-size: 21px;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.cardText p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+/* Video */
+
+.videoPlaceholder {
+  width: 100%;
+  height: 340px;
+  background: var(--placeholder);
+  display: grid;
+  place-items: center;
+}
+
+.playButton {
+  width: 86px;
+  height: 86px;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  padding-right: 5px;
+  border-radius: 50%;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .hero {
+    height: auto;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    grid-template-columns: 76px 1fr;
+  }
+
+  .scaleIcon {
+    width: 66px;
+    height: 66px;
+  }
+
+  .videoPlaceholder {
+    height: 300px;
+  }
+}

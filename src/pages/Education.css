@@ -1,0 +1,341 @@
+/* ==========================================
+   דף מערכת החינוך
+   ========================================== */
+
+.eduPage {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 20px;
+}
+
+.eduTopImages {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: -60px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eduTopImageLarge,
+.eduTopImageSmall {
+  width: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #e3efff,
+    #e3efff 12px,
+    #d3e3fa 12px,
+    #d3e3fa 24px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.eduTopImageLarge {
+  height: 600px;
+}
+
+.eduTopImageSmall {
+  height: 200px;
+}
+
+@media (max-width: 900px) {
+  .eduTopImageLarge {
+    height: 320px;
+  }
+
+  .eduTopImageSmall {
+    height: 120px;
+  }
+}
+
+.eduHero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.eduSection {
+  margin-bottom: 56px;
+}
+
+.eduSectionTitle {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 28px;
+  margin-top: 10px;
+}
+
+.precentageSection {
+  background: white;
+}
+
+.eduProblemSolutionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.eduProblemSolutionCol {
+  min-width: 0;
+}
+
+.eduProblemList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eduProblemItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px 22px;
+  box-shadow: var(--shadow);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.eduProblemIcon {
+  color: var(--red);
+  font-size: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.eduPillars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.eduPillarCard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 26px 28px;
+  box-shadow: var(--shadow);
+}
+
+.eduPillarNumber {
+  flex-shrink: 0;
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--placeholder);
+  opacity: 0.5;
+}
+
+.eduPillarTitle {
+  margin: 0 0 8px;
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.eduPillarDesc {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.precentageSection {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 0;
+  background: #ffffff;
+  padding: 56px 20px;
+}
+
+.precentageSection .eduGoalsGrid {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eduGoalsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.eduGoalCard {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  padding: 26px 22px;
+  text-align: center;
+}
+
+.eduGoalCard h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.eduGoalCard p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.92;
+}
+
+.eduSuccessSection {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 0;
+  background: var(--primary);
+  padding: 72px 20px;
+  color: #fff;
+}
+
+.eduGoalsTitle {
+  text-align: center;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 900;
+  margin: 0 0 48px;
+}
+
+.eduGoalsList {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  text-align: center;
+}
+
+.eduGoalItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eduGoalCheck {
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.eduGoalItem h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.eduGoalItem p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.eduFaq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eduFaqItem {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0 22px;
+  box-shadow: var(--shadow);
+  text-align: right;
+}
+
+.eduFaqSummary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 18px 0;
+  font-family: inherit;
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 17px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.eduFaqChevron {
+  flex-shrink: 0;
+  color: var(--red);
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.eduFaqItemOpen .eduFaqChevron {
+  transform: rotate(180deg);
+}
+
+.eduFaqAnswerWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.eduFaqItemOpen .eduFaqAnswerWrap {
+  grid-template-rows: 1fr;
+}
+
+.eduFaqAnswerInner {
+  overflow: hidden;
+}
+
+.eduFaqItem p {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .eduGoalsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .eduProblemSolutionGrid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .eduProblemSolutionCol {
+    margin-bottom: 40px;
+  }
+
+  .eduProblemSolutionCol:last-child {
+    margin-bottom: 0;
+  }
+
+  .eduPillarCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

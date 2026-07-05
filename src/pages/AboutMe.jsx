@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import "./AboutMe.css";
 
 const milestones = [
   {
