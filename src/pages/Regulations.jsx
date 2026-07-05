@@ -129,7 +129,7 @@ export default function Regulations() {
       {/* 3. תוכנית החוק */}
       <div className="eduSection lawPlanSection">
         <h2 className="eduSectionTitle brand-blue">מה יכלול החוק שננסח?</h2>
-        <div className="lawPlanGrid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "24px" }}>
+        <div className="lawPlanGrid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "24px" }}> 
           {lawSteps.map((step) => (
             <div className="lawPlanCard" key={step.id}>
               <span className="lawPlanNumber">{step.id}</span>
@@ -144,8 +144,8 @@ export default function Regulations() {
         </div>
       </div>
 
-      {/* 4. קריאה לפעולה */}
-      <div className="eduSection lawCallToAction">
+      {/* 4. קריאה לפעולה + כפתור קישור מעודכן */}
+      <div className="eduSection lawCallToAction" style={{ marginBottom: "120px" }}>
         <h2 className="ctaMain">
           ננצל את הליווי המקצועי של עורך הדין של הוועדה לניסוח הצעת חוק מוגמרת,
           נרתום חברי כנסת, נקיים שדולות ונפעיל לחץ ציבורי ותקשורתי נרחב!
@@ -155,10 +155,18 @@ export default function Regulations() {
           הכוח האמיתי של הוועדה האתית-משפטית מגיע מהלגיטימציה והאמון שלכם. אנחנו נחוקק את המועצה, אך במקביל נחזק את המחוזות, הרשויות ובתי הספר כדי לוודא שברגע האמת כולנו עומדים כאיש אחד.
         </h3>
         <div className="ctaButtons">
-          <button type="button" className="ctaPrimaryBtn">קרא את טיוטת החוק</button>
+          {/* החלפת כפתור ה-button בתגית a שמקשרת ישירות לקובץ החוק */}
+          <a 
+            href="https://drive.google.com/file/d/1zhVWRE0MYh_mwhkumrlrRp8SjGUtgS1y/view" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="ctaPrimaryBtn"
+            style={{ textDecoration: "none", display: "inline-block" }}
+          >
+            קרא את טיוטת החוק
+          </a>
         </div>
       </div>
-      <div className="eduSection lawCallToAction" style={{ marginBottom: "120px" }}></div>
 
       {/* 5. אזור שאלות ותשובות */}
       <div className="eduSection">
