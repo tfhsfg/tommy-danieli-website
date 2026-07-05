@@ -197,9 +197,9 @@
 
   .nav {
     height: 72px !important;
-    padding: 0 16px !important;
+    padding: 0 24px !important;
     display: flex !important;
-    flex-direction: row-reverse !important; /* דוחף לוגו לשמאל, המבורגר לימין */
+    flex-direction: row !important; /* החזרת כפתור המבורגר לשמאל ולוגו לימין ללא קפיצה */
     align-items: center !important;
     justify-content: space-between !important;
   }
@@ -281,7 +281,7 @@
     display: none !important;
   }
 
-  /* פתיחת הדרופדאון בתוך רשימת המובייל */
+  /* הגדרת הדרופדאון במובייל - מוסתר כברירת מחדל ונפתח דינמית */
   .dropdownWrap {
     width: 100%;
   }
@@ -292,8 +292,14 @@
     width: 100% !important;
     box-shadow: none !important;
     background: rgba(0, 59, 137, 0.03) !important;
+    padding: 0 !important;
+    display: none !important; /* מוסתר כברירת מחדל במובייל */
+  }
+
+  /* הצגת הדרופדאון רק כאשר הוא אקטיבי (בלחיצה) */
+  .dropdownWrap.dropdownActive .dropdown {
+    display: block !important;
     padding: 5px 0 !important;
-    display: block !important; /* תתי-התפריט מוצגים מובנים בפנים */
   }
 
   .dropdown a {
@@ -316,4 +322,3 @@
     gap: 12px;
   }
 }
-

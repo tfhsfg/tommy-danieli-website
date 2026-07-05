@@ -13,15 +13,35 @@ const menuItems = [
 ];
 
 const dropdownItems = [
-  { label: "חיקוק המועצה הארצית", to: "/regulations" },
-  { label: "מערכת החינוך", to: "/education" },
+  { label: "מיישרים קו בחקיקה", to: "/regulations" },
+  { label: "מיישרים קו בחינוך", to: "/education" },
   { label: "מיישרים קו בוועדה", to: "/committee" },
-  { label: "חוק קרית שמונה" },
+  { label: "מיישרים קו במורחבת", to: "/regional" },
   { label: "כל התוכניות", to: "/plans" },
 ];
 
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    if (isMenuOpen) setIsDropdownOpen(false);
+  };
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+    setIsDropdownOpen(false);
+  };
+
+  const handleDropdownClick = (e) => {
+    // בודק אם הגולש נמצא במובייל (מסך קטן מ-900 פיקסלים)
+    if (window.innerWidth <= 900) {
+      e.preventDefault(); // מונע מעבר עמוד מיידי
+      e.stopPropagation(); // מונע סגירה של התפריט הראשי
+      setIsDropdownOpen(!isDropdownOpen); // פותח/סוגר את הדרופדאון במובייל
+    }
+  };
 
   return (
     <div className="site" dir="rtl">
@@ -35,7 +55,7 @@ export default function Layout() {
           {/* כפתור המבורגר למובייל */}
           <button 
             className={`hamburgerBtn ${isMenuOpen ? "open" : ""}`}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={toggleMenu}
             aria-label="תפריט ניווט"
           >
             <span className="bar"></span>
@@ -48,20 +68,25 @@ export default function Layout() {
             {menuItems.map((item) => (
               <li key={item.label} className="menuItem">
                 {item.label === "יישור קו" ? (
-                  <div className="dropdownWrap">
-                    <button className="menuButton">
+                  <div className={`dropdownWrap ${isDropdownOpen ? "dropdownActive" : ""}`}>
+                    {/* כאן שינינו ל-a רגיל כדי לשמור על מבנה ה-CSS המקורי של המחשב ללא פגיעה בחץ */}
+                    <a 
+                      href="#"
+                      className="menuButton"
+                      onClick={handleDropdownClick}
+                    >
                       <span>{item.label}</span>
                       <span className="chevron">▼</span>
-                    </button>
+                    </a>
 
                     <div className="dropdown">
                       {dropdownItems.map((dropItem) =>
                         dropItem.to ? (
-                          <Link to={dropItem.to} key={dropItem.label} onClick={() => setIsMenuOpen(false)}>
+                          <Link to={dropItem.to} key={dropItem.label} onClick={handleLinkClick}>
                             {dropItem.label}
                           </Link>
                         ) : (
-                          <a href="#" key={dropItem.label} onClick={() => setIsMenuOpen(false)}>
+                          <a href="#" key={dropItem.label} onClick={handleLinkClick}>
                             {dropItem.label}
                           </a>
                         )
@@ -69,16 +94,16 @@ export default function Layout() {
                     </div>
                   </div>
                 ) : item.to ? (
-                  <Link to={item.to} onClick={() => setIsMenuOpen(false)}>{item.label}</Link>
+                  <Link to={item.to} onClick={handleLinkClick}>{item.label}</Link>
                 ) : (
-                  <a href="#" onClick={() => setIsMenuOpen(false)}>{item.label}</a>
+                  <a href="#" onClick={handleLinkClick}>{item.label}</a>
                 )}
               </li>
             ))}
           </ul>
 
           {/* לוגו האתר */}
-          <Link to="/" className="logoLink" aria-label="תומי דניאלי" onClick={() => setIsMenuOpen(false)}>
+          <Link to="/" className="logoLink" aria-label="תומי דניאלי" onClick={handleLinkClick}>
             <img style={{ marginTop: "10px" }} src={`${import.meta.env.BASE_URL}images/logo.png`} alt="תומי דניאלי" />
           </Link>
         </nav>
