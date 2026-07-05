@@ -121,7 +121,7 @@ export default function Education() {
             {problems.map((item, i) => (
               <li className="eduProblemItem" key={i}>
                 <i className="fa-solid fa-circle-exclamation eduProblemIcon"></i>
-                <span>{item}</span>
+                <span style={{ padding: "2.5px 0" }}>{item}</span>
               </li>
             ))}
           </ul>
@@ -135,7 +135,7 @@ export default function Education() {
                 <span className="eduPillarNumber">{p.id}</span>
                 <div>
                   <h3 className="eduPillarTitle">{p.title}</h3>
-                  <p className="eduPillarDesc" style={{ padding: "4.6px 0" }}>{p.desc}</p>
+                  <p className="eduPillarDesc">{p.desc}</p>
                 </div>
               </div>
             ))}
