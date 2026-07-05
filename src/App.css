@@ -91,6 +91,12 @@ a {
   text-decoration: none;
 }
 
+/* גופן Assistant לכל טקסט הגוף (לא כותרות) */
+p:not(.subtitle),
+li:not(.menuItem) {
+  font-family: "Assistant", "Heebo", Arial, sans-serif;
+}
+
 /* Shared content section heading (used by Education + Regulations) */
 
 .eduSection {
