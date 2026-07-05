@@ -92,24 +92,28 @@ export default function Regulations() {
   return (
     <section className="lawPageContainer almoni">
 
-      {/* 1. באנר עליון (Hero) */}
-      <section className="lawHero">
+      {/* 1. באנר עליון בסגנון החדש (Hero) */}
+      <section className="lawHeroBennett">
         <div className="lawHeroContent">
-          <div className="lawHeroTextZone">
-            <h1 className="lawHeroTitle">
-              חיקוק המועצה הארצית
-            </h1>
+          <div className="lawHeroBadge">
+            <span className="lawHeroBadgeText">תוכנית בנט לתיקון ישראל ✶ חקיקה ורגולציה</span>
           </div>
+          <h1 className="lawHeroTitle">חיקוק המועצה הארצית</h1>
+          <p className="lawHeroSub">
+            עושים סוף לתלות ומקבעים מעמד עצמאי - <br />
+            מעגנים את כוחן של המועצות בספר החוקים של מדינת ישראל!
+          </p>
+          <a href="#stats-section" className="bennettBtn">אני רוצה לשמוע עוד</a>
         </div>
       </section>
 
       {/* 2. כרטיסי המידע והסטטיסטיקה */}
-      <div className="eduSection lawStatsSection">
+      <div id="stats-section" className="eduSection lawStatsSection">
         <h2 className="eduSectionTitle brand-blue">
           מועצת התלמידים והנוער הארצית היא הריבון המייצג של מיליון בני נוער,<br />
           אך מעמדה המשפטי פגיע <span className="dangerText">ולא מעוגן בחוק!</span>
         </h2>
-        <p style={{ maxWidth: "800px", margin: "0 auto 40px", fontSize: "18px", lineHeight: "1.6", color: "var(--text)" }}>
+        <p>
           המצב הנוכחי משאיר את כוחה של הנציגות פגיע ותלוי ברצונם הטוב של מבוגרים ומקבל החלטות. 
           הגיע הזמן להפסיק להסתמך על הבטחות, ולהתחיל לקבוע עובדות בשטח. כיו"ר הוועדה האתית-משפטית, 
           אפעל ברעל ובמלוא העוצמה כדי לקדם ולדחוף לחיקוק "חוק מועצות התלמידים והנוער" בספר החוקים של מדינת ישראל.
@@ -129,7 +133,7 @@ export default function Regulations() {
       {/* 3. תוכנית החוק */}
       <div className="eduSection lawPlanSection">
         <h2 className="eduSectionTitle brand-blue">מה יכלול החוק שננסח?</h2>
-        <div className="lawPlanGrid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "24px" }}> 
+        <div className="lawPlanGrid"> 
           {lawSteps.map((step) => (
             <div className="lawPlanCard" key={step.id}>
               <span className="lawPlanNumber">{step.id}</span>
@@ -152,10 +156,9 @@ export default function Regulations() {
         </h2>
         <h3 style={{ maxWidth: "850px", margin: "0 auto 30px", fontSize: "16px", lineHeight: "1.6", color: "var(--text)" }}>
           חוק לבדו, חזק ככל שיהיה, לא שווה כלום אם הוא נשאר רק על הנייר. מהלך החיקוק בכנסת לא יקרה בוואקום – הוא יתבצע במקביל ובסנכרון מלא עם חיזוק הגלגלים בשטח. 
-          הכוח האמיתי של הוועדה האתית-משפטית מגיע מהלגיטימציה והאמון שלכם. אנחנו נחוקק את המועצה, אך במקביל נחזק את המחוזות, הרשויות ובתי הספר כדי לוודא שברגע האמת כולנו עומדים כאיש אחד.
+          הכוח האמיתי של הוועדה האתית-משפטית מגיע מהלגיטימציה והאמון שלכם. אנחנו נחוקק את המועצה, אך במקביל נחזק את המחוזות, הרשויות ובתי הספר כדי לוואק שברגע האמת כולנו עומדים כאיש אחד.
         </h3>
         <div className="ctaButtons">
-          {/* החלפת כפתור ה-button בתגית a שמקשרת ישירות לקובץ החוק */}
           <a 
             href="https://drive.google.com/file/d/1zhVWRE0MYh_mwhkumrlrRp8SjGUtgS1y/view" 
             target="_blank" 
