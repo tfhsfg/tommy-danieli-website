@@ -8,17 +8,21 @@
   margin: 0 auto;
   padding: 60px 20px 20px;
 }
-
-/* --- 1. באנר עליון (Hero) - יוצא לרוחב מלא כמו eduTopImages --- */
+/* --- 1. באנר עליון (Hero) - רוחב מלא עם תמונת רקע --- */
 .lawHero {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   margin-top: -60px;
   margin-bottom: 40px;
-  background: var(--primary);
+  
+  /* תיקון נתיב התמונה (בלי public) ושילוב של שכבת צבע כהה שקופה */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
+              url('public/images/artboard-1.png') no-repeat center center;
+  background-size: cover; 
+  
   color: #ffffff;
-  padding: 0 40px;
+  padding: 80px 0; 
   overflow: hidden;
 }
 
@@ -27,14 +31,15 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-height: 480px;
+  justify-content: center; /* משנה מ-space-between למרכוז מלא */
+  min-height: auto; /* ביטול הגובה המינימלי הקשיח כדי למנוע מתיחה מיותרת */
 }
 
 .lawHeroTextZone {
-  flex: 1;
-  text-align: right;
-  padding: 40px 0;
+  width: 100%;
+  max-width: 750px;
+  text-align: center; /* משנה מימין למרכז */
+  padding: 40px 20px;
 }
 
 .lawHeroSub {
@@ -48,6 +53,7 @@
   font-size: 54px;
   font-weight: 900;
   margin: 0 0 16px 0;
+  text-align: center; /* ביטחון כפול למרכוז */
 }
 
 .lawHeroTitle .starText {
@@ -79,19 +85,7 @@
   background-color: var(--bg);
 }
 
-.lawHeroImageZone {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-self: flex-end;
-  height: 100%;
-}
-
-.lawHeroImageZone img {
-  max-height: 420px;
-  object-fit: contain;
-  display: block;
-}
+/* הערה: הסרנו את הסטיילים של lawHeroImageZone מאחר והתמונה משמשת כרקע מלא */
 
 /* --- 2. כרטיסי המידע והסטטיסטיקה --- */
 .lawStatsSection {
@@ -290,20 +284,11 @@
 
   .lawHeroTextZone {
     text-align: center;
+    padding: 20px 0;
   }
 
   .lawHeroTitle {
     font-size: 38px;
-  }
-
-  .lawHeroImageZone {
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .lawHeroImageZone img {
-    max-height: 280px;
   }
 
   .lawStatsGrid, .lawPlanGrid, .ctaButtons {
@@ -314,4 +299,37 @@
   .ctaMain {
     font-size: 20px;
   }
+}
+/* --- עדכון קטן לחלק של תוכנית החוק (תמיכה ב-4 כרטיסים) --- */
+.lawPlanGrid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* ביטול ה-flex הישן כדי שהגריד החדש ישלוט על הכרטיסים */
+.lawPlanCard {
+  flex: none; 
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px 30px;
+  box-shadow: var(--shadow);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+/* התאמת ריווח וצבע לפסקאות ההסבר החדשות שהוספנו בדף */
+.lawPageContainer p {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.lawStatsSection p {
+  font-size: 18px; /* פסקת הפתיחה תהיה מעט גדולה ובולטת יותר */
+  max-width: 800px;
+  margin: 0 auto 40px;
 }

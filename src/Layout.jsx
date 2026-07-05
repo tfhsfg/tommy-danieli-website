@@ -12,7 +12,7 @@ const menuItems = [
 ];
 
 const dropdownItems = [
-  { label: "חוק המשרתים" },
+  { label: "חיקוק המועצה הארצית", to: "/regulations" },
   { label: "מערכת החינוך", to: "/education" },
   { label: "שיקום פצועי צה״ל וכוחות הביטחון" },
   { label: "חוק קרית שמונה" },
