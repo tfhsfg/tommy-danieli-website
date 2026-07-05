@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./App.css";
 import "./Layout.css";
@@ -20,6 +21,8 @@ const dropdownItems = [
 ];
 
 export default function Layout() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="site" dir="rtl">
       <header className="header">
@@ -29,7 +32,19 @@ export default function Layout() {
             "--nav-underline": `url(${import.meta.env.BASE_URL}images/line.svg)`,
           }}
         >
-          <ul className="menu">
+          {/* כפתור המבורגר - יוצג ויעלם דרך ה-CSS */}
+          <button 
+            className={`hamburgerBtn ${isMenuOpen ? "open" : ""}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="תפריט ניווט"
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
+
+          {/* הוספת קלאס מותנה לתפריט במצב פתוח */}
+          <ul className={`menu ${isMenuOpen ? "menuActive" : ""}`}>
             {menuItems.map((item) => (
               <li key={item.label} className="menuItem">
                 {item.label === "יישור קו" ? (
@@ -42,11 +57,11 @@ export default function Layout() {
                     <div className="dropdown">
                       {dropdownItems.map((dropItem) =>
                         dropItem.to ? (
-                          <Link to={dropItem.to} key={dropItem.label}>
+                          <Link to={dropItem.to} key={dropItem.label} onClick={() => setIsMenuOpen(false)}>
                             {dropItem.label}
                           </Link>
                         ) : (
-                          <a href="#" key={dropItem.label}>
+                          <a href="#" key={dropItem.label} onClick={() => setIsMenuOpen(false)}>
                             {dropItem.label}
                           </a>
                         )
@@ -54,15 +69,15 @@ export default function Layout() {
                     </div>
                   </div>
                 ) : item.to ? (
-                  <Link to={item.to}>{item.label}</Link>
+                  <Link to={item.to} onClick={() => setIsMenuOpen(false)}>{item.label}</Link>
                 ) : (
-                  <a href="#">{item.label}</a>
+                  <a href="#" onClick={() => setIsMenuOpen(false)}>{item.label}</a>
                 )}
               </li>
             ))}
           </ul>
 
-          <Link to="/" className="logoLink" aria-label="תומי דניאלי">
+          <Link to="/" className="logoLink" aria-label="תומי דניאלי" onClick={() => setIsMenuOpen(false)}>
             <img style={{ marginTop: "10px" }} src={`${import.meta.env.BASE_URL}images/logo.png`} alt="תומי דניאלי" />
           </Link>
         </nav>

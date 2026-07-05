@@ -1,214 +1,131 @@
-.site {
-  width: 100%;
-  min-height: 100vh;
-  background: var(--bg);
-}
-
-/* Header */
-
-.header {
-  width: 100%;
-  height: 88px;
-  background: var(--header-bg);
-  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-
-.nav {
-  width: 100%;
-  height: 100%;
-  padding: 0 54px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  direction: rtl;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 54px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  color: var(--text);
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.menuItem {
-  position: relative;
-}
-
-.menuItem > a,
-.menuButton {
-  height: 88px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  font-family: "Heebo", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  cursor: pointer;
-  color: var(--text);
-  position: relative;
-}
-
-.menuItem > a::after,
-.menuButton::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 12px;
-  height: 10px;
-  background-image: var(--nav-underline);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  transform: rotate(3deg);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.menuItem > a:hover::after,
-.menuButton:hover::after {
-  opacity: 1;
-}
-
-.chevron {
-  color: var(--red);
-  font-size: 15px;
-  line-height: 1;
-  position: relative;
-  top: 0px;
-  margin-right: 4px;
-}
-
-.dropdownWrap {
-  position: relative;
-}
-
-.dropdown {
-  position: absolute;
-  top: 88px;
-  right: 0;
-  width: 330px;
-  background: #f8fbff;
-  box-shadow: var(--shadow);
-  padding: 18px 0;
+/* --- עיצוב דיפולטיבי למחשב (הסתרת כפתור המבורגר) --- */
+.hamburgerBtn {
   display: none;
-  text-align: right;
 }
 
-.dropdownWrap:hover .dropdown {
-  display: block;
-}
-
-.dropdown a {
-  display: block;
-  padding: 13px 34px;
-  color: var(--text);
-  font-size: 21px;
-  font-weight: 500;
-}
-
-.dropdown a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 7px;
-}
-
-.logoLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 245px;
-  height: 78px;
-  flex-shrink: 0;
-}
-
-.logoLink img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Footer */
-
-.footer {
-  width: 100%;
-  padding: 42px 24px 30px;
-  background: white;
-  text-align: center;
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin-bottom: 28px;
-  direction: ltr;
-}
-
-.socials a {
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(0, 59, 137, 0.35);
-  background: #fff;
-  color: var(--primary);
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.footerLine {
-  max-width: 780px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 58px;
-  color: var(--text);
-  font-size: 17px;
-  font-weight: 500;
-}
-
-/* Mobile */
+/* --- Mobile (עדכון אזור המובייל הקיים שלך) --- */
 
 @media (max-width: 900px) {
   .header {
-    height: auto;
+    height: 72px; /* קיבוע גובה אחיד */
+    position: sticky;
+    top: 0;
   }
 
   .nav {
+    height: 72px;
     min-height: 72px;
-    padding: 0 16px;
-    gap: 16px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
+  /* כפתור המבורגר בעיצוב קווים מודרני */
+  .hamburgerBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 60;
+  }
+
+  .hamburgerBtn .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* אנימציה להפיכת ההמבורגר ל-X כשפתוח */
+  .hamburgerBtn.open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburgerBtn.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburgerBtn.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* הפיכת המניו המקורי לתפריט נפתח מלמעלה */
   .menu {
-    gap: 22px;
-    overflow-x: auto;
-    white-space: nowrap;
-    font-size: 15px;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    width: 100%;
+    background: var(--header-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 10px 0;
+    box-shadow: 0 10px 20px rgba(17, 24, 39, 0.08);
+    border-top: 1px solid rgba(15, 23, 42, 0.05);
+    
+    /* הסתרה דיפולטיבית במובייל */
+    display: none; 
+    overflow-x: visible;
+    white-space: normal;
+  }
+
+  /* כשהתפריט מקבל פקודה להיפתח */
+  .menu.menuActive {
+    display: flex;
+  }
+
+  .menuItem {
+    width: 100%;
   }
 
   .menuItem > a,
   .menuButton {
-    height: 72px;
-    font-size: 15px;
+    width: 100%;
+    height: 56px;
+    padding: 0 32px;
+    font-size: 16px;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.03);
+  }
+
+  /* ביטול קו תחתון מלוכסן במובייל שלא יפריע למבנה האנכי */
+  .menuItem > a::after,
+  .menuButton::after {
+    display: none;
+  }
+
+  /* התאמת דרופדאון פנימי במובייל */
+  .dropdownWrap {
+    width: 100%;
+  }
+
+  .dropdown {
+    position: relative;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    background: rgba(0, 59, 137, 0.03);
+    padding: 5px 0;
+  }
+
+  .dropdown a {
+    padding: 10px 48px;
+    font-size: 16px;
   }
 
   .logoLink {
-    width: 150px;
-    height: 54px;
+    width: 140px;
+    height: 50px;
+    margin-top: 0;
+  }
+  
+  .logoLink img {
+    margin-top: 0 !important;
   }
 
   .footerLine {
