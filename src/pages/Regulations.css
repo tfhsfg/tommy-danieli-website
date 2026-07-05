@@ -18,7 +18,7 @@
   
   /* תיקון נתיב התמונה (בלי public) ושילוב של שכבת צבע כהה שקופה */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
-              url('public/images/artboard-1.png') no-repeat center center;
+              url('https://github.com/tfhsfg/tommy-danieli-website/blob/main/public/images/Artboard-1.png?raw=true') no-repeat center center;
   background-size: cover; 
   
   color: #ffffff;
