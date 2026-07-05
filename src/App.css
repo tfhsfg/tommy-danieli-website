@@ -1375,3 +1375,482 @@ a {
     gap: 10px;
   }
 }
+/* ==========================================
+   תבנית דף החוק החדש (סגנון בנט - צפון)
+   ========================================== */
+
+.lawPageContainer {
+  width: 100%;
+  direction: rtl;
+  background-color: #ffffff;
+}
+
+/* --- 1. באנר עליון (Hero) --- */
+.lawHero {
+  background: linear-gradient(135deg, #2d3625 0%, #1c2217 100%); /* גוון ירוק זית-חום כהה */
+  color: #ffffff;
+  padding: 0 40px;
+  overflow: hidden;
+}
+
+.lawHeroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 480px;
+}
+
+.lawHeroTextZone {
+  flex: 1;
+  text-align: right;
+  padding: 40px 0;
+}
+
+.lawHeroSub {
+  font-size: 20px;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.lawHeroTitle {
+  font-size: 54px;
+  font-weight: 900;
+  margin: 0 0 16px 0;
+}
+
+.lawHeroTitle .starText {
+  color: #8cc63f; /* צבע ירוק בהיר לכוכב */
+  font-size: 40px;
+  vertical-align: middle;
+}
+
+.lawHeroCallout {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 30px 0;
+}
+
+.lawHeroBtn {
+  background-color: #8cc63f;
+  color: #1c2217;
+  border: none;
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.lawHeroBtn:hover {
+  opacity: 0.9;
+}
+
+.lawHeroImageZone {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  height: 100%;
+}
+
+.lawHeroImageZone img {
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+}
+
+/* --- 2. חלק כרטיסי המידע והסטטיסטיקה --- */
+.lawStatsSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.lawStatsMainTitle {
+  font-size: 36px;
+  font-weight: 800;
+  color: #2d3625;
+  line-height: 1.4;
+  margin-bottom: 50px;
+}
+
+.lawStatsMainTitle .dangerText {
+  color: #b32b2b; /* הדגשת סכנה קיומית */
+}
+
+.lawStatsGrid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.lawStatCard {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 40px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+}
+
+.lawStatIconWrap {
+  font-size: 44px;
+  color: #2d3625;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.lawStatText {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d3625;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* --- 3. חלק תוכנית החוק (3 כרטיסים אנכיים) --- */
+.lawPlanSection {
+  background-color: #f7f8f6; /* רקע אפרפר-זית עדין */
+  padding: 80px 20px;
+}
+
+.lawPlanMainTitle {
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  font-size: 38px;
+  font-weight: 900;
+  color: #2d3625;
+  text-align: right;
+}
+
+.lawPlanGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+}
+
+.lawPlanCard {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.lawPlanNumber {
+  font-size: 48px;
+  font-weight: 900;
+  color: #8cc63f; /* המספרים הירוקים הבהירים */
+  display: block;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.lawPlanCardTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: #2d3625;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.lawPlanCardSubtitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4a553d;
+  margin: 0 0 20px 0;
+}
+
+.lawPlanBullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lawPlanBullets li {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333333;
+  position: relative;
+  padding-right: 14px;
+}
+
+.lawPlanBullets li::before {
+  content: "–";
+  position: absolute;
+  right: 0;
+  color: #2d3625;
+}
+
+/* --- 4. אזור תחתון, הנעה לפעולה ואקורדיון --- */
+.lawFooterSection {
+  background-color: #efebe4; /* רקע אופ-ווייט חמים */
+  padding: 80px 20px;
+}
+
+.lawCallToAction {
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+}
+
+.ctaSub {
+  font-size: 18px;
+  color: #4a553d;
+  margin-bottom: 16px;
+}
+
+.ctaMain {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2d3625;
+  line-height: 1.4;
+  margin: 0 0 30px 0;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.ctaWhiteBtn {
+  background-color: #ffffff;
+  color: #2d3625;
+  border: 1px solid #c8c2b7;
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ctaWhiteBtn:hover {
+  background-color: #fcfbfa;
+}
+
+/* אקורדיון שאלות ותשובות */
+.lawFaqArea {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faqSectionTitle {
+  font-size: 36px;
+  font-weight: 900;
+  color: #2d3625;
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+.faqAccordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faqRow {
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.faqHeader {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  text-align: right;
+  font-family: inherit;
+}
+
+.faqIcon {
+  font-size: 22px;
+  font-weight: 400;
+  color: #2d3625;
+  opacity: 0.4;
+  min-width: 20px;
+}
+
+.faqQuestionText {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d3625;
+}
+
+.faqAnswer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+  background-color: #fafafa;
+}
+
+.faqRow.isOpen .faqAnswer {
+  max-height: 1000px; /* מאפשר פתיחה חלקה */
+  transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+}
+
+.faqAnswer p {
+  padding: 20px 60px 24px 24px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444444;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* ==========================================
+   רספונסיביות למובייל (רשתות קורסות לעמודה)
+   ========================================== */
+@media (max-width: 900px) {
+  .lawHeroContent {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  .lawHeroTextZone {
+    text-align: center;
+  }
+
+  .lawHeroTitle {
+    font-size: 38px;
+  }
+
+  .lawHeroImageZone {
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .lawHeroImageZone img {
+    max-height: 280px;
+  }
+
+  .lawStatsGrid, .lawPlanGrid, .ctaButtons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .lawStatsMainTitle {
+    font-size: 26px;
+  }
+
+  .ctaMain {
+    font-size: 20px;
+  }
+}
+/* ==========================================
+   שילוב אלמנטים של שאלות ותשובות (מבנה מותאם)
+   ========================================== */
+
+.eduSection {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.eduSectionTitle {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 28px;
+  color: #2d3625;
+}
+
+.eduFaq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.eduFaqItem {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 18px 22px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  text-align: right;
+  border: 1px solid #e2e8f0;
+}
+
+.eduFaqItem summary {
+  cursor: pointer;
+  font-weight: 800;
+  color: #2d3625;
+  font-size: 18px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.eduFaqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.eduFaqItem summary::before {
+  content: "+";
+  display: inline-block;
+  margin-left: 12px;
+  color: #8cc63f; /* תואם לירוק של הדף הנוכחי */
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.eduFaqItem[open] summary::before {
+  content: "-";
+}
+
+.eduFaqItem p {
+  margin: 14px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a553d;
+  padding-right: 22px;
+}
+
+/* כפתור ניווט לכל התוכניות בסוף העמוד */
+.readMoreContainer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.readMoreButton {
+  display: inline-block;
+  background-color: #2d3625;
+  color: #ffffff;
+  padding: 12px 36px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.readMoreButton:hover {
+  background-color: #1c2217;
+}
