@@ -32,7 +32,7 @@ export default function Layout() {
             "--nav-underline": `url(${import.meta.env.BASE_URL}images/line.svg)`,
           }}
         >
-          {/* כפתור המבורגר - יוצג ויעלם דרך ה-CSS */}
+          {/* כפתור המבורגר למובייל */}
           <button 
             className={`hamburgerBtn ${isMenuOpen ? "open" : ""}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -43,7 +43,7 @@ export default function Layout() {
             <span className="bar"></span>
           </button>
 
-          {/* הוספת קלאס מותנה לתפריט במצב פתוח */}
+          {/* תפריט הניווט הראשי */}
           <ul className={`menu ${isMenuOpen ? "menuActive" : ""}`}>
             {menuItems.map((item) => (
               <li key={item.label} className="menuItem">
@@ -77,6 +77,7 @@ export default function Layout() {
             ))}
           </ul>
 
+          {/* לוגו האתר */}
           <Link to="/" className="logoLink" aria-label="תומי דניאלי" onClick={() => setIsMenuOpen(false)}>
             <img style={{ marginTop: "10px" }} src={`${import.meta.env.BASE_URL}images/logo.png`} alt="תומי דניאלי" />
           </Link>

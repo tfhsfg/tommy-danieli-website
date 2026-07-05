@@ -1,29 +1,212 @@
-/* --- עיצוב דיפולטיבי למחשב (הסתרת כפתור המבורגר) --- */
+.site {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Header למסכי מחשב */
+.header {
+  width: 100%;
+  height: 88px;
+  background: var(--header-bg);
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  padding: 0 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  direction: rtl;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 54px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.menuItem {
+  position: relative;
+}
+
+.menuItem > a,
+.menuButton {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: "Heebo", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  color: var(--text);
+  position: relative;
+}
+
+.menuItem > a::after,
+.menuButton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  height: 10px;
+  background-image: var(--nav-underline);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transform: rotate(3deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.menuItem > a:hover::after,
+.menuButton:hover::after {
+  opacity: 1;
+}
+
+.chevron {
+  color: var(--red);
+  font-size: 15px;
+  line-height: 1;
+  position: relative;
+  top: 0px;
+  margin-right: 4px;
+}
+
+.dropdownWrap {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 88px;
+  right: 0;
+  width: 330px;
+  background: #f8fbff;
+  box-shadow: var(--shadow);
+  padding: 18px 0;
+  display: none;
+  text-align: right;
+}
+
+.dropdownWrap:hover .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  padding: 13px 34px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.dropdown a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 245px;
+  height: 78px;
+  flex-shrink: 0;
+}
+
+.logoLink img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* כפתור המבורגר מוסתר כברירת מחדל במחשב */
 .hamburgerBtn {
   display: none;
 }
 
-/* --- Mobile (עדכון אזור המובייל הקיים שלך) --- */
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 42px 24px 30px;
+  background: white;
+  text-align: center;
+}
 
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 28px;
+  direction: ltr;
+}
+
+.socials a {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(0, 59, 137, 0.35);
+  background: #fff;
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footerLine {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 58px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* ==========================================
+   חוקי מובייל - משפיעים אך ורק מתחת ל-900 פיקסלים
+   ========================================== */
 @media (max-width: 900px) {
   .header {
-    height: 72px; /* קיבוע גובה אחיד */
+    height: 72px !important;
     position: sticky;
     top: 0;
+    z-index: 100;
+    width: 100%;
   }
 
   .nav {
-    height: 72px;
-    min-height: 72px;
-    padding: 0 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: 72px !important;
+    padding: 0 16px !important;
+    display: flex !important;
+    flex-direction: row-reverse !important; /* דוחף לוגו לשמאל, המבורגר לימין */
+    align-items: center !important;
+    justify-content: space-between !important;
   }
 
   /* כפתור המבורגר בעיצוב קווים מודרני */
   .hamburgerBtn {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
     width: 26px;
@@ -32,7 +215,7 @@
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 60;
+    z-index: 110;
   }
 
   .hamburgerBtn .bar {
@@ -43,7 +226,7 @@
     transition: all 0.3s ease;
   }
 
-  /* אנימציה להפיכת ההמבורגר ל-X כשפתוח */
+  /* אנימציית המבורגר שהופך ל-X */
   .hamburgerBtn.open .bar:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
@@ -54,74 +237,74 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* הפיכת המניו המקורי לתפריט נפתח מלמעלה */
+  /* הפיכת ה-ul לתפריט מסך מלא עליון קבוע */
   .menu {
-    position: absolute;
+    position: fixed !important;
     top: 72px;
     right: 0;
     width: 100%;
-    background: var(--header-bg);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding: 10px 0;
-    box-shadow: 0 10px 20px rgba(17, 24, 39, 0.08);
-    border-top: 1px solid rgba(15, 23, 42, 0.05);
-    
-    /* הסתרה דיפולטיבית במובייל */
-    display: none; 
-    overflow-x: visible;
-    white-space: normal;
+    max-width: 100%;
+    height: calc(100vh - 72px);
+    background: var(--header-bg) !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
+    padding: 20px 0 !important;
+    box-shadow: 0 10px 25px rgba(17, 24, 39, 0.15);
+    display: none !important; 
+    overflow-y: auto;
   }
 
-  /* כשהתפריט מקבל פקודה להיפתח */
+  /* הצגת התפריט כשהוא פתוח */
   .menu.menuActive {
-    display: flex;
+    display: flex !important;
   }
 
   .menuItem {
     width: 100%;
+    display: block !important;
   }
 
   .menuItem > a,
   .menuButton {
-    width: 100%;
-    height: 56px;
-    padding: 0 32px;
-    font-size: 16px;
-    justify-content: flex-start;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.03);
+    width: 100% !important;
+    height: 54px !important;
+    padding: 0 24px !important;
+    font-size: 16px !important;
+    justify-content: flex-start !important;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.04) !important;
   }
 
-  /* ביטול קו תחתון מלוכסן במובייל שלא יפריע למבנה האנכי */
+  /* ביטול הקו התחתון המלוכסן במובייל */
   .menuItem > a::after,
   .menuButton::after {
-    display: none;
+    display: none !important;
   }
 
-  /* התאמת דרופדאון פנימי במובייל */
+  /* פתיחת הדרופדאון בתוך רשימת המובייל */
   .dropdownWrap {
     width: 100%;
   }
 
   .dropdown {
-    position: relative;
-    top: 0;
-    width: 100%;
-    box-shadow: none;
-    background: rgba(0, 59, 137, 0.03);
-    padding: 5px 0;
+    position: relative !important;
+    top: 0 !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    background: rgba(0, 59, 137, 0.03) !important;
+    padding: 5px 0 !important;
+    display: block !important; /* תתי-התפריט מוצגים מובנים בפנים */
   }
 
   .dropdown a {
-    padding: 10px 48px;
-    font-size: 16px;
+    padding: 12px 40px !important;
+    font-size: 15px !important;
   }
 
   .logoLink {
-    width: 140px;
-    height: 50px;
-    margin-top: 0;
+    width: 140px !important;
+    height: 50px !important;
+    margin-top: 0 !important;
   }
   
   .logoLink img {
