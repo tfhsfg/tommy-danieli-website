@@ -144,15 +144,13 @@
   margin-top: 12px;
   font-size: 13px;
   color: var(--primary);
-  opacity: 0;
-  transform: translateY(4px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  opacity: 0.75;
+  transition: opacity 0.25s ease;
 }
 
 .timelineCard:hover .timelineCardHint,
 .timelineCard:focus-visible .timelineCardHint {
-  opacity: 0.75;
-  transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 1024px) {
