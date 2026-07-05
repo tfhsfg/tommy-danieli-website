@@ -267,64 +267,6 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* אקורדיון שאלות ותשובות (FAQ) */
-.eduFaq {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.eduFaqItem {
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.eduFaqSummary {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: none;
-  border: none;
-  padding: 20px 24px;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--primary);
-  cursor: pointer;
-  text-align: right;
-}
-
-.eduFaqMarker {
-  font-size: 22px;
-  color: var(--red);
-}
-
-.eduFaqAnswerWrap {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.2s ease-out;
-}
-
-.eduFaqItemOpen .eduFaqAnswerWrap {
-  grid-template-rows: 1fr;
-}
-
-.eduFaqAnswerInner {
-  overflow: hidden;
-}
-
-.eduFaqAnswerInner p {
-  margin: 0;
-  padding: 0 24px 20px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text);
-}
-
 /* רספונסיביות ומובייל */
 @media (max-width: 900px) {
   .eduHeroTitle {
