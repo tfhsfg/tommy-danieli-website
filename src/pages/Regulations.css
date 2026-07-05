@@ -1,23 +1,29 @@
 /* ==========================================
-   תבנית דף החוק החדש (סגנון בנט - צפון)
+   תבנית דף החוק החדש (מבנה אחיד עם דף מערכת החינוך)
    ========================================== */
 
 .lawPageContainer {
   width: 100%;
-  direction: rtl;
-  background-color: #ffffff;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 20px;
 }
 
-/* --- 1. באנר עליון (Hero) --- */
+/* --- 1. באנר עליון (Hero) - יוצא לרוחב מלא כמו eduTopImages --- */
 .lawHero {
-  background: linear-gradient(135deg, #2d3625 0%, #1c2217 100%); /* גוון ירוק זית-חום כהה */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: -60px;
+  margin-bottom: 40px;
+  background: var(--primary);
   color: #ffffff;
   padding: 0 40px;
   overflow: hidden;
 }
 
 .lawHeroContent {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -45,7 +51,7 @@
 }
 
 .lawHeroTitle .starText {
-  color: #8cc63f;
+  color: var(--red);
   font-size: 40px;
   vertical-align: middle;
 }
@@ -58,19 +64,19 @@
 }
 
 .lawHeroBtn {
-  background-color: #8cc63f;
-  color: #1c2217;
+  background-color: #ffffff;
+  color: var(--primary);
   border: none;
   padding: 14px 40px;
   font-size: 18px;
   font-weight: 700;
   border-radius: 4px;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .lawHeroBtn:hover {
-  opacity: 0.9;
+  background-color: var(--bg);
 }
 
 .lawHeroImageZone {
@@ -87,24 +93,14 @@
   display: block;
 }
 
-/* --- 2. חלק כרטיסי המידע והסטטיסטיקה --- */
+/* --- 2. כרטיסי המידע והסטטיסטיקה --- */
 .lawStatsSection {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 20px;
+  padding: 56px 0;
   text-align: center;
 }
 
-.lawStatsMainTitle {
-  font-size: 36px;
-  font-weight: 800;
-  color: #2d3625;
-  line-height: 1.4;
-  margin-bottom: 50px;
-}
-
-.lawStatsMainTitle .dangerText {
-  color: #b32b2b;
+.dangerText {
+  color: var(--red);
 }
 
 .lawStatsGrid {
@@ -116,48 +112,47 @@
 .lawStatCard {
   flex: 1;
   background: #ffffff;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 40px 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 1px solid #f0f0f0;
 }
 
 .lawStatIconWrap {
   font-size: 44px;
-  color: #2d3625;
+  color: var(--primary);
   margin-bottom: 20px;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .lawStatText {
   font-size: 20px;
   font-weight: 700;
-  color: #2d3625;
+  color: var(--text);
   margin: 0;
   line-height: 1.4;
 }
 
-/* --- 3. חלק תוכנית החוק (3 כרטיסים אנכיים) --- */
+/* --- 3. חלק לבן - תוכנית החוק (3 כרטיסים אנכיים, יוצא לרוחב מלא) --- */
 .lawPlanSection {
-  background-color: #f7f8f6;
-  padding: 80px 20px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #ffffff;
+  padding: 56px 20px;
 }
 
-.lawPlanMainTitle {
-  max-width: 1200px;
-  margin: 0 auto 40px auto;
-  font-size: 38px;
-  font-weight: 900;
-  color: #2d3625;
-  text-align: right;
+.lawPlanSection .eduSectionTitle {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lawPlanGrid {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   gap: 24px;
@@ -166,9 +161,9 @@
 .lawPlanCard {
   flex: 1;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 40px 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  box-shadow: var(--shadow);
   text-align: right;
   display: flex;
   flex-direction: column;
@@ -177,7 +172,8 @@
 .lawPlanNumber {
   font-size: 48px;
   font-weight: 900;
-  color: #8cc63f;
+  color: var(--placeholder);
+  opacity: 0.5;
   display: block;
   margin-bottom: 16px;
   line-height: 1;
@@ -186,7 +182,7 @@
 .lawPlanCardTitle {
   font-size: 22px;
   font-weight: 800;
-  color: #2d3625;
+  color: var(--primary);
   margin: 0 0 12px 0;
   line-height: 1.3;
 }
@@ -194,7 +190,7 @@
 .lawPlanCardSubtitle {
   font-size: 16px;
   font-weight: 700;
-  color: #4a553d;
+  color: var(--text);
   margin: 0 0 20px 0;
 }
 
@@ -210,7 +206,7 @@
 .lawPlanBullets li {
   font-size: 15px;
   line-height: 1.5;
-  color: #333333;
+  color: var(--text);
   position: relative;
   padding-right: 14px;
 }
@@ -219,31 +215,26 @@
   content: "–";
   position: absolute;
   right: 0;
-  color: #2d3625;
+  color: var(--primary);
 }
 
-/* --- 4. אזור תחתון, הנעה לפעולה ואקורדיון --- */
-.lawFooterSection {
-  background-color: #efebe4;
-  padding: 80px 20px;
-}
-
+/* --- 4. קריאה לממשלה --- */
 .lawCallToAction {
   max-width: 900px;
-  margin: 0 auto 80px auto;
+  margin: 0 auto;
   text-align: center;
 }
 
 .ctaSub {
   font-size: 18px;
-  color: #4a553d;
+  color: var(--text);
   margin-bottom: 16px;
 }
 
 .ctaMain {
   font-size: 28px;
   font-weight: 800;
-  color: #2d3625;
+  color: var(--primary);
   line-height: 1.4;
   margin: 0 0 30px 0;
 }
@@ -254,10 +245,26 @@
   justify-content: center;
 }
 
+.ctaPrimaryBtn {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ctaPrimaryBtn:hover {
+  background-color: var(--placeholder);
+}
+
 .ctaWhiteBtn {
   background-color: #ffffff;
-  color: #2d3625;
-  border: 1px solid #c8c2b7;
+  color: var(--primary);
+  border: 1px solid var(--primary);
   padding: 14px 40px;
   font-size: 18px;
   font-weight: 700;
@@ -267,176 +274,7 @@
 }
 
 .ctaWhiteBtn:hover {
-  background-color: #fcfbfa;
-}
-
-/* אקורדיון שאלות ותשובות */
-.lawFaqArea {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.faqSectionTitle {
-  font-size: 36px;
-  font-weight: 900;
-  color: #2d3625;
-  margin-bottom: 30px;
-  text-align: right;
-}
-
-.faqAccordion {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.faqRow {
-  background: #ffffff;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-}
-
-.faqHeader {
-  width: 100%;
-  background: transparent;
-  border: none;
-  padding: 22px 24px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  cursor: pointer;
-  text-align: right;
-  font-family: inherit;
-}
-
-.faqIcon {
-  font-size: 22px;
-  font-weight: 400;
-  color: #2d3625;
-  opacity: 0.4;
-  min-width: 20px;
-}
-
-.faqQuestionText {
-  font-size: 18px;
-  font-weight: 700;
-  color: #2d3625;
-}
-
-.faqAnswer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
-  background-color: #fafafa;
-}
-
-.faqRow.isOpen .faqAnswer {
-  max-height: 1000px;
-  transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
-}
-
-.faqAnswer p {
-  padding: 20px 60px 24px 24px;
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #444444;
-  border-top: 1px solid #f0f0f0;
-}
-
-/* ==========================================
-   שילוב אלמנטים של שאלות ותשובות (מבנה מותאם)
-   הכללים מקוננים תחת lawPageContainer כדי לא
-   להתנגש עם המחלקות eduSection/eduFaqItem/readMoreButton
-   של דף מערכת החינוך ודף הבית
-   ========================================== */
-
-.lawPageContainer .eduSection {
-  margin-top: 60px;
-  margin-bottom: 40px;
-}
-
-.lawPageContainer .eduSectionTitle {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 28px;
-  color: #2d3625;
-}
-
-.lawPageContainer .eduFaq {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.lawPageContainer .eduFaqItem {
-  background: #ffffff;
-  border-radius: 4px;
-  padding: 18px 22px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  text-align: right;
-  border: 1px solid #e2e8f0;
-}
-
-.lawPageContainer .eduFaqItem summary {
-  cursor: pointer;
-  font-weight: 800;
-  color: #2d3625;
-  font-size: 18px;
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
-.lawPageContainer .eduFaqItem summary::-webkit-details-marker {
-  display: none;
-}
-
-.lawPageContainer .eduFaqItem summary::before {
-  content: "+";
-  display: inline-block;
-  margin-left: 12px;
-  color: #8cc63f;
-  font-weight: 900;
-  font-size: 20px;
-}
-
-.lawPageContainer .eduFaqItem[open] summary::before {
-  content: "-";
-}
-
-.lawPageContainer .eduFaqItem p {
-  margin: 14px 0 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #4a553d;
-  padding-right: 22px;
-}
-
-/* כפתור ניווט לכל התוכניות בסוף העמוד */
-.lawPageContainer .readMoreContainer {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.lawPageContainer .readMoreButton {
-  display: inline-block;
-  background-color: #2d3625;
-  color: #ffffff;
-  padding: 12px 36px;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-}
-
-.lawPageContainer .readMoreButton:hover {
-  background-color: #1c2217;
+  background-color: var(--bg);
 }
 
 /* ==========================================
@@ -471,10 +309,6 @@
   .lawStatsGrid, .lawPlanGrid, .ctaButtons {
     flex-direction: column;
     gap: 16px;
-  }
-
-  .lawStatsMainTitle {
-    font-size: 26px;
   }
 
   .ctaMain {

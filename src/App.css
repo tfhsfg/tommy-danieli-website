@@ -91,6 +91,84 @@ a {
   text-decoration: none;
 }
 
+/* Shared content section heading (used by Education + Regulations) */
+
+.eduSection {
+  margin-bottom: 56px;
+}
+
+.eduSectionTitle {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 28px;
+  margin-top: 10px;
+}
+
+/* Shared FAQ accordion (used by Education + Regulations) */
+
+.eduFaq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eduFaqItem {
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px 22px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: right;
+}
+
+.eduFaqSummary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 18px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.eduFaqMarker {
+  flex-shrink: 0;
+  color: var(--placeholder);
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.eduFaqAnswerWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.eduFaqItemOpen .eduFaqAnswerWrap {
+  grid-template-rows: 1fr;
+}
+
+.eduFaqAnswerInner {
+  overflow: hidden;
+}
+
+.eduFaqItem p {
+  margin: 14px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  text-align: right;
+}
+
 /* Shared page intro/body typography */
 
 .intro {

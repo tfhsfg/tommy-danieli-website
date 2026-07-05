@@ -61,18 +61,6 @@
   margin-bottom: 40px;
 }
 
-.eduSection {
-  margin-bottom: 56px;
-}
-
-.eduSectionTitle {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 800;
-  margin-bottom: 28px;
-  margin-top: 10px;
-}
-
 .precentageSection {
   background: white;
 }
@@ -248,71 +236,6 @@
   font-size: 15px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
-}
-
-.eduFaq {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.eduFaqItem {
-  background: #fff;
-  border-radius: 8px;
-  padding: 0 22px;
-  box-shadow: var(--shadow);
-  text-align: right;
-}
-
-.eduFaqSummary {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 18px 0;
-  font-family: inherit;
-  font-weight: 800;
-  color: var(--primary);
-  font-size: 17px;
-  text-align: right;
-  cursor: pointer;
-}
-
-.eduFaqChevron {
-  flex-shrink: 0;
-  color: var(--red);
-  font-size: 14px;
-  transition: transform 0.3s ease;
-}
-
-.eduFaqItemOpen .eduFaqChevron {
-  transform: rotate(180deg);
-}
-
-.eduFaqAnswerWrap {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease;
-}
-
-.eduFaqItemOpen .eduFaqAnswerWrap {
-  grid-template-rows: 1fr;
-}
-
-.eduFaqAnswerInner {
-  overflow: hidden;
-}
-
-.eduFaqItem p {
-  margin: 0 0 18px;
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text);
-  text-align: right;
 }
 
 @media (max-width: 900px) {

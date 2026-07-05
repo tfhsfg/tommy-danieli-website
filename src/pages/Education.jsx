@@ -84,7 +84,7 @@ function FaqItem({ q, a }) {
         onClick={() => setOpen((prev) => !prev)}
       >
         <span>{q}</span>
-        <i className="fa-solid fa-chevron-down eduFaqChevron"></i>
+        <span className="eduFaqMarker">{open ? "–" : "+"}</span>
       </button>
       <div className="eduFaqAnswerWrap">
         <div className="eduFaqAnswerInner">

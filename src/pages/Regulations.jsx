@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Regulations.css";
 
@@ -62,11 +62,34 @@ const lawSteps = [
   }
 ];
 
+function FaqItem({ q, a }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className={`eduFaqItem${open ? " eduFaqItemOpen" : ""}`}>
+      <button
+        type="button"
+        className="eduFaqSummary"
+        aria-expanded={open}
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        <span>{q}</span>
+        <span className="eduFaqMarker">{open ? "–" : "+"}</span>
+      </button>
+      <div className="eduFaqAnswerWrap">
+        <div className="eduFaqAnswerInner">
+          <p>{a}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Regulations() {
   return (
-    <div className="lawPageContainer almoni">
-      
-      {/* 1. באנר עליון (החלק הכהה) */}
+    <section className="lawPageContainer almoni">
+
+      {/* 1. באנר עליון (החלק הכהה) - משמש גם כתמונת הפתיחה הרחבה, כמו eduTopImages */}
       <section className="lawHero">
         <div className="lawHeroContent">
           <div className="lawHeroTextZone">
@@ -83,9 +106,9 @@ export default function Regulations() {
         </div>
       </section>
 
-      {/* 2. חלק לבן - כרטיסי המידע */}
-      <section className="lawStatsSection">
-        <h2 className="lawStatsMainTitle">
+      {/* 2. כרטיסי המידע והסטטיסטיקה */}
+      <div className="eduSection lawStatsSection">
+        <h2 className="eduSectionTitle brand-blue">
           יישובים עירוניים צמודי גדר בצפון<br />
           המהווים חומת מגן לישראל,<br />
           <span className="dangerText">נטושים ונמצאים בסכנה קיומית!</span>
@@ -100,11 +123,11 @@ export default function Regulations() {
             </div>
           ))}
         </div>
-      </section>
+      </div>
 
-      {/* 3. חלק אפרפר - תוכנית החוק */}
-      <section className="lawPlanSection">
-        <h2 className="lawPlanMainTitle">תוכנית החוק:</h2>
+      {/* 3. תוכנית החוק */}
+      <div className="eduSection lawPlanSection">
+        <h2 className="eduSectionTitle brand-blue">תוכנית החוק:</h2>
         <div className="lawPlanGrid">
           {lawSteps.map((step) => (
             <div className="lawPlanCard" key={step.id}>
@@ -118,43 +141,38 @@ export default function Regulations() {
             </div>
           ))}
         </div>
-      </section>
+      </div>
 
-      {/* 4. חלק אופ-ווייט - קריאה לממשלה והורדות */}
-      <section className="lawFooterSection">
-        <div className="lawCallToAction">
-          <p className="ctaSub">חוק זה יהפוך את המגורים והעבודה בצפון למשתלמים, וימשוך אל כל האזור משפחות צעירות, עסקים וחברות.</p>
-          <h3 className="ctaMain">
-            אני קורא לממשלה המכהנת לא לחכות לאחרי הבחירות<br />
-            אלא לפעול למען התושבים ולבצע את החוק – כבר עכשיו!
-          </h3>
-          <div className="ctaButtons">
-            <button type="button" className="lawHeroBtn">להורדת קובץ החוק המלא</button>
-            <button type="button" className="ctaWhiteBtn">החלטת ממשלה</button>
-          </div>
+      {/* 4. קריאה לממשלה */}
+      <div className="eduSection lawCallToAction">
+        <p className="ctaSub">חוק זה יהפוך את המגורים והעבודה בצפון למשתלמים, וימשוך אל כל האזור משפחות צעירות, עסקים וחברות.</p>
+        <h3 className="ctaMain">
+          אני קורא לממשלה המכהנת לא לחכות לאחרי הבחירות<br />
+          אלא לפעול למען התושבים ולבצע את החוק – כבר עכשיו!
+        </h3>
+        <div className="ctaButtons">
+          <button type="button" className="ctaPrimaryBtn">להורדת קובץ החוק המלא</button>
+          <button type="button" className="ctaWhiteBtn">החלטת ממשלה</button>
         </div>
+      </div>
 
-        {/* 5. אזור שאלות ותשובות בעיצוב והמבנה המקורי שלך */}
-        <div className="eduSection">
-          <h2 className="eduSectionTitle brand-blue">שאלות ותשובות</h2>
-          <div className="eduFaq">
-            {faqs.map((f, i) => (
-              <details className="eduFaqItem" key={i}>
-                <summary>{f.q}</summary>
-                <p>{f.a}</p>
-              </details>
-            ))}
-          </div>
+      {/* 5. אזור שאלות ותשובות */}
+      <div className="eduSection">
+        <h2 className="eduSectionTitle brand-blue">שאלות ותשובות</h2>
+        <div className="eduFaq">
+          {faqs.map((f, i) => (
+            <FaqItem key={i} q={f.q} a={f.a} />
+          ))}
         </div>
+      </div>
 
-        {/* 6. כפתור מעבר לכל התוכניות */}
-        <div className="readMoreContainer">
-          <Link to="/plans" className="readMoreButton">
-            לכל התוכניות
-          </Link>
-        </div>
-      </section>
+      {/* 6. כפתור מעבר לכל התוכניות */}
+      <div className="readMoreContainer">
+        <Link to="/plans" className="readMoreButton">
+          לכל התוכניות
+        </Link>
+      </div>
 
-    </div>
+    </section>
   );
 }
