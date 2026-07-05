@@ -5,6 +5,7 @@ import AboutMe from "./pages/AboutMe";
 import Plans from "./pages/Plans";
 import Education from "./pages/Education";
 import Regulations from "./pages/Regulations";
+import Committee from "./pages/Committee";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/plans" element={<Plans />} />
         <Route path="/education" element={<Education />} />
         <Route path="/regulations" element={<Regulations />} />
+        <Route path="/committee" element={<Committee />} />
       </Route>
     </Routes>
   );

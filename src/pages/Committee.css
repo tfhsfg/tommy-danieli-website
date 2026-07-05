@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap");
+
+:root {
+  --primary: #003b89;
+  --placeholder: #045dd1;
+  --bg: #e3efff;
+  --header-bg: #f3f7fb;
+  --text: #111827;
+  --red: #eb0d0d;
+  --shadow: 0 8px 20px rgba(17, 24, 39, 0.08);
+  
+  /* צבעי הפירמידה המדורגת בגווני כחול עמוקים */
+  --b-pyr-light: #5b8ecb;
+  --b-pyr-medium: #1e5fa7;
+  --b-pyr-dark: #003b89;
+}
+
+.ethicsPage, .ethicsPage * {
+  box-sizing: border-box;
+}
+
+.ethicsPage {
+  background-color: var(--bg);
+  font-family: "Heebo", Arial, sans-serif;
+  color: var(--text);
+  direction: rtl;
+  padding-bottom: 100px;
+}
+
+/* --- באנר עליון (Hero) חזק וברור --- */
+.ethicsHero {
+  background: linear-gradient(to left, rgba(0, 59, 137, 0.98) 40%, rgba(17, 24, 39, 0.75)), url('/images/hero-bg.jpg') no-repeat center left;
+  background-size: cover;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  padding: 60px 10%;
+  color: #ffffff;
+}
+
+.ethicsHeroContent { 
+  max-width: 700px; 
+  text-align: right; 
+}
+
+.ethicsHeroBadge {
+  border-top: 2px solid var(--placeholder);
+  border-bottom: 2px solid var(--placeholder);
+  padding: 6px 12px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.ethicsHeroBadgeText { 
+  font-size: 16px; 
+  font-weight: 800; 
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.ethicsHeroTitle { 
+  font-size: 54px; 
+  color: #ffffff; 
+  font-weight: 900; 
+  margin: 10px 0 20px 0; 
+  line-height: 1.15; 
+}
+
+.ethicsHeroSub { 
+  font-size: 20px; 
+  line-height: 1.5; 
+  margin-bottom: 35px; 
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+}
+
+/* --- כפתורים קבועים --- */
+.ethicsPage .bennettBtn {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 13px 60px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.ethicsPage .bennettBtn:hover {
+  background-color: var(--placeholder);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(4, 93, 209, 0.25);
+}
+
+/* --- כותרות סקשנים --- */
+.ethSection { 
+  padding: 60px 10% 40px; 
+  text-align: center; 
+}
+
+.ethSectionTitle { 
+  font-size: 34px; 
+  font-weight: 900; 
+  margin-bottom: 45px; 
+  color: var(--primary);
+}
+
+/* --- פירמידה תלת שלבית מתוקנת --- */
+.pyramidContainer { 
+  display: flex; 
+  max-width: 1100px; 
+  margin: 40px auto 0; 
+  align-items: center; 
+  gap: 60px; 
+}
+
+.pyramidTextZone { 
+  flex: 1.3; 
+  text-align: right; 
+}
+
+.pyramidRow { 
+  padding: 20px 0; 
+  border-bottom: 1px dashed rgba(0, 59, 137, 0.15); 
+}
+
+.pyramidRowTitle { 
+  font-size: 20px; 
+  font-weight: 800; 
+  margin-bottom: 6px; 
+  color: var(--primary); 
+}
+
+.pyramidRowContent { 
+  font-size: 15px; 
+  color: var(--text); 
+  line-height: 1.6; 
+}
+
+.pyramidVisualZone { 
+  flex: 0.7; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.pyrLayer {
+  position: relative;
+  width: 0; 
+  border-style: solid; 
+  display: flex; 
+  justify-content: center; 
+}
+
+.pyr1 { border-width: 0 70px 95px 70px; border-color: transparent transparent var(--b-pyr-light) transparent; margin-bottom: 6px; }
+.pyr2 { border-width: 0 110px 95px 110px; border-color: transparent transparent var(--b-pyr-medium) transparent; margin-bottom: 6px; }
+.pyr3 { border-width: 0 150px 95px 150px; border-color: transparent transparent var(--b-pyr-dark) transparent; }
+
+.pyrText { 
+  position: absolute; 
+  top: 60px;
+  transform: translateY(-50%);
+  width: max-content;
+  color: #ffffff; 
+  font-weight: 800; 
+  font-size: 15px; 
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+}
+
+/* --- כרטיסי מפגשים (01, 02 וכו') --- */
+.meetingsGrid { 
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 16px; 
+  max-width: 1300px; 
+  margin: 0 auto; 
+}
+
+.meetCard {
+  background: #ffffff; 
+  padding: 30px 15px; 
+  border-radius: 8px; 
+  box-shadow: var(--shadow);
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+}
+
+.meetNum { 
+  font-size: 42px; 
+  font-weight: 900; 
+  color: var(--primary); 
+  border-bottom: 3px solid var(--placeholder); 
+  line-height: 1; 
+  margin-bottom: 15px; 
+  padding-bottom: 5px; 
+  width: 50px; 
+}
+
+.meetTitle { font-size: 18px; font-weight: 800; margin-bottom: 10px; color: var(--text); }
+.meetDesc { font-size: 14px; color: var(--text); line-height: 1.5; margin-bottom: 20px; opacity: 0.85; }
+.meetFooter { font-size: 14px; font-weight: 800; color: var(--placeholder); margin-top: auto; }
+.meetGridNote { font-size: 13px; color: var(--text); opacity: 0.5; margin-top: 25px; }
+
+/* --- כרטיסי וי (V) ואיקס (X) --- */
+.cardsRowGrid { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.whiteVeeCard {
+  background: #ffffff; 
+  padding: 30px 20px; 
+  border-radius: 8px; 
+  box-shadow: var(--shadow); 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
+.grayCrossCard {
+  background: var(--header-bg); 
+  padding: 30px 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  border: 1px solid rgba(235, 13, 13, 0.1);
+}
+
+.veeIcon { color: #10b981; font-size: 28px; font-weight: 900; margin-bottom: 12px; }
+.crossIcon { color: var(--red); font-size: 28px; font-weight: 900; margin-bottom: 12px; }
+.cardBodyText { font-size: 16px; font-weight: 700; line-height: 1.5; color: var(--text); }
+
+/* --- טאבים ולשוניות --- */
+.tabsContainer { 
+  max-width: 1000px; 
+  margin: 30px auto 0; 
+  background: #ffffff; 
+  border-radius: 8px; 
+  box-shadow: var(--shadow); 
+  overflow: hidden; 
+}
+
+.tabsHeader { 
+  display: flex; 
+  background: var(--header-bg); 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08); 
+}
+
+.tabButton {
+  background: none; 
+  border: none; 
+  padding: 18px 25px; 
+  font-size: 16px; 
+  font-weight: 700;
+  color: var(--text); 
+  opacity: 0.65;
+  cursor: pointer; 
+  transition: all 0.2s;
+}
+
+.tabButton:hover { opacity: 1; color: var(--primary); }
+.tabButtonActive { 
+  background: #ffffff; 
+  color: var(--primary); 
+  opacity: 1;
+  border-top: 4px solid var(--primary); 
+}
+
+.tabContent { padding: 35px 40px; text-align: right; font-size: 16px; line-height: 1.7; color: var(--text); }
+
+/* רספונסיביות */
+@media (max-width: 1100px) {
+  .meetingsGrid { grid-template-columns: repeat(3, 1fr); }
+  .cardsRowGrid { grid-template-columns: repeat(2, 1fr); }
+  .pyramidContainer { flex-direction: column-reverse; gap: 30px; }
+}
+
+@media (max-width: 768px) {
+  .meetingsGrid, .cardsRowGrid { grid-template-columns: 1fr; }
+  .ethicsHeroTitle { font-size: 36px; }
+  .tabsHeader { flex-wrap: wrap; }
+  .tabButton { flex: 1 1 50%; padding: 12px; font-size: 15px; }
+}

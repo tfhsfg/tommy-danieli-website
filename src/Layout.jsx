@@ -5,16 +5,16 @@ import "./Layout.css";
 const menuItems = [
   { label: "הבית", to: "/" },
   { label: "עליי", to: "/aboutme" },
-  { label: "יישור קו" },
-  { label: "אירועים" },
-  { label: "שותפים" },
-  { label: "תכנית שנתית" },
+  { label: "יישור קו", to: "/plans" },
+  { label: "אירועים", to: "/events" },
+  { label: "שותפים", to: "/partners" },
+  { label: "תכנית שנתית", to: "/annual-plan" },
 ];
 
 const dropdownItems = [
   { label: "חיקוק המועצה הארצית", to: "/regulations" },
   { label: "מערכת החינוך", to: "/education" },
-  { label: "שיקום פצועי צה״ל וכוחות הביטחון" },
+  { label: "מיישרים קו בוועדה", to: "/committee" },
   { label: "חוק קרית שמונה" },
   { label: "כל התוכניות", to: "/plans" },
 ];
