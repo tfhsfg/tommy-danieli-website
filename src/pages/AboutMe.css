@@ -161,7 +161,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--primary);
+  background: var(--red);
   border: 3px solid #fff;
   box-shadow: 0 0 0 2px rgba(0, 59, 137, 0.35);
   z-index: 2;
