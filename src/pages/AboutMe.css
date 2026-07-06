@@ -10,7 +10,7 @@
 
 .aboutMeContent {
   width: 100%;
-  max-width: 800px;
+  max-width: 1050px; /* הרחבנו את הקונטיינר כדי לתת מקום לטקסט ולתמונות זה לצד זה */
   text-align: right;
 }
 
@@ -21,8 +21,17 @@
   text-align: center;
 }
 
+/* המבנה הדו-עמודי הראשי לחלק העליון */
+.aboutMainFlex {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
 .bodyText {
-  margin: 20px 0 0;
+  flex: 1.3; /* נותן לטקסט עדיפות שטח גדולה יותר משמאל */
+  margin: 0;
   color: var(--text);
   font-size: 18px;
   line-height: 1.7;
@@ -48,21 +57,24 @@
   line-height: 1.3;
 }
 
-/* גלריית 3 תמונות ראשית */
+/* גלריית קולאז' תמונות פיזיות מימין */
 .aboutGallery {
-  display: flex;
-  gap: 20px;
-  margin: 40px 0 60px 0;
+  flex: 0.7; /* משאיר שטח מתאים לקולאז' התמונות מימין */
+  position: relative;
+  height: 420px; /* גובה פיקסלי קבוע הכרחי בשביל אלמנטים ב-Absolute */
+  margin: 20px 0 0 0;
   width: 100%;
 }
 
 .galleryItem {
-  flex: 1;
+  position: absolute;
+  width: 190px;
   height: 240px;
-  border-radius: 12px;
+  border: 8px solid #fff; /* מסגרת לבנה עבה כמו של פולארויד / תמונה מודפסת */
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* צל עמוק ורך שנותן תחושת תלת-ממד */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, z-index 0.3s ease;
 }
 
 .galleryItem img {
@@ -71,13 +83,37 @@
   object-fit: cover;
 }
 
+/* מיקומים וזוויות הטיה עם חפיפה מינימלית בקצוות בלבד */
+.galleryItem:nth-child(1) {
+  top: 10px;
+  right: 2%;
+  transform: rotate(-6deg); /* נטייה קלה שמאלה */
+  z-index: 1;
+}
+
+.galleryItem:nth-child(2) {
+  top: 120px;
+  right: 46%; /* מורחק שמאלה כדי למנוע חפיפה עמוקה */
+  transform: rotate(5deg); /* נטייה קלה ימינה */
+  z-index: 2;
+}
+
+.galleryItem:nth-child(3) {
+  top: 320px; /* מורד למטה כדי ליצור בסיס משולש אוורירי */
+  right: 8%; /* ממורכז יחסית ביניהן */
+  transform: rotate(-3deg); /* נטייה כמעט ישרה */
+  z-index: 3;
+}
+
+/* אפקט ריחוף שמביא את התמונה לקדמת הקולאז' ומיישר אותה */
 .galleryItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(0, 59, 137, 0.15);
+  transform: scale(1.08) rotate(0deg) !important;
+  z-index: 10 !important;
+  box-shadow: 0 20px 45px rgba(0, 59, 137, 0.25);
 }
 
 .timelineSectionTitle {
-  margin-top: 48px !important;
+  margin-top: 64px !important;
   margin-bottom: 20px !important;
 }
 
@@ -279,7 +315,6 @@
   padding-bottom: 12px;
 }
 
-/* עיצוב המלל בתוך המודל */
 .modalBodyContent {
   color: var(--text);
   font-size: 16px;
@@ -290,7 +325,6 @@
   margin: 0 0 16px 0;
 }
 
-/* עיצוב כותרות המשנה הפנימיות */
 .modalInnerTitle {
   font-size: 19px;
   font-weight: 800;
@@ -299,7 +333,7 @@
 }
 
 .modalInnerTitle:first-of-type {
-  margin-top: 0; /* ביטול מרווח עליון לכותרת הראשונה */
+  margin-top: 0;
 }
 
 .timelineModalClose {
@@ -327,12 +361,11 @@
   outline: none;
 }
 
-/* שורת תמונות קטנות בתחתית המודל */
 .modalImagesRow {
   display: flex;
   gap: 12px;
   width: 100%;
-  margin-top: 32px; /* רווח נקי בין סוף הטקסט לתמונות */
+  margin-top: 32px;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   padding-top: 20px;
 }
@@ -376,22 +409,39 @@
   }
 }
 
-/* Mobile */
+/* Mobile & Tablet Responsive */
 
 @media (max-width: 900px) {
+  .aboutMainFlex {
+    flex-direction: column-reverse; /* הופך את הסדר במובייל: טקסט למעלה, קולאז' למטה */
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .aboutGallery {
+    max-width: 360px;
+    height: 320px;
+    margin: 0 auto;
+  }
+  
+  .galleryItem {
+    width: 150px;
+    height: 190px;
+  }
+  
+  /* מיקומים מעודכנים למובייל עם חפיפה עדינה */
+  .galleryItem:nth-child(1) { right: 2%; top: 10px; transform: rotate(-5deg); }
+  .galleryItem:nth-child(2) { right: 44%; top: 30px; transform: rotate(5deg); }
+  .galleryItem:nth-child(3) { right: 20%; top: 120px; transform: rotate(-2deg); }
+
   .bodyText {
     font-size: 16px;
+    width: 100%;
   }
   .sectionSubtitle {
     font-size: 20px;
   }
-  .aboutGallery {
-    flex-direction: column;
-    gap: 16px;
-  }
-  .galleryItem {
-    height: 200px;
-  }
+
   .modalImagesRow {
     gap: 8px;
   }
