@@ -1,0 +1,71 @@
+/* ==========================================
+   באנר עליון לדפי תוכן (Hero Bennett Style)
+   הכללים כאן נעולים ב-!important בכוונה: הבאנר חייב להיראות זהה
+   בכל עמוד תוכן, ללא קשר לסגנונות הגלובליים/גופן של העמוד המארח.
+   ========================================== */
+
+.banner {
+  direction: rtl !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  min-height: 480px !important;
+  display: flex !important;
+  align-items: center !important;
+  /* 10vw ולא 10% בכוונה: הבאנר פורץ ל-100vw, ואחוזים ב-padding מחושבים
+     לפי רוחב הקונטיינר ההורה (שמשתנה בין עמודים), לא לפי רוחב הבאנר עצמו */
+  padding: 60px 10vw !important;
+  color: #ffffff !important;
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  margin-top: -60px !important; /* נצמד ל-Header הראשי */
+  margin-bottom: 60px !important;
+  box-sizing: border-box !important;
+}
+
+.bannerContent {
+  max-width: 800px !important;
+  width: 100% !important;
+  text-align: right !important;
+}
+
+.bannerTitle {
+  font-family: 'almoni', 'Heebo', Arial, sans-serif !important;
+  font-size: 54px !important;
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  margin: 10px 0 20px 0 !important;
+  line-height: 1.15 !important;
+  letter-spacing: normal !important;
+}
+
+.bannerDescription {
+  font-family: 'Assistant', 'Heebo', Arial, sans-serif !important;
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 400 !important;
+  white-space: pre-line !important;
+}
+
+@media (max-width: 900px) {
+  .banner {
+    padding: 40px 20px !important;
+    min-height: 400px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .bannerContent {
+    text-align: center !important;
+  }
+
+  .bannerTitle {
+    font-size: 36px !important;
+  }
+
+  .bannerDescription {
+    font-size: 17px !important;
+  }
+}

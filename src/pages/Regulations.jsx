@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Banner from "../components/Banner";
 import "./Regulations.css";
 
 // מערך השאלות והתשובות מותאם למצע המועצה
@@ -92,20 +93,12 @@ export default function Regulations() {
   return (
     <section className="lawPageContainer almoni">
 
-      {/* 1. באנר עליון בסגנון החדש (Hero) */}
-      <section className="lawHeroBennett">
-        <div className="lawHeroContent">
-          <div className="lawHeroBadge">
-            <span className="lawHeroBadgeText">תוכנית בנט לתיקון ישראל ✶ חקיקה ורגולציה</span>
-          </div>
-          <h1 className="lawHeroTitle">חיקוק המועצה הארצית</h1>
-          <p className="lawHeroSub">
-            עושים סוף לתלות ומקבעים מעמד עצמאי - <br />
-            מעגנים את כוחן של המועצות בספר החוקים של מדינת ישראל!
-          </p>
-          <a href="#stats-section" className="bennettBtn">אני רוצה לשמוע עוד</a>
-        </div>
-      </section>
+      {/* 1. באנר עליון */}
+      <Banner
+        image="https://github.com/tfhsfg/tommy-danieli-website/blob/main/public/images/Artboard-1.png?raw=true"
+        title="חיקוק המועצה הארצית"
+        description={"עושים סוף לתלות ומקבעים מעמד עצמאי -\nמעגנים את כוחן של המועצות בספר החוקים של מדינת ישראל!"}
+      />
 
       {/* 2. כרטיסי המידע והסטטיסטיקה */}
       <div id="stats-section" className="eduSection lawStatsSection">

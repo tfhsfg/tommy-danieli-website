@@ -25,54 +25,8 @@
   font-family: "Heebo", Arial, sans-serif;
   color: var(--text);
   direction: rtl;
+  padding-top: 60px;
   padding-bottom: 100px;
-}
-
-/* --- באנר עליון (Hero) חזק וברור --- */
-.ethicsHero {
-  background: linear-gradient(to left, rgba(0, 59, 137, 0.98) 40%, rgba(17, 24, 39, 0.75)), url('/images/hero-bg.jpg') no-repeat center left;
-  background-size: cover;
-  min-height: 480px;
-  display: flex;
-  align-items: center;
-  padding: 60px 10%;
-  color: #ffffff;
-}
-
-.ethicsHeroContent { 
-  max-width: 700px; 
-  text-align: right; 
-}
-
-.ethicsHeroBadge {
-  border-top: 2px solid var(--placeholder);
-  border-bottom: 2px solid var(--placeholder);
-  padding: 6px 12px;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.ethicsHeroBadgeText { 
-  font-size: 16px; 
-  font-weight: 800; 
-  letter-spacing: 0.5px;
-  color: #ffffff;
-}
-
-.ethicsHeroTitle { 
-  font-size: 54px; 
-  color: #ffffff; 
-  font-weight: 900; 
-  margin: 10px 0 20px 0; 
-  line-height: 1.15; 
-}
-
-.ethicsHeroSub { 
-  font-size: 20px; 
-  line-height: 1.5; 
-  margin-bottom: 35px; 
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 400;
 }
 
 /* --- כפתורים קבועים --- */
@@ -290,7 +244,6 @@
 
 @media (max-width: 768px) {
   .meetingsGrid, .cardsRowGrid { grid-template-columns: 1fr; }
-  .ethicsHeroTitle { font-size: 36px; }
   .tabsHeader { flex-wrap: wrap; }
   .tabButton { flex: 1 1 50%; padding: 12px; font-size: 15px; }
 }

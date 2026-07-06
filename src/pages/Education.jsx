@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Banner from "../components/Banner";
 import "./Education.css";
 
 const problems = [
@@ -99,20 +100,12 @@ export default function Education() {
   return (
     <section className="eduPage almoni" dir="rtl">
       
-      {/* 1. באנר עליון (Hero) חדש בסגנון הוועדה */}
-      <section className="eduHeroBennett">
-        <div className="eduHeroContent">
-          <div className="eduHeroBadge">
-            <span className="eduHeroBadgeText">תוכנית בנט לתיקון ישראל ✶ מערכת החינוך</span>
-          </div>
-          <h1 className="eduHeroTitle">התוכנית למערכת החינוך</h1>
-          <p className="eduHeroSub">
-            חינוך איכותי ושוויוני לכל ילד וילדה בישראל. <br />
-            מיישרים קו עם העתיד - עוברים ללמידה רלוונטית, גמישה וערכית.
-          </p>
-          <a href="#problem-section" className="bennettBtn">אני רוצה לשמוע עוד</a>
-        </div>
-      </section>
+      {/* 1. באנר עליון */}
+      <Banner
+        image="https://www.office24.co.il/images/itempics/cat1_71.jpg"
+        title="התוכנית למערכת החינוך"
+        description={"חינוך איכותי ושוויוני לכל ילד וילדה בישראל.\nמיישרים קו עם העתיד - עוברים ללמידה רלוונטית, גמישה וערכית."}
+      />
 
       {/* 2. מה הבעיה ומה הפתרון */}
       <div className="eduSection eduProblemSolutionGrid" id="problem-section">

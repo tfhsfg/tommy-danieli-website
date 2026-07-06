@@ -9,82 +9,6 @@
   padding: 60px 20px 20px;
 }
 
-/* --- 1. באנר עליון (Hero Bennett Style) - רוחב מלא עם תמונת הרקע של החקיקה --- */
-.lawHeroBennett {
-  background: linear-gradient(to left, rgba(0, 59, 137, 0.98) 40%, rgba(17, 24, 39, 0.75)), 
-              url('https://github.com/tfhsfg/tommy-danieli-website/blob/main/public/images/Artboard-1.png?raw=true') no-repeat center center;
-  background-size: cover;
-  min-height: 480px;
-  display: flex;
-  align-items: center;
-  padding: 60px 10%;
-  color: #ffffff;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  margin-top: -60px; /* נצמד ל-Header הראשי */
-  margin-bottom: 60px;
-}
-
-.lawHeroContent {
-  max-width: 800px;
-  text-align: right;
-  width: 100%;
-}
-
-.lawHeroBadge {
-  border-top: 2px solid #045dd1;
-  border-bottom: 2px solid #045dd1;
-  padding: 6px 12px;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.lawHeroBadgeText {
-  font-size: 16px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-}
-
-.lawHeroTitle {
-  font-size: 54px;
-  color: #ffffff !important;
-  font-weight: 900;
-  margin: 10px 0 20px 0;
-  line-height: 1.15;
-  text-align: right !important;
-}
-
-.lawHeroSub {
-  font-size: 20px;
-  line-height: 1.5;
-  margin-bottom: 35px;
-  color: #ffffff;
-  font-weight: 400;
-  display: block;
-}
-
-/* כפתור מעוצב בסגנון התוכנית בתוך הבאנר */
-.lawPageContainer .bennettBtn {
-  background-color: #003b89;
-  color: #ffffff;
-  border: none;
-  padding: 13px 60px;
-  font-size: 18px;
-  font-weight: 800;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.2s ease-in-out;
-}
-
-.lawPageContainer .bennettBtn:hover {
-  background-color: #045dd1;
-  transform: translateY(-2px);
-}
-
 /* --- 2. כרטיסי המידע והסטטיסטיקה --- */
 .lawStatsSection {
   padding: 56px 0;
@@ -287,21 +211,6 @@
    רספונסיביות למובייל
    ========================================== */
 @media (max-width: 900px) {
-  .lawHeroTitle {
-    font-size: 36px;
-    text-align: center !important;
-  }
-  
-  .lawHeroBennett {
-    padding: 40px 20px;
-    min-height: 400px;
-    margin-bottom: 40px;
-  }
-
-  .lawHeroContent {
-    text-align: center;
-  }
-
   .lawStatsGrid, .ctaButtons {
     flex-direction: column;
     gap: 16px;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Banner from "../components/Banner";
 // שינוי הנתיב כדי לצאת מתיקיית pages אל תיקיית src הראשית
 import "./Committee.css";
 
@@ -29,20 +30,12 @@ export default function Committee() {
   return (
     <div className="ethicsPage">
       
-      {/* 1. באנר עליון (Hero) */}
-      <section className="ethicsHero">
-        <div className="ethicsHeroContent">
-          <div className="ethicsHeroBadge">
-            <span className="ethicsHeroBadgeText">תוכנית בנט לתיקון ישראל ✶ ועדת אתיקה ומשפט</span>
-          </div>
-          <h1 className="ethicsHeroTitle">ועדת אתיקה ומשפט אידיאלית ומודל הניהול</h1>
-          <p className="ethicsHeroSub">
-            הגיע הזמן. עושים תיקון היסטורי - <br />
-            בונים מחדש את השותפות והכוח המקצועי של הנציגים בשטח!
-          </p>
-          <a href="#meetings-section" className="bennettBtn">אני רוצה לשמוע עוד</a>
-        </div>
-      </section>
+      {/* 1. באנר עליון */}
+      <Banner
+        image="https://www.office24.co.il/images/itempics/cat1_71.jpg"
+        title="ועדת אתיקה ומשפט אידיאלית ומודל הניהול"
+        description={"הגיע הזמן. עושים תיקון היסטורי -\nבונים מחדש את השותפות והכוח המקצועי של הנציגים בשטח!"}
+      />
 
       {/* 2. שלושת עוגני הפיתוח האישי במבנה פירמידה */}
       <section className="ethSection">
