@@ -6,6 +6,7 @@ import Plans from "./pages/Plans";
 import Education from "./pages/Education";
 import Regulations from "./pages/Regulations";
 import Committee from "./pages/Committee";
+import Rehabilitation from "./pages/Regional";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/education" element={<Education />} />
         <Route path="/regulations" element={<Regulations />} />
         <Route path="/committee" element={<Committee />} />
+        <Route path="/regional" element={<Regional />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Plans.css";
 
 const planItems = [
@@ -48,7 +49,8 @@ const planItems = [
     icon: "fa-solid fa-heart-pulse",
     description: "יצירת מעטפת הוליסטית קבועה ומיידית לכל פצועי צה\"ל וכוחות הביטחון, ללא בירוקרטיה ובחזקת 'מאמינים פלוס'. הקמת מערך תמיכה רגשי ונפשי מקיף למשפחות הלוחמים ומסלולי שילוב מהירים באקדמיה ובתעסוקה.",
     targetTitle: "מטרה",
-    targetText: "חובה מוסרית: אפס בירוקרטיה בטיפול במי שנתנו את גופם ונפשם למען המדינה."
+    targetText: "חובה מוסרית: אפס בירוקרטיה בטיפול במי שנתנו את גופם ונפשם למען המדינה.",
+    to: "/regional"
   },
   {
     id: 7,
@@ -99,9 +101,15 @@ export default function Plans() {
                   <p className="planTargetText">{item.targetText}</p>
                 </div>
                 
-                <button type="button" className="readMoreGreenBtn">
-                  למידע המלא
-                </button>
+                {item.to ? (
+                  <Link to={item.to} className="readMoreGreenBtn">
+                    למידע המלא
+                  </Link>
+                ) : (
+                  <button type="button" className="readMoreGreenBtn">
+                    למידע המלא
+                  </button>
+                )}
               </div>
             </div>
 
