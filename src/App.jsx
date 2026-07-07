@@ -9,6 +9,7 @@ import Committee from "./pages/Committee";
 import Rehabilitation from "./pages/Regional";
 import NotFound from "./pages/NotFound";
 import Regional from "./pages/Regional";
+import OrganizationalLanguage from "./pages/OrganizationalLanguage";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/committee" element={<Committee />} />
         <Route path="/regional" element={<Regional />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/organizationallanguage" element={<OrganizationalLanguage />} />
       </Route>
     </Routes>
   );

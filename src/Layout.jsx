@@ -13,6 +13,9 @@ const menuItems = [
 ];
 
 const dropdownItems = [
+  { label: "מיישרים קו בשפה הארגונית", to: "/organizationallanguage" },
+  { label: "מיישרים קו בוועדה", to: "/committee" },
+  { label: "מיישרים קו במורחבת", to: "/regional" },
   { label: "מיישרים קו בחקיקה", to: "/regulations" },
   { label: "מיישרים קו בחינוך", to: "/education" },
   { label: "כל התוכניות", to: "/plans" },

@@ -1,0 +1,301 @@
+/* ==========================================
+   דף הטמעת השפה הארגונית - עיצוב מתקדם לשבירת Walls of Text
+   ========================================== */
+
+.orgLanguagePage {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 20px;
+}
+
+.orgIntroSection {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+/* ציטוט אסטרטגי מודגש */
+.orgStrategicQuote {
+  background: rgba(0, 59, 137, 0.04);
+  border-right: 5px solid var(--primary);
+  padding: 24px;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--primary);
+  text-align: right;
+  margin: 32px 0;
+}
+
+/* --- ציר זמן אנכי חדשני --- */
+.orgTimelineVertical {
+  position: relative;
+  margin: 40px 0;
+  padding-right: 30px;
+}
+
+.orgTimelineVertical::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 12px;
+  width: 3px;
+  background: rgba(0, 59, 137, 0.15);
+}
+
+.orgTimelineItem {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.orgTimelineBadge {
+  position: absolute;
+  right: -30px;
+  top: 5px;
+  background: var(--primary);
+  color: #fff;
+  width: 60px;
+  height: 26px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(0, 59, 137, 0.2);
+}
+
+.orgTimelineContent {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.orgTimelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.orgTimelineHeader h3 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.orgTimelineTime {
+  background: rgba(0, 59, 137, 0.08);
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.orgTimelineDetails {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.orgTimelineDetails li {
+  position: relative;
+  padding-right: 18px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.orgTimelineDetails li::before {
+  content: '•';
+  position: absolute;
+  right: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* --- כרטיסיות קרב: אתגרים ופתרונות --- */
+.orgChallengesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.orgChallengeCard {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.orgChallengeTop {
+  background: #f8fafc;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.orgChallengeTop i {
+  font-size: 24px;
+  color: var(--red);
+}
+
+.orgChallengeTop h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.orgChallengeBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex-grow: 1;
+}
+
+.orgChallengeBlock {
+  font-size: 14.5px;
+  line-height: 1.6;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.orgChallengeBlock.problem {
+  background: rgba(239, 68, 68, 0.04);
+  color: #334155;
+  border-right: 3px solid var(--red);
+}
+
+.orgChallengeBlock.solution {
+  background: rgba(16, 185, 129, 0.04);
+  color: #334155;
+  border-right: 3px solid #10b981;
+}
+
+/* --- באנר Monday מורחב --- */
+.orgGoalsSubtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: -30px auto 40px;
+  opacity: 0.9;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.orgMondayGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.orgMondayCard {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 24px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.orgMondayCard:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.orgMondayNumber {
+  font-size: 36px;
+  font-weight: 900;
+  opacity: 0.2;
+  margin-bottom: 8px;
+}
+
+.orgMondayCard h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.orgMondayCard p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  opacity: 0.88;
+}
+
+/* --- גריד חזון פוליטי רחב (תקנון על וכנסת) --- */
+.orgBigVisionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 36px;
+}
+
+.orgVisionCard {
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.orgVisionIcon {
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.orgVisionCard h3 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.orgVisionCard p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.orgVisionHighlight {
+  background: rgba(0, 59, 137, 0.03);
+  padding: 14px;
+  border-radius: 6px;
+  border-right: 3px solid var(--primary);
+  font-size: 14.5px !important;
+}
+
+/* רספונסיביות למובייל */
+@media (max-width: 768px) {
+  .orgTimelineHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .orgBigVisionGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
