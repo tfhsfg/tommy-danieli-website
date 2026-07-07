@@ -1,32 +1,9 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
 // שינוי הנתיב כדי לצאת מתיקיית pages אל תיקיית src הראשית
 import "./Committee.css";
 
 export default function Committee() {
-  const [activeTab, setActiveTab] = useState(0);
-
-  // נתונים עבור הטאבים
-  const tabData = [
-    {
-      title: "חוק המשרתים של בנט",
-      content: "החוק נכתב בשיתוף בוגרי אגף התקציבים ויוצר סדר עדיפויות חדש במדינה, כדי לתת תמריצים אמיתיים לכל אזרחי מדינת ישראל לתרום למדינה. כולם מוזמנים לקחת חלק בהגנה על המדינה או שירות לאומי, ללמוד לימודים אקדמיים על חשבון המדינה לאחר השירות ולהשתלב בשוק התעסוקה. החוק מייצר גלגל תנופה שיקדם את המשק הישראלי לצמיחה חסרת תקדים, בעקבות שיפור הפריון הכלכלי והאחדות בעם."
-    },
-    {
-      title: "מאיפה הכסף?",
-      content: "התקציב למימון המהפכה האתית והמשפטית יגיע ישירות מתוך התייעלות מבנית עמוקה וקיצוץ רוחבי בסעיפים בירוקרטיים מנופחים ובמשרדי ממשלה מיותרים. כספים קואליציוניים שהלכו עד היום למקומות שלא מעודדים עשייה - יופנו במישרין להעצמת הנציגים המשרתים בשטח ולבניית כלים מתקדמים למאה ה-21."
-    },
-    {
-      title: "שאלת מיליון השקל",
-      content: "שאלת המפתח היא כיצד הופכים את נציגי הוועדה למומחים הגדולים ביותר למשפט מועצתי. התשובה טמונה בהכשרת העומק ובכלים הפרקטיים: ברגע שלנציג יש את היכולת לנסח חוות דעת משפטית עצמאית ולהבדיל בין חוק חיוני לבירוקרטיה, הכוח חוזר לידי הנוער עצמו באופן מלא ובלתי ניתן לערעור."
-    },
-    {
-      title: "בשורה התחתונה",
-      content: "בשורה התחתונה, אנחנו מיישרים קו עם תפוקה ועשייה. הוועדה האתית-משפטית הארצית בראשותי לא תהיה עוד ועדה תיאורטית של ניירות ופרוטוקולים, אלא חממה לפיתוח מנהיגות משתפת, יצירת תוצרים מעשיים בשטח והובלת המהפכות הגדולות של הקדנציה הקרובה."
-    }
-  ];
-
   return (
     <div className="ethicsPage">
       
@@ -159,34 +136,10 @@ export default function Committee() {
         <button type="button" className="bennettBtn">אני רוצה לשמוע עוד</button>
       </section>
 
-      {/* 6. עוד על התוכנית: מערכת לשוניות אינטראקטיבית */}
-      <section className="ethSection">
-        <h2 className="ethSectionTitle" style={{ fontSize: "36px" }}>עוד על הוועדה והחזון</h2>
-        
-        <div className="tabsContainer">
-          <div className="tabsHeader">
-            {tabData.map((tab, idx) => (
-              <button
-                key={idx}
-                type="button"
-                className={`tabButton ${activeTab === idx ? "tabButtonActive" : ""}`}
-                onClick={() => setActiveTab(idx)}
-              >
-                {tab.title}
-              </button>
-            ))}
-          </div>
-          
-          <div className="tabContent">
-            <p>{tabData[activeTab].content}</p>
-          </div>
-        </div>
-      </section>
-
       {/* כפתור ניווט תחתון לחזרה */}
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-        <Link to="/plans" className="bennettBtn" style={{ background: "none", border: "2px solid #222", color: "#222" }}>
-          לכל התוכניות והוועדות
+      <div className="readMoreContainer">
+        <Link to="/plans" className="readMoreButton">
+          לכל התוכניות
         </Link>
       </div>
 
