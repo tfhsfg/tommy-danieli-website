@@ -15,8 +15,6 @@ const menuItems = [
 const dropdownItems = [
   { label: "מיישרים קו בחקיקה", to: "/regulations" },
   { label: "מיישרים קו בחינוך", to: "/education" },
-  { label: "מיישרים קו בוועדה", to: "/committee" },
-  { label: "מיישרים קו במורחבת", to: "/regional" },
   { label: "כל התוכניות", to: "/plans" },
 ];
 
