@@ -1,0 +1,222 @@
+/* ==========================================
+   תבנית דף החוק החדש (מבנה אחיד עם דף מערכת החינוך)
+   ========================================== */
+
+.lawPageContainer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 20px;
+}
+
+/* --- 2. כרטיסי המידע והסטטיסטיקה --- */
+.lawStatsSection {
+  padding: 56px 0;
+  text-align: center;
+}
+
+.dangerText {
+  color: var(--red);
+}
+
+.lawStatsGrid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.lawStatCard {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.lawStatIconWrap {
+  font-size: 44px;
+  color: var(--primary);
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.lawStatText {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* --- 3. חלק לבן - תוכנית החוק --- */
+.lawPlanSection {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #ffffff;
+  padding: 56px 20px;
+}
+
+.lawPlanSection .eduSectionTitle {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lawPlanGrid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.lawPlanCard {
+  flex: none; 
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px 30px;
+  box-shadow: var(--shadow);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.lawPlanNumber {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--placeholder);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.lawPlanCardTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.lawPlanCardSubtitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 20px 0;
+}
+
+.lawPlanBullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lawPlanBullets li {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  position: relative;
+  padding-right: 14px;
+}
+
+.lawPlanBullets li::before {
+  content: "–";
+  position: absolute;
+  right: 0;
+  color: var(--primary);
+}
+
+/* --- 4. קריאה לממשלה --- */
+.lawCallToAction {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaSub {
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.ctaMain {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.4;
+  margin: 0 0 30px 0;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.ctaPrimaryBtn {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ctaPrimaryBtn:hover {
+  background-color: var(--placeholder);
+}
+
+.ctaWhiteBtn {
+  background-color: #ffffff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ctaWhiteBtn:hover {
+  background-color: var(--bg);
+}
+
+/* התאמת ריווח וצבע לפסקאות ההסבר */
+.lawPageContainer p {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.lawStatsSection p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* ==========================================
+   רספונסיביות למובייל
+   ========================================== */
+@media (max-width: 900px) {
+  .lawStatsGrid, .ctaButtons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ctaMain {
+    font-size: 20px;
+  }
+}
