@@ -1,6 +1,6 @@
 import "./Banner.css";
 
-export default function Banner({ image, title, description }) {
+export default function Banner({ image = "/images/banner-default.jpg", title, description }) {
   return (
     <section
       className="banner"

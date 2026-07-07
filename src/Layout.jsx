@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./App.css";
 import "./Layout.css";
+import { preloadImages } from "./utils/preloadImages";
 
 const menuItems = [
   { label: "הבית", to: "/" },
@@ -25,6 +26,15 @@ const dropdownItems = [
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  // מריצים את טעינת התמונות ברקע אחרי שהעמוד הראשון כבר נטען,
+  // כדי לא להתחרות על רוחב פס עם התוכן הקריטי של הטעינה הראשונה
+  useEffect(() => {
+    const idleRequest = window.requestIdleCallback || ((cb) => setTimeout(cb, 300));
+    const idleCancel = window.cancelIdleCallback || clearTimeout;
+    const id = idleRequest(preloadImages);
+    return () => idleCancel(id);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
