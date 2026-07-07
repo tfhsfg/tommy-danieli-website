@@ -114,9 +114,9 @@ export default function Home() {
         </div>
 
         <div className="readMoreContainer">
-          <a href="/tommy-danieli-website/#/plans" className="readMoreButton almoni">
+          <Link to="/plans" className="readMoreButton almoni">
             לקריאה עוד
-          </a>
+          </Link>
         </div>
       </section>
       {/* אזור הוידאו המעודכן עם נגן יוטיוב המוטמע כהלכה */}
