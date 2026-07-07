@@ -119,6 +119,7 @@ const faqData = [
 
 export default function OrganizationalLanguage() {
   const [openFaq, setOpenFaq] = useState(null);
+  const [timelineOpen, setTimelineOpen] = useState(false);
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -140,33 +141,6 @@ export default function OrganizationalLanguage() {
         <blockquote className="orgStrategicQuote">
           <strong>השפה הארגונית היא חוקת העבודה שלנו.</strong> היא קוד ההפעלה המחייב והמסונכרן שמגדיר מהי מועצה חוקית ומתפקדת, ומבהיר לשטח דבר אחד פשוט: עידן השכונה במועצות הנוער נגמר. יש סטנדרט אחיד למשילות דמוקרטית.
         </blockquote>
-      </div>
-
-      {/* חלק 2: ציר זמן ויזואלי ותחנות עבודה */}
-      <div className="eduSection">
-        <h2 className="eduSectionTitle brand-blue">מפת הדרכים השנתית ושלבי ההתנעה</h2>
-        <p className="eduSectionDesc text-center">לוח זמנים קשיח ותחנות עבודה ברורות המשלבות את דרגי המטה, המחוז והשטח:</p>
-        
-        <div className="orgTimelineVertical">
-          {timelineSteps.map((step, index) => (
-            <div className="orgTimelineItem" key={index}>
-              <div className="orgTimelineBadge">
-                <span>{step.phase}</span>
-              </div>
-              <div className="orgTimelineContent">
-                <div className="orgTimelineHeader">
-                  <h3>{step.title}</h3>
-                  <span className="orgTimelineTime">{step.time}</span>
-                </div>
-                <ul className="orgTimelineDetails">
-                  {step.details.map((detail, dIdx) => (
-                    <li key={dIdx}>{detail}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* חלק 3: כרטיסיות קרב - אתגרים ופתרונות */}
@@ -239,6 +213,46 @@ export default function OrganizationalLanguage() {
             <p className="orgVisionHighlight">
               <strong>הדאטה ככלי נשק פוליטי בוועדות הכנסת:</strong> כשינסו לטעון שאנחנו גוף חובבני, נציג נתונים אמפיריים חותכים: 100% מהמועצות מבוקרות ב-Monday, עברו בחירות חשאיות ופועלות תחת מנחים מוסמכים. השפה הארגונית מסירה כל עילה חוקית להתנגדות לחוק!
             </p>
+          </div>
+        </div>
+      </div>
+
+      {/* חלק 5.5: מפת הדרכים השנתית - מוסתרת מאחורי כפתור כחול יחיד */}
+      <div className="eduSection">
+        <button
+          type="button"
+          className="orgTimelineToggleBtn"
+          onClick={() => setTimelineOpen((prev) => !prev)}
+          aria-expanded={timelineOpen}
+        >
+          <span>מפת הדרכים השנתית ושלבי ההתנעה</span>
+          <span className="orgTimelineToggleIcon">{timelineOpen ? "−" : "+"}</span>
+        </button>
+
+        <div className={`orgTimelineCollapseWrap${timelineOpen ? " orgTimelineCollapseOpen" : ""}`}>
+          <div className="orgTimelineCollapseInner">
+            <p className="eduSectionDesc text-center">לוח זמנים קשיח ותחנות עבודה ברורות המשלבות את דרגי המטה, המחוז והשטח:</p>
+
+            <div className="orgTimelineVertical">
+              {timelineSteps.map((step, index) => (
+                <div className="orgTimelineItem" key={index}>
+                  <div className="orgTimelineBadge">
+                    <span>{step.phase}</span>
+                  </div>
+                  <div className="orgTimelineContent">
+                    <div className="orgTimelineHeader">
+                      <h3>{step.title}</h3>
+                      <span className="orgTimelineTime">{step.time}</span>
+                    </div>
+                    <ul className="orgTimelineDetails">
+                      {step.details.map((detail, dIdx) => (
+                        <li key={dIdx}>{detail}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

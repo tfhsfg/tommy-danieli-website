@@ -286,6 +286,53 @@
   font-size: 14.5px !important;
 }
 
+/* --- כפתור יחיד לפתיחת מפת הדרכים השנתית --- */
+.orgTimelineToggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 20px 28px;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.orgTimelineToggleBtn:hover {
+  background-color: var(--placeholder);
+}
+
+.orgTimelineToggleIcon {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.orgTimelineCollapseWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.orgTimelineCollapseOpen {
+  grid-template-rows: 1fr;
+}
+
+.orgTimelineCollapseInner {
+  overflow: hidden;
+}
+
+.orgTimelineCollapseInner .orgTimelineVertical {
+  margin-top: 28px;
+}
+
 /* רספונסיביות למובייל */
 @media (max-width: 768px) {
   .orgTimelineHeader {
