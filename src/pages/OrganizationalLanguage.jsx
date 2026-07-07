@@ -218,40 +218,41 @@ export default function OrganizationalLanguage() {
       </div>
 
       {/* חלק 5.5: מפת הדרכים השנתית - מוסתרת מאחורי כפתור כחול יחיד */}
-      <div className="eduSection">
+      <div className={`eduSection orgTimelineToggleCard${timelineOpen ? " orgTimelineToggleOpen" : ""}`}>
         <button
           type="button"
           className="orgTimelineToggleBtn"
           onClick={() => setTimelineOpen((prev) => !prev)}
           aria-expanded={timelineOpen}
         >
-          <span>מפת הדרכים השנתית ושלבי ההתנעה</span>
-          <span className="orgTimelineToggleIcon">{timelineOpen ? "−" : "+"}</span>
+          מפת הדרכים השנתית ושלבי ההתנעה
         </button>
 
-        <div className={`orgTimelineCollapseWrap${timelineOpen ? " orgTimelineCollapseOpen" : ""}`}>
+        <div className="orgTimelineCollapseWrap">
           <div className="orgTimelineCollapseInner">
-            <p className="eduSectionDesc text-center">לוח זמנים קשיח ותחנות עבודה ברורות המשלבות את דרגי המטה, המחוז והשטח:</p>
+            <div className="orgTimelineCollapseContent">
+              <p className="eduSectionDesc text-center">לוח זמנים קשיח ותחנות עבודה ברורות המשלבות את דרגי המטה, המחוז והשטח:</p>
 
-            <div className="orgTimelineVertical">
-              {timelineSteps.map((step, index) => (
-                <div className="orgTimelineItem" key={index}>
-                  <div className="orgTimelineBadge">
-                    <span>{step.phase}</span>
-                  </div>
-                  <div className="orgTimelineContent">
-                    <div className="orgTimelineHeader">
-                      <h3>{step.title}</h3>
-                      <span className="orgTimelineTime">{step.time}</span>
+              <div className="orgTimelineVertical">
+                {timelineSteps.map((step, index) => (
+                  <div className="orgTimelineItem" key={index}>
+                    <div className="orgTimelineBadge">
+                      <span>{step.phase}</span>
                     </div>
-                    <ul className="orgTimelineDetails">
-                      {step.details.map((detail, dIdx) => (
-                        <li key={dIdx}>{detail}</li>
-                      ))}
-                    </ul>
+                    <div className="orgTimelineContent">
+                      <div className="orgTimelineHeader">
+                        <h3>{step.title}</h3>
+                        <span className="orgTimelineTime">{step.time}</span>
+                      </div>
+                      <ul className="orgTimelineDetails">
+                        {step.details.map((detail, dIdx) => (
+                          <li key={dIdx}>{detail}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
