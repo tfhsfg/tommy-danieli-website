@@ -111,7 +111,7 @@ li:not(.menuItem) {
   margin-top: 10px;
 }
 
-/* Shared FAQ accordion (used by Education + Regulations) */
+/* Shared FAQ accordion (used by all pages) */
 
 .eduFaq {
   display: flex;

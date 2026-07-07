@@ -1,5 +1,5 @@
 /* ==========================================
-   דף שיקום פצועי צה"ל וכוחות הביטחון
+   דף מורחבת אתיקה - פורום יו"רי ועדות
    ========================================== */
 
 .rehabPage {
@@ -18,16 +18,28 @@
 
 .rehabIntroSection .eduSectionDesc {
   color: var(--text);
-  font-size: 16px;
-  line-height: 1.7;
-  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0 auto 20px;
 }
 
-/* --- תוכנית עשרת הצעדים --- */
+.rehabScheduleInfo {
+  background: rgba(0, 59, 137, 0.05);
+  border-right: 4px solid var(--primary);
+  padding: 16px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: var(--text);
+  text-align: right;
+  margin-top: 24px;
+  line-height: 1.6;
+}
+
+/* --- תוכנית ארבעת העוגנים --- */
 .rehabProgramGrid {
   margin-top: 36px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 22px;
   text-align: right;
 }
@@ -39,82 +51,70 @@
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease;
+}
+
+.rehabProgramCard:hover {
+  transform: translateY(-4px);
 }
 
 .rehabProgramNumber {
   font-size: 32px;
   font-weight: 900;
-  color: var(--placeholder);
-  opacity: 0.5;
-  display: block;
-  margin-bottom: 10px;
-  line-height: 1;
-}
-
-.rehabProgramTitle {
-  margin: 0 0 10px;
   color: var(--primary);
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 1.3;
+  opacity: 0.25;
+  display: block;
+  margin-bottom: 8px;
 }
 
-.rehabProgramDesc {
+.rehabProgramCard h3 {
+  margin: 0 0 12px;
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.rehabProgramCard p {
   margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.6;
   color: var(--text);
 }
 
-/* --- עובדות שמחייבות פעולה --- */
-.rehabFactsSection {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  margin-bottom: 0;
-  background: #ffffff;
-  padding: 56px 20px;
-}
-
-.rehabFactsSection .eduSectionTitle {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* --- עקרונות הליבה (כרטיסיות) --- */
 .rehabFactsGrid {
-  max-width: 1000px;
-  margin: 0 auto;
   display: flex;
   gap: 24px;
-  justify-content: center;
+  margin-top: 36px;
 }
 
 .rehabFactCard {
   flex: 1;
   background: #ffffff;
   border-radius: 8px;
-  padding: 40px 24px;
+  padding: 32px 24px;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .rehabFactIconWrap {
-  font-size: 40px;
+  font-size: 36px;
   color: var(--primary);
-  margin-bottom: 20px;
-  opacity: 0.85;
+  margin-bottom: 16px;
+  opacity: 0.9;
 }
 
 .rehabFactText {
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 15.5px;
+  font-weight: 500;
   color: var(--text);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* --- מדדי הצלחה --- */
@@ -137,48 +137,82 @@
 }
 
 .rehabGoalsList {
-  max-width: 640px;
+  max-width: 680px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 48px;
-  text-align: center;
+  gap: 32px;
 }
 
 .rehabGoalItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: start;
 }
 
 .rehabGoalCheck {
-  font-size: 26px;
-  color: #fff;
-  margin-bottom: 16px;
+  background: #fff;
+  color: var(--primary);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  margin-top: 4px;
 }
 
 .rehabGoalItem h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
+  margin: 0 0 8px;
+  font-size: 22px;
   font-weight: 800;
-  color: #fff;
 }
 
 .rehabGoalItem p {
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
+  opacity: 0.9;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
 }
 
-/* רספונסיביות ומובייל */
-@media (max-width: 900px) {
-  .rehabProgramGrid {
-    grid-template-columns: 1fr;
-  }
+/* --- קישור חזרה לעמוד הבית --- */
+.rehabFooterLink {
+  margin-top: 48px;
+  text-align: center;
+}
 
+.rehabFooterLink a {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.rehabFooterLink a:hover {
+  opacity: 0.8;
+}
+
+/* --- רספונסיביות לניידים וטאבלטים --- */
+@media (max-width: 768px) {
   .rehabFactsGrid {
     flex-direction: column;
+    gap: 16px;
+  }
+
+  .rehabGoalsTitle {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  .rehabGoalItem h3 {
+    font-size: 19px;
+  }
+
+  .rehabGoalItem p {
+    font-size: 15px;
   }
 }

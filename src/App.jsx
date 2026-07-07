@@ -8,6 +8,7 @@ import Regulations from "./pages/Regulations";
 import Committee from "./pages/Committee";
 import Rehabilitation from "./pages/Regional";
 import NotFound from "./pages/NotFound";
+import Regional from "./pages/Regional";
 
 export default function App() {
   return (
