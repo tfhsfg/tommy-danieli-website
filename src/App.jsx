@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import Regional from "./pages/Regional";
 import OrganizationalLanguage from "./pages/OrganizationalLanguage";
 import Regulations from "./pages/Regulations";
+import Partners from "./pages/Partners";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/organizationallanguage" element={<OrganizationalLanguage />} />
         <Route path="/regulations" element={<Regulations />} />
+        <Route path="/partners" element={<Partners />} />
       </Route>
     </Routes>
   );
