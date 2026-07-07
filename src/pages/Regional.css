@@ -176,26 +176,6 @@
   line-height: 1.6;
 }
 
-/* --- קישור חזרה לעמוד הבית --- */
-.rehabFooterLink {
-  margin-top: 48px;
-  text-align: center;
-}
-
-.rehabFooterLink a {
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: opacity 0.2s ease;
-}
-
-.rehabFooterLink a:hover {
-  opacity: 0.8;
-}
-
 /* --- רספונסיביות לניידים וטאבלטים --- */
 @media (max-width: 768px) {
   .rehabFactsGrid {

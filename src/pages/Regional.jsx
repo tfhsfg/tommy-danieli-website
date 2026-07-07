@@ -5,22 +5,22 @@ import "./Regional.css";
 
 const programSteps = [
   {
-    id: "א׳",
+    id: "01",
     title: "למידה ופיתוח",
     desc: "פתיחת כל מפגש ביחידת למידה ייעודית: העשרה וכלים מקצועיים, הכשרות משפטיות, סדנאות רטוריקה, ניהול קונפליקטים ופיתוח אישי ומקצועי לחברי המורחבת.",
   },
   {
-    id: "ב׳",
+    id: "02",
     title: "מעקב ובקרה",
     desc: "יישור קו והסרת חסמים בשטח. סיכום סטטוס ביצוע מהמפגש הקודם, הצפת קשיים ואתגרים ייחודיים מהמחוזות והרשויות, ומציאת פתרונות משותפים בזמן אמת.",
   },
   {
-    id: "ג׳",
+    id: "03",
     title: "אסטרטגיה ותכנון",
     desc: "מבט קדימה ויעדי מאקרו. סקירת התוכנית השנתית והתאמת המדיניות הארצית למחוזות ולרשויות, מתוך שאיפה לייצר מדיניות ריאלית, רלוונטית ומייצגת עבור כל גלגלי המועצה.",
   },
   {
-    id: "ד׳",
+    id: "04",
     title: "קהילת עמיתים",
     desc: "שיתוף, התייעצות וחיבור. במה פתוחה ליושבי הראש לשתף בהצלחות, להציג יוזמות מקומיות ולבקש ייעוץ, חשיבה משותפת וגיבוי מחבריהם לפורום תוך פיתוח אקלים צוותי תומך.",
   },
@@ -80,7 +80,7 @@ export default function Regional() {
 
   return (
     <div className="rehabPage">
-      <Banner title="מורחבת אתיקה" subtitle="פורום יו״רי הוועדות האתיות-משפטיות" />
+      <Banner title="מיישרים קו במורחבת" description="הפורום של יושברי ראש הוועדות האתיות-משפטיות" />
 
       {/* 1. רציונל ותפיסת עולם */}
       <div className="eduSection rehabIntroSection">
@@ -138,7 +138,7 @@ export default function Regional() {
         </div>
       </div>
 
-      {/* 5. שאלות ותשובות - הועתק בדיוק מעמוד Education */}
+      {/* 5. שאלות ותשובות */}
       <div className="eduSection">
         <h2 className="eduSectionTitle brand-blue">שאלות ותשובות על הפורום</h2>
         <div className="eduFaq">
@@ -163,10 +163,10 @@ export default function Regional() {
         </div>
       </div>
 
-      {/* 6. כפתור חזרה לעמוד הבית */}
-      <div className="rehabFooterLink">
-        <Link to="/" className="brand-blue">
-          <i className="fa-solid fa-arrow-right-long"></i> חזרה לעמוד הבית
+      {/* 6. כפתור תחתון לחזרה לכל התוכניות */}
+      <div className="readMoreContainer">
+        <Link to="/plans" className="readMoreButton">
+          לכל התוכניות
         </Link>
       </div>
     </div>
