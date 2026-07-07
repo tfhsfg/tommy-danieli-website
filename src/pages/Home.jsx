@@ -89,7 +89,7 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <img src={`https://raw.githubusercontent.com/tfhsfg/tommy-danieli-website/refs/heads/main/public/images/hero-banner.png`} draggable={false} alt="תומי דניאלי - מיישרים קו" />
+        <img src="/images/hero-banner.png" draggable={false} alt="תומי דניאלי - מיישרים קו" />
       </section>
 
       <section className="almoni">

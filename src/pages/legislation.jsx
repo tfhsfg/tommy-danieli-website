@@ -95,7 +95,7 @@ export default function Regulations() {
 
       {/* 1. באנר עליון */}
       <Banner
-        image="https://github.com/tfhsfg/tommy-danieli-website/blob/main/public/images/Artboard-1.png?raw=true"
+        image="/images/Artboard-1.png"
         title="חיקוק המועצה הארצית"
         description={"עושים סוף לתלות ומקבעים מעמד עצמאי -\nמעגנים את כוחן של המועצות בספר החוקים של מדינת ישראל!"}
       />

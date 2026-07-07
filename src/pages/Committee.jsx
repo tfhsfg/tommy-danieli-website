@@ -9,7 +9,7 @@ export default function Committee() {
       
       {/* 1. באנר עליון */}
       <Banner
-        image="https://www.office24.co.il/images/itempics/cat1_71.jpg"
+        image="/images/banner-default.jpg"
         title="ועדת אתיקה ומשפט אידיאלית ומודל הניהול"
         description={"הגיע הזמן. עושים תיקון היסטורי -\nבונים מחדש את השותפות והכוח המקצועי של הנציגים בשטח!"}
       />

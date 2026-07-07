@@ -24,7 +24,7 @@ export default function Partners() {
   return (
     <section className="partnersPage almoni" dir="rtl">
       <Banner
-        image="https://www.office24.co.il/images/itempics/cat1_71.jpg"
+        image="/images/banner-default.jpg"
         title="שותפים"
         description={"יחד נצליח לשנות את המערכת -\nהכירו את הגורמים והשותפים שמובילים איתי את הדרך."}
       />

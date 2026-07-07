@@ -102,7 +102,7 @@ export default function Education() {
       
       {/* 1. באנר עליון */}
       <Banner
-        image="https://www.office24.co.il/images/itempics/cat1_71.jpg"
+        image="/images/banner-default.jpg"
         title="התוכנית למערכת החינוך"
         description={"חינוך איכותי ושוויוני לכל ילד וילדה בישראל.\nמיישרים קו עם העתיד - עוברים ללמידה רלוונטית, גמישה וערכית."}
       />
