@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
 import "./Regional.css";
@@ -35,7 +34,7 @@ const programSteps = [
   },
 ];
 
-// 2. עקרונות הליבה ודרכי עבודה (למעלה לפי הנחיית אור)
+// 2. עקרונות הליבה ודרכי עבודה
 const coreFacts = [
   {
     icon: "fa-solid fa-handshake",
@@ -81,7 +80,7 @@ export default function Regional() {
       <div className="eduSection">
         <div className="rehabIntroSection">
           <p className="eduSectionDesc">
-            יושבי ראש הוועדות האתיות-משפטיות במחוזות וברשויות הם הזרוע הביצועית והחזקה ביותר של עולם האתיקה בישראל. עם זאת, תחום האתיקה והמשפט נוטה לעיתים להיות פחות מוכר בשטח הבית-ספרי והמקומי.
+            יושבי ראש הוועדות האתיות-משפטיות במחוזות וברשויות הם הזרוע הביצועיות והחזקה ביותר של עולם האתיקה בישראל. עם זאת, תחום האתיקה והמשפט נוטה לעיתים להיות פחות מוכר בשטח הבית-ספרי והמקומי.
           </p>
           <p className="eduSectionDesc">
             העבודה שלנו ברמה המחוזית והארצית, משמעותית ככל שתהיה, אינה יכולה לחיות "בתוך עצמה" – כדי להוביל שינויי עומק אמיתיים, המדיניות חייבת לפגוש את השטח בצורה מקצועית, עקבית ובלתי מסורבלת, דרך העצמה וחיזוק של בעלי התפקידים המקומיים.
@@ -134,7 +133,7 @@ export default function Regional() {
 
       {/* 5. מדדי הצלחה */}
       <div className="rehabSuccessSection">
-        <h2 className="rehabGoalsTitle">איך נדע שהצלחנו?</h2>
+        <h2 className="rehabGoalsTitle">איך נדע שהצלחנו? (מדדי הצלחה)</h2>
         <div className="rehabGoalsList">
           {goals.map((g, i) => (
             <div className="rehabGoalItem" key={i}>
@@ -151,7 +150,7 @@ export default function Regional() {
       {/* 6. כפתור תחתון לחזרה לכל התוכניות */}
       <div className="readMoreContainer">
         <Link to="/plans" className="readMoreButton">
-          לכל התוכניות 
+          לכל התוכניות המנהיגותיות
         </Link>
       </div>
     </div>
