@@ -2,7 +2,6 @@ import Home from "../pages/Home";
 import AboutMe from "../pages/AboutMe";
 import Plans from "../pages/Plans";
 import Education from "../pages/Education";
-import Legislation from "../pages/Legislation";
 import Committee from "../pages/Committee";
 import Regional from "../pages/Regional";
 import OrganizationalLanguage from "../pages/OrganizationalLanguage";
