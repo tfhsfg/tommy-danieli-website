@@ -22,6 +22,7 @@ const personJsonLd = {
 };
 
 // מקור אמת יחיד: משמש גם את הראוטים באפליקציה, גם את ה-SEO (title/description),
+
 // גם את סקריפט ה-prerender וגם את מפת האתר (sitemap.xml) שנוצרים בזמן הבנייה
 export const routes = [
   {
