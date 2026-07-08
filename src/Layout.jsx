@@ -100,15 +100,14 @@ export default function Layout() {
               <li key={item.label} className="menuItem">
                 {item.label === "מיישרים קו" ? (
                   <div className={`dropdownWrap ${isDropdownOpen ? "dropdownActive" : ""}`}>
-                    {/* כאן שינינו ל-a רגיל כדי לשמור על מבנה ה-CSS המקורי של המחשב ללא פגיעה בחץ */}
-                    <a 
-                      href="#"
+                    <Link
+                      to={item.to}
                       className="menuButton"
                       onClick={handleDropdownClick}
                     >
                       <span>{item.label}</span>
                       <span className="chevron">▼</span>
-                    </a>
+                    </Link>
 
                     <div className="dropdown">
                       {dropdownItems.map((dropItem) =>
