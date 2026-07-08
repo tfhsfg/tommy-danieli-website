@@ -1,33 +1,16 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
-import Home from "./pages/Home";
-import AboutMe from "./pages/AboutMe";
-import Plans from "./pages/Plans";
-import Education from "./pages/Education";
-import Legislation from "./pages/legislation";
-import Committee from "./pages/Committee";
-import Rehabilitation from "./pages/Regional";
 import NotFound from "./pages/NotFound";
-import Regional from "./pages/Regional";
-import OrganizationalLanguage from "./pages/OrganizationalLanguage";
-import Regulations from "./pages/Regulations";
-import Partners from "./pages/Partners";
+import { routes } from "./seo/routes";
 
 export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/aboutme" element={<AboutMe />} />
-        <Route path="/plans" element={<Plans />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/legislation" element={<Legislation />} />
-        <Route path="/committee" element={<Committee />} />
-        <Route path="/regional" element={<Regional />} />
+        {routes.map(({ path, component: Component }) => (
+          <Route key={path} path={path} element={<Component />} />
+        ))}
         <Route path="*" element={<NotFound />} />
-        <Route path="/organizationallanguage" element={<OrganizationalLanguage />} />
-        <Route path="/regulations" element={<Regulations />} />
-        <Route path="/partners" element={<Partners />} />
       </Route>
     </Routes>
   );

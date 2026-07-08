@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import "./App.css";
 import "./Layout.css";
 import { preloadImages } from "./utils/preloadImages";
+import { routes } from "./seo/routes";
+import Seo from "./components/Seo";
 
 const menuItems = [
   { label: "הבית", to: "/" },
@@ -26,6 +28,8 @@ const dropdownItems = [
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { pathname } = useLocation();
+  const currentRoute = routes.find((route) => route.path === pathname);
 
   // מריצים את טעינת התמונות ברקע אחרי שהעמוד הראשון כבר נטען,
   // כדי לא להתחרות על רוחב פס עם התוכן הקריטי של הטעינה הראשונה
@@ -57,6 +61,24 @@ export default function Layout() {
 
   return (
     <div className="site" dir="rtl">
+      {currentRoute ? (
+        <Seo
+          title={currentRoute.title}
+          description={currentRoute.description}
+          path={currentRoute.path}
+          image={currentRoute.image}
+          jsonLd={currentRoute.jsonLd}
+          noindex={currentRoute.noindex}
+        />
+      ) : (
+        <Seo
+          title="העמוד לא נמצא"
+          description="העמוד שחיפשת לא נמצא באתר של תומי דניאלי."
+          path={pathname}
+          noindex
+        />
+      )}
+
       <header className="header">
         <nav
           className="nav"

@@ -1,13 +1,23 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(
+const app = (
   <StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )
+
+const rootEl = document.getElementById('root')
+
+// דפים שנוצרו מראש (prerender) מגיעים עם תוכן קיים ב-root וצריך "hydrate";
+// בסביבת פיתוח (vite dev) ה-root ריק, אז עושים רינדור רגיל מהלקוח
+if (rootEl.hasChildNodes()) {
+  hydrateRoot(rootEl, app)
+} else {
+  createRoot(rootEl).render(app)
+}

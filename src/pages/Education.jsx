@@ -142,7 +142,7 @@ export default function Education() {
         <div className="eduGoalsGrid">
           {precentage.map((g, i) => (
             <div className="eduGoalCard" key={i}>
-              <h1 style={{ fontWeight: 900, fontSize: "42px", margin: "0 0 10px 0" }}>{g.title}</h1>
+              <h3 style={{ fontWeight: 900, fontSize: "42px", margin: "0 0 10px 0" }}>{g.title}</h3>
               <p>{g.desc}</p>
             </div>
           ))}

@@ -89,7 +89,12 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <img src="/images/hero-banner.png" draggable={false} alt="תומי דניאלי - מיישרים קו" />
+        <img
+          src="/images/hero-banner.png"
+          draggable={false}
+          alt="תומי דניאלי - מיישרים קו"
+          fetchPriority="high"
+        />
       </section>
 
       <section className="almoni">
