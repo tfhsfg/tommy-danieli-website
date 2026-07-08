@@ -10,9 +10,7 @@ const menuItems = [
   { label: "הבית", to: "/" },
   { label: "עליי", to: "/aboutme" },
   { label: "מיישרים קו", to: "/plans" },
-  { label: "אירועים", to: "/events" },
   { label: "שותפים", to: "/partners" },
-  { label: "תכנית שנתית", to: "/annual-plan" },
 ];
 
 const dropdownItems = [
@@ -21,7 +19,6 @@ const dropdownItems = [
   { label: "מיישרים קו בוועדה", to: "/committee" },
   { label: "מיישרים קו במורחבת", to: "/regional" },
   { label: "מיישרים קו בחקיקה", to: "/legislation" },
-  { label: "מיישרים קו בחינוך", to: "/education" },
   { label: "כל התוכניות", to: "/plans" },
 ];
 
