@@ -211,7 +211,7 @@ export default function AboutMe() {
 
         </div>
 
-        <h2 className="almoni brand-blue timelineSectionTitle">המסע שלי</h2>
+        <h1 className="almoni brand-blue timelineSectionTitle">המסע שלי</h1>
       </div>
 
       {/* ציר הזמן */}
