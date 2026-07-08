@@ -35,69 +35,104 @@
   line-height: 1.6;
 }
 
-/* --- תוכנית ארבעת העוגנים --- */
+/* --- תוכנית ארבעת העוגנים - מכולה רחבה למניעת שבירת שורה --- */
+.rehabProgramWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .rehabProgramGrid {
-  margin-top: 36px;
+  margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; 
   text-align: right;
 }
 
-.rehabProgramCard {
-  background: #fff;
-  border-radius: 8px;
-  padding: 28px 24px;
-  box-shadow: var(--shadow);
+.rehabProgCard {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  transition: transform 0.25s ease;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.rehabProgramCard:hover {
+.rehabProgCard:hover {
   transform: translateY(-4px);
+  box-shadow: var(--shadow);
 }
 
-.rehabProgramNumber {
-  font-size: 32px;
-  font-weight: 900;
-  color: var(--primary);
-  opacity: 0.25;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.rehabProgramCard h3 {
-  margin: 0 0 12px;
-  color: var(--primary);
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.rehabProgramCard p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text);
-}
-
-/* --- עקרונות הליבה (כרטיסיות) --- */
-.rehabFactsGrid {
+/* החלק העליון - כחול עמוק, טקסט לבן */
+.rehabProgCardHeader {
+  background: linear-gradient(135deg, var(--primary) 0%, #045dd1 100%);
+  padding: 20px 16px;
+  color: #ffffff;
   display: flex;
-  gap: 24px;
-  margin-top: 36px;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rehabCardPhase {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.rehabProgCardHeader .rehabProgTitle {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 8px 0 2px 0;
+  line-height: 1.3;
+}
+
+.rehabProgFocus {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #bae6fd;
+  opacity: 0.95;
+  line-height: 1.3;
+}
+
+/* החלק התחתון - רקע לבן */
+.rehabProgCardBody {
+  padding: 18px 16px;
+  background: #ffffff;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.rehabProgDesc {
+  font-size: 13.5px;
+  color: #4b5563;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --- גריד עובדות / עקרונות ליבה --- */
+.rehabFactsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
 }
 
 .rehabFactCard {
-  flex: 1;
   background: #ffffff;
   border-radius: 8px;
-  padding: 32px 24px;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 28px 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.03);
 }
@@ -148,7 +183,21 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 20px;
-  align-items: start;
+  align-items: flex-start;
+}
+
+.rehabGoalItem h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.rehabGoalItem p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.5;
 }
 
 .rehabGoalCheck {
@@ -157,42 +206,35 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
-.rehabGoalItem h3 {
-  margin: 0 0 8px;
-  font-size: 22px;
-  font-weight: 800;
-}
-
-.rehabGoalItem p {
-  margin: 0;
-  font-size: 16px;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-/* --- רספונסיביות לניידים וטאבלטים --- */
-@media (max-width: 768px) {
-  .rehabFactsGrid {
-    flex-direction: column;
-    gap: 16px;
+/* --- רספונסיביות מותאמת אישית --- */
+@media (max-width: 1024px) {
+  .rehabProgramGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
+@media (max-width: 640px) {
+  .rehabProgramGrid {
+    grid-template-columns: 1fr;
+  }
+  .rehabSuccessSection {
+    padding: 48px 20px;
+  }
   .rehabGoalsTitle {
     font-size: 26px;
     margin-bottom: 32px;
   }
-
-  .rehabGoalItem h3 {
-    font-size: 19px;
+  .rehabGoalsList {
+    gap: 24px;
   }
-
-  .rehabGoalItem p {
-    font-size: 15px;
+  .rehabGoalItem h3 {
+    font-size: 18px;
   }
 }

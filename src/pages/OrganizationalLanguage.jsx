@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
 import "./OrganizationalLanguage.css";
 
-// 1. נתוני ציר הזמן - 5 תחנות מפורטות
+// נתוני ציר הזמן הטכני של רותם שעוברים לתוך הרכיב המתקפל בתחתית
 const timelineSteps = [
   {
     phase: "תחנה 1",
@@ -21,8 +21,8 @@ const timelineSteps = [
     title: "המפץ הדמוקרטי בשטח",
     time: "אוקטובר – נובמבר",
     details: [
-      "אוקטובר: סיום תהליך הקמת הכיתות ובחירות דמוקרטיות, חשאיות ותקינות לכלל המועצות הבית-ספריות.",
-      "נובמבר: סיום מבצע הבחירות הרשמי ברמת הרשויות והקמת הנציגויות המחוזיות החדשות. בלי קיצורי דרך ובלי מינויים מקורבים."
+      "אוקטובר: סיום תהליך הקמת הכיתות ובחירות דמוקרטיות, חשאיות ותקינות למועצות הבית-ספריות.",
+      "נובמבר: סיום מבצע הבחירות הרשמי ברמת הרשויות והקמת הנציגויות המחוזיות השונות ברחבי הארץ."
     ]
   },
   {
@@ -30,9 +30,9 @@ const timelineSteps = [
     title: "מעקב, סנכרון וישיבות סטטוס",
     time: "דצמבר – ינואר",
     details: [
-      "קיום סמינרי חנוכה ממוקדים ופורום יו״רים/סיו״רים מחוזי וארצי לסנכרון שורות.",
-      "הערכות מוקדמת לקראת דוחות הביקורת והצפת חסמים מהשטח.",
-      "קיום ישיבות סטטוס הדוקות: ברמת בית הספר (מול רכזי החח״ק) וברמת הרשות (מול מנהלי מחלקות הנוער למועצות הרשותיות)."
+      "קיום סמינרי חנוכה ממוקדים ופורום יו״רים/סיו״רים מחוזי וארצי לסנכרון מטרות.",
+      "יציאה להערכות לקראת דוחות ביקורת בשטח ומיפוי ראשוני של אתגרי מנהל תקין.",
+      "קיום ישיבות סטטוס הדוקות ברמת בית הספר (מול רכזי החח״ק) וברמת הרשות (מול מנהלי מחלקות הנוער)."
     ]
   },
   {
@@ -40,247 +40,201 @@ const timelineSteps = [
     title: "ועדות אכיפה מחוזיות בשטח",
     time: "מרץ",
     details: [
-      "הקמת 'סיירת ביקורת' מחוזית מובנית: מפקח רשותי, רפרנט מנהיגות, נציג המועצה המחוזית ובוגר/ת המועצה.",
-      "הוועדה מגיעה פיזית אל הרשויות המקומיות, שם מוצגת פעילות המועצה והעבודה בפועל על פי דרישות השפה הארגונית."
+      "הקמת צוותי סיור מחוזיים המורכבים ממפקח רשותי, רפרנט מנהיגות, נציג המועצה המחוזית ובוגר/ת המועצה.",
+      "הצוותים יוצאים פיזית אל הרשויות השונות על מנת לבחון מקרוב את תקינות הפעילות, מתן המענה לנציגים והטמעת השפה הארגונית."
     ]
   },
   {
     phase: "תחנה 5",
     title: "יישום, הערכה והוקרה",
-    time: "אפריל – יוני",
+    time: "אפריל – ינואר",
     details: [
-      "אפריל - מאי: יישום בפועל של תוצאות ותובנות הוועדה המחוזית, תיקון ליקויים בשטח והפעלת סנקציות ארגוניות במידת הצורך.",
-      "מאי - יוני: קיום אירועי הוקרה והערכה רשמיים ברמת הרשות או המחוז למועצות שהפגינו מצוינות והטמעה מלאה של המודל."
+      "אפריל - מאי: יישום מסקנות הסיורים, תיקון ליקויים מבניים בשטח, וחיזוק המועצות המקומיות הזקוקות לתמיכה.",
+      "מאי - יוני: קיום אירועי הוקרה והערכה ברמת הרשות או המחוז למועצות שהפגינו מצוינות ארגונית ומשילות דמוקרטית למופת."
     ]
   }
 ];
 
-// 2. נתוני אתגרים ופתרונות
-const challenges = [
-  {
-    icon: "fa-solid fa-dumpster-fire",
-    title: "תרבות ה׳יהיה בסדר׳ והשכונה",
-    desc: "מנחים ורכזים ותיקים ברשויות שלא מעוניינים בפיקוח, מתנגדים להכתבת כללים מהדרג הארצי, ומעדיפים להמשיך לפעול ללא סדר ותיעוד.",
-    solution: "הפיכת השפה הארגונית למחייבת פדגוגית. מועצה שלא תעבוד לפי הכללים פשוט לא תוכר כנציגות רשמית, ומכתבי דרישה יישלחו ישירות למנהלי אגפי החינוך ברשויות."
-  },
-  {
-    icon: "fa-solid fa-user-ninja",
-    title: "זיוף נתונים פוליטי בשטח",
-    desc: "דיווחים פיקטיביים של רשויות על קיום 'בחירות חשאיות' בזמן שבפועל המנחה המקומי פשוט מינה באופן שרירותי את התלמיד שהוא הכי אוהב.",
-    solution: "הצלבת נתונים קשיחה מול ועדת הבחירות. דרישה להצגת פרוטוקול בחירות חתום ושמות חברי ועדת הבחירות בשאלון ה-MONDAY, בתוספת פשיטות פתע של הוועדה המחוזית במרץ."
-  },
-  {
-    icon: "fa-solid fa-hourglass-slash",
-    title: "עייפות דיווח וטענות בירוקרטיה",
-    desc: "טענות חוזרות מצד מנחים על עומס בירוקרטי בשל הצורך למלא שאלונים דיגיטליים, המשמשות לעיתים קרובות כתירוץ לאי-סדר ארגוני.",
-    solution: "התניית תקציבים וזכויות פוליטיות. רשות או מחוז שלא יזינו נתונים מלאים במערכת, נציגיהם לא יוכלו להגיש מועמדות לתפקידים בארצי, והרשות לא תקבל תקציבי יוזמות שנתיים."
-  }
-];
-
-// 3. מדדי Monday (באנר הצלחה)
-const mondayMetrics = [
-  {
-    title: "מדד הכשרת כוח האדם",
-    desc: "מיפוי ותק המנחה ובדיקת קיומה של תעודת הכשרה רשמית (60 או 120 שעות מחח״ן). אכיפת חובה של מינימום 10 שעות הכשרה שנתיות לכל נציג מועצה בנושאי תקנון ואתיקה."
-  },
-  {
-    title: "מדד הטוהר הדמוקרטי",
-    desc: "חובת הזנת תאריך מדויק של קיום הבחירות, דיווח שמות חברי ועדת הבחירות המקומית, פרסום ספר בוחרים וניהול פרוטוקול תוצאות רשמי, חשוף וחתום."
-  },
-  {
-    title: "מדד המשילות המקומית",
-    desc: "סטטוס כתיבה ואישור של תקנון מקומי התואם את תקנון העל הארצי, ומינוי חובה של שלושת תפקידי המפתח הסטטוטוריים: יו״ר, סיו״ר ומבקר מועצה."
-  },
-  {
-    title: "מדד הממשק הפוליטי",
-    desc: "מיפוי וספירה של מפגשים ודיונים סדירים ורשמיים של נציגי המועצה עם מקבלי ההחלטות הבכירים ברשות (ראש העיר, מנכ״ל הרשות, מנהל אגף החינוך)."
-  }
-];
-
-// 4. נתוני שאלות ותשובות (FAQ)
-const faqData = [
-  {
-    question: "למה הפיקוח והמחוזות צריכים את השאלון והמעקב ב-MONDAY?",
-    answer: "כי ידע הוא כוח פוליטי ומבצעי. כשאנחנו יודעים בזמן אמת מהו ותק המנחה בשטח, מתי אושר התקנון לאחרונה וכמה שעות הכשרה הנציגים קיבלו, אנחנו מסוגלים למפות חולשות ארגוניות, למנוע קריסה של מועצות מקומיות, ולהציג חזית מקצועית חסינת ערעור מול משרד החינוך ומקבלי ההחלטות."
-  },
-  {
-    question: "מה קורה אם רשות או בית ספר מסרבים ליישם את המודל או מדווחים נתונים פיקטיביים?",
-    answer: "כאן נכנסת הוועדה המחוזית (סיירת הביקורת) לפעולה בחודש מרץ. רשות שלא תעמוד בסטנדרטים של השפה הארגונית ולא תציג פרוטוקולים אמיתיים של בחירות חשאיות, תאבד את הלגיטימציה שלה: נציגיה לא יוכרו בדרגים הגבוהים (מחוז וארצי), והיא תיחסם מקבלת תקציבי יוזמות שנתיים באפריל-מאי."
-  },
-  {
-    question: "איך הטמעת השפה הארגונית קשורה ישירות לפתיחת ״תקנון העל״ הארצי?",
-    answer: "אי אפשר לכתוב חוקה חדשה לשטח שלא מסוגל לציית לחוקים הקיימים. השפה הארגונית מיישרת קו ויוצרת 'מכינה חוקתית' – היא מוודאת שכל נציג מבין מושגים כמו קוורום, דוח מבקר וועדת אתיקה. ברגע שהתשתית הזו מוטמעת, כל תיקון חוקתי שנבצע בתקנון העל יחלחל למטה מיד ובאופן אורגני."
-  },
-  {
-    question: "כיצד המודל הזה מסייע לנו לקדם את חקיקת ״חוק המועצה הארצית״ בכנסת?",
-    answer: "בוועדות הכנסת, הטענה הראשונה של פקידי הממשל וחברי הכנסת נגדנו תהיה חוסר מייצגות או חובבנות בשטח. השפה הארגונית היא תעודת הכשרות המשפטית שלנו. באמצעות הדאטה הקשיחה מה-Monday, נוכל להוכיח לחברי הכנסת ש-100% מהמועצות בארץ נבחרות באופן דמוקרטי, חשאי ומבוקר, מה שיסיר כל עילה משפטית להתנגד לחוק הסטטוטורי שלנו."
-  }
-];
-
 export default function OrganizationalLanguage() {
-  const [openFaq, setOpenFaq] = useState(null);
-  const [timelineOpen, setTimelineOpen] = useState(false);
-
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
+  const [isTimelineOpen, setIsTimelineOpen] = useState(false);
 
   return (
-    <div className="orgLanguagePage">
-      <Banner 
-        title="הטמעת השפה הארגונית" 
-        subtitle="מודל משילות, בקרה וכוח פוליטי לשנות תשפ״ו – תשפ״ז" 
+    <div className="ethicsPage">
+      
+      {/* 1. באנר עליון – ניסוח ממוקד שותפות, כוח והעצמה */}
+      <Banner
+        image="/images/banner-default.jpg"
+        title="מיישרים קו בשפה הארגונית"
+        description="מחזירים את הכוח והסמכות לשטח – מטמיעים סטנדרט מקצועי, אחיד וחזק שמגן על הנציגים וממצב את המועצה כגוף שלטוני מוערך!"
       />
 
-      {/* חלק 1: מבוא חזון ורציונל */}
-      <div className="eduSection orgIntroSection">
-        <h2 className="eduSectionTitle brand-blue">הרפורמה המבנית הגדולה</h2>
-        <p className="eduSectionDesc">
-          מועצת התלמידים והנוער בישראל אינה ״ועדת קישוט״ שפועלת מכוח האינרציה; היא הפרלמנט הסטטוטורי הנבחר והמייצג של מאות אלפי בני נוער במדינת ישראל. עם זאת, כוח פוליטי ויכולת השפעה אמיתית מול משרדי הממשלה והשלטון המקומי מחייבים משמעת ארגונית אחידה.
-        </p>
-        <blockquote className="orgStrategicQuote">
-          <strong>השפה הארגונית היא חוקת העבודה שלנו.</strong> היא קוד ההפעלה המחייב והמסונכרן שמגדיר מהי מועצה חוקית ומתפקדת, ומבהיר לשטח דבר אחד פשוט: עידן השכונה במועצות הנוער נגמר. יש סטנדרט אחיד למשילות דמוקרטית.
-        </blockquote>
-      </div>
+      {/* 2. מבוא וחזון – מנרטיב מאיים ומבני, לנרטיב של עוצמה ולגיטימציה */}
+      <div className="orgLanguagePage">
+        <div className="orgIntroSection">
+          <p style={{ fontSize: "18px", lineHeight: "1.7", color: "var(--text)", marginBottom: "24px" }}>
+            מועצות התלמידים והנוער בישראל אינן גוף חברתי זמני או "ועדת קישוט" – המועצה היא הפרלמנט הסטטוטורי הנבחר והמייצג של מאות אלפי בני נוער במדינת ישראל. כדי לייצר כוח פוליטי אמיתי ויכולת השפעה מול משרדי הממשלה והשלטון המקומי, אנחנו חייבים להציג חזית מקצועית, אחידה וחזקה בכל הדרגים: בבית הספר, ברשות, במחוז ובארצי.
+          </p>
+          <p style={{ fontSize: "18px", lineHeight: "1.7", color: "var(--text)" }}>
+            תפיסת <strong>"השפה הארגונית"</strong> שאוביל היא לא בירוקרטיה מעייפת – היא קוד ההפעלה והמצפן שיבטיח שכל מועצה בארץ פועלת בצורה דמוקרטית, שקופה ומקצועית, ומקבלת את הלגיטימציה והכבוד המלאים שמגיעים לה מול בעלי התפקידים במערכת.
+          </p>
 
-      {/* חלק 3: כרטיסיות קרב - אתגרים ופתרונות */}
-      <div className="eduSection">
-        <h2 className="eduSectionTitle brand-blue">החסמים בשטח והמענה האסטרטגי</h2>
-        <p className="eduSectionDesc text-center">הטמעת משילות תמיד תיתקל בהתנגדות. כך נפרק את מוקדי הכוח שמסרבים ליישר קו:</p>
-        
-        <div className="orgChallengesGrid">
-          {challenges.map((item, index) => (
-            <div className="orgChallengeCard" key={index}>
-              <div className="orgChallengeTop">
-                <i className={item.icon}></i>
-                <h3>{item.title}</h3>
-              </div>
-              <div className="orgChallengeBody">
-                <div className="orgChallengeBlock problem">
-                  <strong>האתגר:</strong> {item.desc}
-                </div>
-                <div className="orgChallengeBlock solution">
-                  <strong>הפתרון האסטרטגי:</strong> {item.solution}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* חלק 4: מדדי הצלחה (באנר Monday מלא) */}
-      <div className="eduSection eduSuccessSection">
-        <h2 className="eduGoalsTitle">מטריצת המיפוי ומדדי ההצלחה (מערכת MONDAY)</h2>
-        <p className="orgGoalsSubtitle">
-          המעקב והאכיפה מבוצעים באמצעות דאטה קשיחה ואיסוף סטטוסים דיגיטלי בזמן אמת. אנחנו לא מנחשים – אנחנו ממפים 4 עוגנים מוגדרים:
-        </p>
-        <div className="orgMondayGrid">
-          {mondayMetrics.map((metric, i) => (
-            <div className="orgMondayCard" key={i}>
-              <div className="orgMondayNumber">0{i + 1}</div>
-              <h3>{metric.title}</h3>
-              <p>{metric.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* חלק 5: החזון הפוליטי הרחב - תקנון העל והכנסת */}
-      <div className="eduSection">
-        <h2 className="eduSectionTitle brand-blue">היעד הפוליטי העליון: הגביע הקדוש של הקדנציה</h2>
-        <p className="eduSectionDesc text-center">
-          השפה הארגונית אינה עומדת בפני עצמה – היא אבן הראשה של שני המהלכים ההיסטוריים הגדולים ביותר של הוועדה האתית-משפטית:
-        </p>
-        
-        <div className="orgBigVisionGrid">
-          <div className="orgVisionCard">
-            <div className="orgVisionIcon"><i className="fa-solid fa-gavel"></i></div>
-            <h3>1. הזיקה המיידית לפתיחת ״תקנון העל״ הארצי</h3>
-            <p>
-              פתיחת תקנון העל וכתיבתו מחדש היא המהלך החוקתי הרחב ביותר שלנו, אך חוקים חדשים אינם שווים דבר אם לשטח אין את התרבות הארגונית לציית להם.
-            </p>
-            <p className="orgVisionHighlight">
-              <strong>השפה הארגונית משמשת כמכינה חוקתית:</strong> היא מכשירה את השטח להבין מושגים משפטיים מורכבים (קוורום, דוח מבקר) כך שכל שינוי שנכניס בתקנון העל יחלחל ויבוצע בשטח באופן מיידי ואורגני, ללא פערי הבנה.
-            </p>
-          </div>
-
-          <div className="orgVisionCard">
-            <div className="orgVisionIcon"><i className="fa-solid fa-building-columns"></i></div>
-            <h3>2. התשתית לחקיקת ״חוק המועצות״ בכנסת</h3>
-            <p>
-              היעד העליון הוא העברת חוק סטטוטורי בכנסת המעגן את מעמדה, תקציביה ועצמאותה של המועצה הארצית בחוקי המדינה, ללא תלות בחסדים של פקידים.
-            </p>
-            <p className="orgVisionHighlight">
-              <strong>הדאטה ככלי נשק פוליטי בוועדות הכנסת:</strong> כשינסו לטעון שאנחנו גוף חובבני, נציג נתונים אמפיריים חותכים: 100% מהמועצות מבוקרות ב-Monday, עברו בחירות חשאיות ופועלות תחת מנחים מוסמכים. השפה הארגונית מסירה כל עילה חוקית להתנגדות לחוק!
-            </p>
+          <div className="orgStrategicQuote">
+            "השפה הארגונית היא המגן החוקתי של הנציג בשטח. כשאנחנו עובדים לפי סטנדרט מקצועי ברור, המבוגרים כבר לא יכולים להתייחס אלינו כאל חוג – הם נאלצים להקשיב לנו כאל שותפים שווים לשלטון."
           </div>
         </div>
-      </div>
 
-      {/* חלק 5.5: מפת הדרכים השנתית - מוסתרת מאחורי כפתור כחול יחיד */}
-      <div className={`eduSection orgTimelineToggleCard${timelineOpen ? " orgTimelineToggleOpen" : ""}`}>
-        <button
-          type="button"
-          className="orgTimelineToggleBtn"
-          onClick={() => setTimelineOpen((prev) => !prev)}
-          aria-expanded={timelineOpen}
-        >
-          מפת הדרכים השנתית ושלבי ההתנעה
-        </button>
-
-        <div className="orgTimelineCollapseWrap">
-          <div className="orgTimelineCollapseInner">
-            <div className="orgTimelineCollapseContent">
-              <p className="eduSectionDesc text-center">לוח זמנים קשיח ותחנות עבודה ברורות המשלבות את דרגי המטה, המחוז והשטח:</p>
-
-              <div className="orgTimelineVertical">
-                {timelineSteps.map((step, index) => (
-                  <div className="orgTimelineItem" key={index}>
-                    <div className="orgTimelineBadge">
-                      <span>{step.phase}</span>
-                    </div>
-                    <div className="orgTimelineContent">
-                      <div className="orgTimelineHeader">
-                        <h3>{step.title}</h3>
-                        <span className="orgTimelineTime">{step.time}</span>
-                      </div>
-                      <ul className="orgTimelineDetails">
-                        {step.details.map((detail, dIdx) => (
-                          <li key={dIdx}>{detail}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))}
+        {/* 3. למה השפה הארגונית קריטית? – פירוט היתרונות לנציג */}
+        <div className="eduSection" style={{ marginBottom: "50px" }}>
+          <h2 className="eduSectionTitle brand-blue" style={{ textAlign: "center", marginBottom: "35px" }}>
+            כיצד השפה הארגונית מחזקת את המועצה שלכם בפועל?
+          </h2>
+          <div className="eduGrid">
+            <div className="eduCard">
+              <div className="eduCardHeader">
+                <span className="eduCardIcon">🏛️</span>
+                <h3 className="eduCardTitle">לגיטימציה מול השלטון המקומי</h3>
               </div>
+              <p className="eduCardText">
+                כשמועצה רשותית פועלת על פי פרוטוקולים משפטיים, תקנונים ברורים ומנהל תקין, ראש העיר ומנהל אגף החינוך מחויבים להתייחס אליכם כאל גוף שלטוני רציני שמקבלים איתו החלטות, ולא כאל גוף חברתי שניתן לבטל.
+              </p>
+            </div>
+
+            <div className="eduCard">
+              <div className="eduCardHeader">
+                <span className="eduCardIcon">🛡️</span>
+                <h3 className="eduCardTitle">הגנה וגיבוי מלא לנציג הבודד</h3>
+              </div>
+              <p className="eduCardText">
+                היכרות מעמיקה של השטח עם השפה הארגונית מעניקה לכם – הנציגים בבתי הספר וברשויות – את הכלים והגיבוי החוקתי לעמוד על הזכויות שלכם ושל חבריכם מול מנהלים או בעלי תפקידים שמנסים להצר את צעדיכם.
+              </p>
+            </div>
+
+            <div className="eduCard">
+              <div className="eduCardHeader">
+                <span className="eduCardIcon">🔗</span>
+                <h3 className="eduCardTitle">חיבור אמיתי מהארצי ועד לביס"ד</h3>
+              </div>
+              <p className="eduCardText">
+                השפה המשותפת שוברת את הנתק ההיסטורי בארגון. היא מבטיחה שהקול של הנציג בבית הספר ישפיע ישירות על החלטות המועצה הארצית, ושהישגים פוליטיים ברמה הארצית יחלחלו מיד חזרה אליכם לשטח.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+{/* 4. האתגרים בשטח והמענה האסטרטגי – כרטיסי אתגר ופתרון מודרניים במקום טבלה */}
+<div className="eduSection" style={{ marginBottom: "50px" }}>
+  <h2 className="eduSectionTitle brand-blue" style={{ textAlign: "center", marginBottom: "15px" }}>
+    האתגרים המובנים בשטח ודרכי ההתמודדות האסטרטגיות
+  </h2>
+  <p style={{ textAlign: "center", maxWidth: "750px", margin: "0 auto 30px", fontSize: "16px", color: "var(--text)", lineHeight: "1.6" }}>
+    הטמעת תהליכי עבודה מקצועיים ומשילות דמוקרטית דורשת מנהיגות קשובה ונחושה. הנה הדרך שבה נתמוך בנציגים ונתמודד יחד עם החסמים המרכזיים:
+  </p>
 
-      {/* חלק 6: שאלות ותשובות (אקורדיון FAQ) */}
-      <div className="eduSection">
-        <h2 className="eduSectionTitle brand-blue">שאלות ותשובות על המודל והאכיפה</h2>
-        <div className="eduFaq">
-          {faqData.map((item, index) => (
-            <div
-              className={`eduFaqItem ${openFaq === index ? "eduFaqItemOpen" : ""}`}
-              key={index}
+  <div className="strategicSolutionsGrid">
+    
+    {/* כרטיס 1 */}
+    <div className="solutionCard">
+      <div className="solCardTop">
+        <div className="solBadge challenge">האתגר בשטח</div>
+        <h3 className="solCardHeading">חוסר אחידות בנהלים בשטח</h3>
+        <p className="solCardText">מועצות ברשויות שונות פועלות ללא כללים אחידים, מה שמחליש את מעמדן מול הרשות המקומית ומותיר אותן ללא קול אמיתי.</p>
+      </div>
+      <div className="solCardBottom">
+        <div className="solBadge action">הפתרון האסטרטגי שלנו</div>
+        <p className="solCardContent">
+          <strong>מיסוד מעמד פדגוגי וחוקתי:</strong> ננגיש את השפה הארגונית ככלי עבודה מעשי שיעניק לכל מועצה הכרה רשמית, לגיטימציה וגיבוי מקצועי מלא מהדרג המחוזי והארצי מול כל הגורמים.
+        </p>
+      </div>
+    </div>
+
+    {/* כרטיס 2 */}
+    <div className="solutionCard">
+      <div className="solCardTop">
+        <div className="solBadge challenge">האתגר בשטח</div>
+        <h3 className="solCardHeading">שמירה על טוהר הבחירות</h3>
+        <p className="solCardText">מקרים שבהם נציגים בבתי ספר או ברשויות ממונים באופן שרירותי, "מטעם" המערכת, ולא בבחירות דמוקרטיות וחשאיות כנדרש.</p>
+      </div>
+      <div className="solCardBottom">
+        <div className="solBadge action">הפתרון האסטרטגי שלנו</div>
+        <p className="solCardContent">
+          <strong>שקיפות מלאה והגדרת סטנדרט:</strong> נסייע למועצות ולמנחים לבצע בחירות תקינות ונאמץ חובת דיווח שקופה של פרוטוקול תוצאות רשמי, כדי להבטיח ייצוג אמיתי ואותנטי של הנוער.
+        </p>
+      </div>
+    </div>
+
+    {/* כרטיס 3 */}
+    <div className="solutionCard">
+      <div className="solCardTop">
+        <div className="solBadge challenge">האתגר בשטח</div>
+        <h3 className="solCardHeading">חשש מעומס בירוקרטי ודיווח</h3>
+        <p className="solCardText">חשש טבעי ומובן של מנחים ונציגים טובים בשטח מפני הצפת שאלונים, משימות דיגיטליות מעייפות וטפסים מרובים שגוזלים זמן עשייה.</p>
+      </div>
+      <div className="solCardBottom">
+        <div className="solBadge action">הפתרון האסטרטגי שלנו</div>
+        <p className="solCardContent">
+          <strong>מערכות חכמות ותמרוץ יוזמות:</strong> נפשט את תהליכי הדיווח למינימום ההכרחי דרך מערכות נגישות (Monday), ונחבר בין עמידה בסטנדרטים לקבלת תקציבי יוזמות שנתייים וזכויות הגשת מועמדות.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+        {/* 5. החזון הרחב – חיבור השפה הארגונית לחוק המועצה בכנסת */}
+        <div className="eduSection" style={{ backgroundColor: "rgba(0, 59, 137, 0.02)", padding: "40px 25px", borderRadius: "12px", marginBottom: "60px" }}>
+          <h2 className="eduSectionTitle brand-blue" style={{ fontSize: "26px", marginBottom: "15px" }}>
+            התשתית לחקיקת "חוק המועצה" בכנסת
+          </h2>
+          <p style={{ fontSize: "16px", lineHeight: "1.7", color: "var(--text)", margin: "0" }}>
+            השפה הארגונית אינה עומדת בפני עצמה – היא אבן הראשה של המהלך ההיסטורי הגדול שנוביל בקדנציה הקרובה: <strong>חיקוק מעמד המועצה הארצית בכנסת</strong>. 
+            <br /><br />
+            כשנגיע לוועדת החינוך של הכנסת כדי להעביר חוק סטטוטורי שיעגן את מעמדנו, תקציבינו ועצמאיותנו בחוקי מדינת ישראל, המשפטנים של משרדי הממשלה וחברי הכנסת ינסו לטעון שהמועצה היא גוף חובבני שאינו מייצג באמת. השפה הארגונית תאפשר לנו להציג להם דאטה קשיחה, אמפירית וחד-משמעית: נראה להם מפת מדינה שבה 100% מהמועצות מבוקרות, עברו בחירות דמוקרטיות וחשאיות, מחזיקות בתקנון חתום ופועלות במקצועיות שיכולה ללמד את המבוגרים שיעור במשילות.
+          </p>
+        </div>
+
+        {/* 6. מפת הדרכים השנתית וציר ההתנעה (התוכן של רותם) – מוסתר בתוך רכיב מתקפל בתחתית העמוד */}
+        <div className="eduSection" style={{ marginBottom: "40px" }}>
+          <div className={`orgTimelineToggleCard ${isTimelineOpen ? "orgTimelineToggleOpen" : ""}`}>
+            <button
+              type="button"
+              className="orgTimelineToggleBtn"
+              onClick={() => setIsTimelineOpen(!isTimelineOpen)}
             >
-              <button className="eduFaqSummary" onClick={() => toggleFaq(index)}>
-                {item.question}
-                <span className="eduFaqMarker">
-                  {openFaq === index ? "−" : "+"}
-                </span>
-              </button>
-              <div className="eduFaqAnswerWrap">
-                <div className="eduFaqAnswerInner">
-                  <p>{item.answer}</p>
+              {isTimelineOpen ? "📂 סגור את תוכנית העבודה המלאה וציר שלבי ההתנעה" : "📂 לצפייה בתוכנית העבודה המלאה וציר שלבי ההתנעה המדויק (לחץ לפתיחה)"}
+            </button>
+
+            <div className="orgTimelineCollapseWrap">
+              <div className="orgTimelineCollapseInner">
+                <div className="orgTimelineCollapseContent">
+                  
+                  <p style={{ fontSize: "15px", lineHeight: "1.6", color: "var(--text)", marginBottom: "30px", borderBottom: "1px solid #eee", paddingBottom: "15px" }}>
+                    על מנת להבטיח את יישום המודל בשטח, שנת העבודה מחולקת לתחנות עבודה קבועות המשלבות את דרגי המטה והשטח בסנכרון מלא, לצד מעקב נתונים שוטף (ארבעת עוגני מערכת Monday: מדד הכשרת כוח אדם, מדד הטוהר הדמוקרטי, מדד המשילות המקומית ומדד הממשק הפוליטי).
+                  </p>
+
+                  <div className="orgTimelineVertical">
+                    {timelineSteps.map((step, idx) => (
+                      <div className="orgTimeItem" key={idx}>
+                        <div className="orgTimeBadge">{step.phase}</div>
+                        <div className="orgTimeContent">
+                          <div className="orgTimeHeader">
+                            <h4 className="orgTimeTitle">{step.title}</h4>
+                            <span className="orgTimePeriod">{step.time}</span>
+                          </div>
+                          <ul className="orgTimelineDetails">
+                            {step.details.map((detail, dIdx) => (
+                              <li key={dIdx}>{detail}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
                 </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
+
       </div>
 
       {/* כפתור ניווט חזרה */}

@@ -1,12 +1,12 @@
 /* ==========================================
-   דף הטמעת השפה הארגונית - עיצוב מתקדם לשבירת Walls of Text
+   דף הטמעת השפה הארגונית - עיצוב מתקדם ומיושר
    ========================================== */
 
 .orgLanguagePage {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 20px 20px;
+  padding: 40px 20px;
 }
 
 .orgIntroSection {
@@ -28,10 +28,149 @@
   margin: 32px 0;
 }
 
-/* --- ציר זמן אנכי חדשני --- */
+/* סקשנים וכרטיסים במבנה אחיד */
+.eduSection {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.05);
+  margin-bottom: 40px;
+}
+
+.eduSectionTitle {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 25px;
+}
+
+/* גריד של יתרונות השפה הארגונית */
+.eduGrid {
+  display: block;
+  text-align: center;
+}
+
+.eduCard {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  margin: 1.5%;
+  background: #fdfdfd;
+  border: 1px solid #eef2f6;
+  padding: 25px 20px;
+  border-radius: 8px;
+  text-align: right;
+  min-height: 240px;
+}
+
+.eduCardHeader {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.eduCardIcon {
+  font-size: 24px;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.eduCardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.eduCardText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+/* --- טבלת האתגרים והמענה האסטרטגי --- */
+.eduTableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.eduTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  font-size: 14.5px;
+}
+
+.eduTable th {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 15px;
+  font-weight: 700;
+}
+
+.eduTable td {
+  padding: 15px;
+  border-bottom: 1px solid #eef2f6;
+  line-height: 1.6;
+}
+
+.eduTable tr:nth-child(even) {
+  background-color: #fafdff;
+}
+
+.solCell {
+  background-color: rgba(16, 185, 129, 0.02);
+  border-right: 3px solid #10b981;
+}
+
+/* --- רכיב מתקפל לציר הזמן השנתי --- */
+.orgTimelineToggleCard {
+  background-color: var(--primary);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.orgTimelineToggleBtn {
+  width: 100%;
+  background: none;
+  color: #ffffff;
+  border: none;
+  padding: 20px 28px;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+
+.orgTimelineToggleCard:hover {
+  background-color: #002d69;
+}
+
+/* מנגנון פתיחה חלק באנימציה מבוססת מקסימום גובה */
+.orgTimelineCollapseWrap {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  background: #ffffff;
+}
+
+.orgTimelineToggleOpen .orgTimelineCollapseWrap {
+  max-height: 2000px; /* גובה מקסימלי מספיק להכיל את התוכן הפתוח */
+}
+
+.orgTimelineCollapseContent {
+  padding: 30px;
+}
+
+/* ציר זמן אנכי פנימי */
 .orgTimelineVertical {
   position: relative;
-  margin: 40px 0;
   padding-right: 30px;
 }
 
@@ -45,317 +184,153 @@
   background: rgba(0, 59, 137, 0.15);
 }
 
-.orgTimelineItem {
+.orgTimeItem {
   position: relative;
   margin-bottom: 30px;
 }
 
-.orgTimelineBadge {
+.orgTimeBadge {
   position: absolute;
   right: -30px;
-  top: 5px;
+  top: 2px;
   background: var(--primary);
-  color: #fff;
-  width: 60px;
-  height: 26px;
-  border-radius: 20px;
-  display: grid;
-  place-items: center;
-  font-size: 13px;
-  font-weight: 800;
-  box-shadow: 0 2px 8px rgba(0, 59, 137, 0.2);
-}
-
-.orgTimelineContent {
-  background: #fff;
-  border-radius: 8px;
-  padding: 24px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(0, 0, 0, 0.02);
-}
-
-.orgTimelineHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  padding-bottom: 12px;
-  margin-bottom: 14px;
-}
-
-.orgTimelineHeader h3 {
-  margin: 0;
-  color: var(--primary);
-  font-size: 19px;
-  font-weight: 800;
-}
-
-.orgTimelineTime {
-  background: rgba(0, 59, 137, 0.08);
-  color: var(--primary);
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: 14px;
+  color: #ffffff;
+  font-size: 11px;
   font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.orgTimeHeader {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.orgTimeTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 5px 0;
+}
+
+.orgTimePeriod {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
 }
 
 .orgTimelineDetails {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  margin: 8px 0 0 0;
+  padding-right: 20px;
+  list-style-type: disc;
 }
 
 .orgTimelineDetails li {
-  position: relative;
-  padding-right: 18px;
-  font-size: 15px;
+  font-size: 13.5px;
   line-height: 1.6;
   color: var(--text);
+  margin-bottom: 6px;
 }
 
-.orgTimelineDetails li::before {
-  content: '•';
-  position: absolute;
-  right: 0;
-  color: var(--primary);
-  font-weight: bold;
+@media (max-width: 768px) {
+  .eduCard { width: 96%; margin: 2% auto; display: block; }
+  .eduTable th, .eduTable td { padding: 10px; font-size: 13px; }
 }
 
-/* --- כרטיסיות קרב: אתגרים ופתרונות --- */
-.orgChallengesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* --- גריד כרטיסי אתגר ופתרון אסטרטגי --- */
+.strategicSolutionsGrid {
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
-  margin-top: 36px;
+  justify-content: space-between;
+  margin-top: 30px;
 }
 
-.orgChallengeCard {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(0, 0, 0, 0.04);
+.solutionCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  width: 31.5%;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.orgChallengeTop {
-  background: #f8fafc;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+.solutionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 59, 137, 0.08);
 }
 
-.orgChallengeTop i {
-  font-size: 24px;
-  color: var(--red);
-}
-
-.orgChallengeTop h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--primary);
-}
-
-.orgChallengeBody {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+/* חלק עליון - האתגר */
+.solCardTop {
+  padding: 24px;
+  background: #ffffff;
   flex-grow: 1;
 }
 
-.orgChallengeBlock {
-  font-size: 14.5px;
-  line-height: 1.6;
-  padding: 12px;
-  border-radius: 6px;
-}
-
-.orgChallengeBlock.problem {
-  background: rgba(239, 68, 68, 0.04);
-  color: #334155;
-  border-right: 3px solid var(--red);
-}
-
-.orgChallengeBlock.solution {
-  background: rgba(16, 185, 129, 0.04);
-  color: #334155;
-  border-right: 3px solid #10b981;
-}
-
-/* --- באנר Monday מורחב --- */
-.orgGoalsSubtitle {
-  text-align: center;
-  max-width: 700px;
-  margin: -30px auto 40px;
-  opacity: 0.9;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.orgMondayGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.orgMondayCard {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  padding: 24px;
-  position: relative;
-  transition: background 0.3s ease;
-}
-
-.orgMondayCard:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.orgMondayNumber {
-  font-size: 36px;
-  font-weight: 900;
-  opacity: 0.2;
-  margin-bottom: 8px;
-}
-
-.orgMondayCard h3 {
-  margin: 0 0 12px;
+.solCardHeading {
   font-size: 18px;
-  font-weight: 800;
-  color: #fff;
+  font-weight: 700;
+  color: var(--text);
+  margin: 12px 0 8px 0;
 }
 
-.orgMondayCard p {
-  margin: 0;
-  font-size: 14.5px;
+.solCardText {
+  font-size: 14px;
   line-height: 1.6;
-  opacity: 0.88;
+  color: #4b5563;
+  margin: 0;
 }
 
-/* --- גריד חזון פוליטי רחב (תקנון על וכנסת) --- */
-.orgBigVisionGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-top: 36px;
+/* חלק תחתון - הפתרון */
+.solCardBottom {
+  padding: 24px;
+  background: rgba(16, 185, 129, 0.04);
+  border-top: 1px solid rgba(16, 185, 129, 0.1);
+  border-right: 4px solid #10b981;
 }
 
-.orgVisionCard {
-  background: #fff;
-  border-radius: 8px;
-  padding: 32px 24px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(0, 0, 0, 0.03);
-}
-
-.orgVisionIcon {
-  font-size: 32px;
-  color: var(--primary);
-  margin-bottom: 16px;
-}
-
-.orgVisionCard h3 {
-  margin: 0 0 16px;
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--primary);
-}
-
-.orgVisionCard p {
-  font-size: 15px;
+.solCardContent {
+  font-size: 14px;
   line-height: 1.6;
   color: var(--text);
-  margin-bottom: 16px;
+  margin: 10px 0 0 0;
 }
 
-.orgVisionHighlight {
-  background: rgba(0, 59, 137, 0.03);
-  padding: 14px;
-  border-radius: 6px;
-  border-right: 3px solid var(--primary);
-  font-size: 14.5px !important;
+/* תגיות כותרת פנימיות */
+.solBadge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
 }
 
-/* --- כפתור יחיד לפתיחת מפת הדרכים השנתית --- */
-.orgTimelineToggleCard {
-  background-color: var(--primary);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: background-color 0.2s ease-in-out;
+.solBadge.challenge {
+  background: #fee2e2;
+  color: #dc2626;
 }
 
-.orgTimelineToggleBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background: none;
-  color: #ffffff;
-  border: none;
-  padding: 20px 28px;
-  font-size: 20px;
-  font-weight: 800;
-  font-family: inherit;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+.solBadge.action {
+  background: #d1fae5;
+  color: #065f46;
 }
 
-.orgTimelineToggleCard:hover .orgTimelineToggleBtn {
-  background-color: rgba(255, 255, 255, 0.08);
-}
-
-.orgTimelineCollapseWrap {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.orgTimelineToggleOpen .orgTimelineCollapseWrap {
-  grid-template-rows: 1fr;
-}
-
-.orgTimelineCollapseInner {
-  overflow: hidden;
-}
-
-.orgTimelineCollapseContent {
-  background: #ffffff;
-  padding: 28px;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.orgTimelineToggleOpen .orgTimelineCollapseContent {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.4s ease 0.12s, transform 0.4s ease 0.12s;
-}
-
-.orgTimelineCollapseContent .orgTimelineVertical {
-  margin: 0;
-}
-
-/* רספונסיביות למובייל */
-@media (max-width: 768px) {
-  .orgTimelineHeader {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+/* התאמה רספונסיבית לניידים */
+@media (max-width: 992px) {
+  .solutionCard {
+    width: 48%;
   }
-  
-  .orgBigVisionGrid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .strategicSolutionsGrid {
+    flex-direction: column;
+  }
+  .solutionCard {
+    width: 100%;
   }
 }
