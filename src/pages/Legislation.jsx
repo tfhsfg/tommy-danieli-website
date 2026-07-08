@@ -1,27 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
 import "./Legislation.css";
-
-// מערך השאלות והתשובות מותאם למצע המועצה
-const faqs = [
-  {
-    q: "מדוע חוזרי מנכ\"ל וחוק זכויות התלמיד לא מספיקים כיום?",
-    a: "חוזרי מנכ\"ל ניתנים לשינוי בקלות על ידי דרגים פוליטיים ומשתנים ומותירים את המועצה תלויה ברצונם הטוב של מבוגרים. חוק זכויות התלמיד כולל סעיפים כלליים בלבד, בעוד שחיקוק חוק ייעודי יעניק למועצה מעמד משפטי יציב, עצמאי וחסין מפני לחצים."
-  },
-  {
-    q: "כיצד החוק ישפיע על נציג במועצה בית-ספרית או רשותית?",
-    a: "החוק יעניק הכרה סטטוטורית לכל גלגלי הנציגות. משמעות הדבר היא הגנה משפטית, הגדרת סמכויות ברורה וכוח אמיתי להשפיע מול הנהלות בתי הספר והרשויות המקומיות, ולא רק ברמה הארצית."
-  },
-  {
-    q: "מה המשמעות של עצמאות מוחלטת לתקנון העל?",
-    a: "החוק יקבע שניהול הבחירות, האתיקה והתקנון הפנימי של המועצות נקבעים אך ורק על ידי בני הנוער עצמם. כל תהליך פתיחת ועדכון התקנון שנוביל השנה יהפוך להיסטורי, מכיוון שהחוקים שננסח יחד עם השטח יחייבו את כולם לשנים קדימה ללא התערבות חיצונית."
-  },
-  {
-    q: "איך נבטיח שהחוק אכן ייושם ולא יישאר רק על הנייר?",
-    a: "המהלך המשפטי בכנסת יתבצע במקביל לחיזוק השטח (המחוזות, הרשויות ובתי הספר). הכוח האמיתי מגיע מהאמון והלגיטימציה של בני הנוער; ככל שהשטח יהיה חזק ומודע לזכויותיו, כך נוכל לאכוף את החוק ולעמוד כאיש אחד מול מקבלי ההחלטות."
-  }
-];
 
 // 3 נקודות המצב / האתגרים הנוכחיים
 const infoCards = [
@@ -66,30 +46,7 @@ const lawSteps = [
   }
 ];
 
-function FaqItem({ q, a }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className={`eduFaqItem${open ? " eduFaqItemOpen" : ""}`}>
-      <button
-        type="button"
-        className="eduFaqSummary"
-        aria-expanded={open}
-        onClick={() => setOpen((prev) => !prev)}
-      >
-        <span>{q}</span>
-        <span className="eduFaqMarker">{open ? "–" : "+"}</span>
-      </button>
-      <div className="eduFaqAnswerWrap">
-        <div className="eduFaqAnswerInner">
-          <p>{a}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default function Regulations() {
+export default function Legislation() {
   return (
     <section className="lawPageContainer almoni">
 
@@ -142,14 +99,14 @@ export default function Regulations() {
       </div>
 
       {/* 4. קריאה לפעולה + כפתור קישור מעודכן */}
-      <div className="eduSection lawCallToAction" style={{ marginBottom: "120px" }}>
+      <div className="eduSection lawCallToAction" style={{ marginBottom: "60px" }}>
         <h2 className="ctaMain">
           ננצל את הליווי המקצועי של עורך הדין של הוועדה לניסוח הצעת חוק מוגמרת,
           נרתום חברי כנסת, נקיים שדולות ונפעיל לחץ ציבורי ותקשורתי נרחב!
         </h2>
         <h3 style={{ maxWidth: "850px", margin: "0 auto 30px", fontSize: "16px", lineHeight: "1.6", color: "var(--text)" }}>
           חוק לבדו, חזק ככל שיהיה, לא שווה כלום אם הוא נשאר רק על הנייר. מהלך החיקוק בכנסת לא יקרה בוואקום – הוא יתבצע במקביל ובסנכרון מלא עם חיזוק הגלגלים בשטח. 
-          הכוח האמיתי של הוועדה האתית-משפטית מגיע מהלגיטימציה והאמון שלכם. אנחנו נחוקק את המועצה, אך במקביל נחזק את המחוזות, הרשויות ובתי הספר כדי לוואק שברגע האמת כולנו עומדים כאיש אחד.
+          הכוח האמיתי של הוועדה האתית-משפטית מגיע מהלגיטימציה והאמון שלכם. אנחנו נחוקק את המועצה, אך במקביל נחזק את המחוזות, הרשויות ובתי הספר כדי לוודא שברגע האמת כולנו עומדים כאיש אחד.
         </h3>
         <div className="ctaButtons">
           <a 
@@ -164,20 +121,10 @@ export default function Regulations() {
         </div>
       </div>
 
-      {/* 5. אזור שאלות ותשובות */}
-      <div className="eduSection">
-        <h2 className="eduSectionTitle brand-blue">שאלות ותשובות</h2>
-        <div className="eduFaq">
-          {faqs.map((f, i) => (
-            <FaqItem key={i} q={f.q} a={f.a} />
-          ))}
-        </div>
-      </div>
-
-      {/* 6. כפתור מעבר לכל התוכניות */}
+      {/* 5. כפתור מעבר לכל התוכניות */}
       <div className="readMoreContainer">
         <Link to="/plans" className="readMoreButton">
-          לכל התוכניות
+          לכל התוכניות המנהיגותיות
         </Link>
       </div>
 
