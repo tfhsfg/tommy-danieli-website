@@ -165,3 +165,34 @@
     text-align: center;
   }
 }
+
+/* Phone tier: tighten padding and title size */
+@media (max-width: 480px) {
+  .plansPage {
+    padding: 40px 16px;
+  }
+
+  .plansHeader {
+    margin-bottom: 32px;
+  }
+
+  .plansContainer {
+    gap: 24px;
+  }
+
+  .planCardIconSide {
+    padding: 22px;
+  }
+
+  .planIcon {
+    font-size: 44px;
+  }
+
+  .planCardTextSide {
+    padding: 20px 18px;
+  }
+
+  .planCardTitle {
+    font-size: 21px;
+  }
+}

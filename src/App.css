@@ -224,3 +224,46 @@ li:not(.menuItem) {
     font-size: 19px;
   }
 }
+
+/* Phone tier: scale typography/spacing for real phone widths (~360–430px) */
+@media (max-width: 480px) {
+  .readMoreContainer {
+    margin-top: 40px;
+    margin-bottom: 28px;
+  }
+
+  .readMoreButton {
+    padding: 14px 38px;
+    font-size: 19px;
+  }
+
+  .intro {
+    padding: 34px 16px 30px;
+  }
+
+  .intro h1 {
+    font-size: 27px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+    margin: 12px 0 26px;
+  }
+
+  .eduSectionTitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .eduFaqItem {
+    padding: 15px 16px;
+  }
+
+  .eduFaqSummary {
+    font-size: 16px;
+  }
+
+  .eduFaqItem p {
+    font-size: 15px;
+  }
+}

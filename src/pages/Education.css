@@ -219,3 +219,41 @@
     gap: 16px;
   }
 }
+
+/* Phone tier: reduce oversized title/stat numbers/padding for phones */
+@media (max-width: 480px) {
+  .eduPage {
+    padding: 40px 16px 16px;
+  }
+
+  .precentageSection {
+    padding: 44px 16px;
+  }
+
+  .eduSuccessSection {
+    padding: 52px 16px;
+  }
+
+  .eduGoalsTitle {
+    font-size: 24px;
+    margin-bottom: 36px;
+  }
+
+  .eduGoalsList {
+    gap: 36px;
+  }
+
+  /* !important כדי לגבור על ה-fontSize האינליין (42px) של מספרי הסטטיסטיקה */
+  .eduGoalCard h3 {
+    font-size: 34px !important;
+  }
+
+  .eduPillarCard {
+    padding: 20px 18px;
+    gap: 14px;
+  }
+
+  .eduProblemItem {
+    padding: 16px 18px;
+  }
+}

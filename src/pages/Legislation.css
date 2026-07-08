@@ -220,3 +220,52 @@
     font-size: 20px;
   }
 }
+
+/* Phone tier: reduce oversized numbers/titles/padding and stack CTA buttons */
+@media (max-width: 480px) {
+  .lawPageContainer {
+    padding: 40px 16px 16px;
+  }
+
+  .lawStatsSection {
+    padding: 40px 0;
+  }
+
+  .lawStatCard {
+    padding: 30px 20px;
+  }
+
+  .lawStatIconWrap {
+    font-size: 38px;
+  }
+
+  .lawStatText {
+    font-size: 18px;
+  }
+
+  .lawPlanSection {
+    padding: 44px 16px;
+  }
+
+  .lawPlanCard {
+    padding: 30px 22px;
+  }
+
+  .lawPlanNumber {
+    font-size: 40px;
+  }
+
+  .lawPlanCardTitle {
+    font-size: 20px;
+  }
+
+  .ctaMain {
+    font-size: 19px;
+  }
+
+  .ctaPrimaryBtn,
+  .ctaWhiteBtn {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}

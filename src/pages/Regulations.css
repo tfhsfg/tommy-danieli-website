@@ -111,3 +111,38 @@
     font-size: 22px;
   }
 }
+
+/* Phone tier: tighten padding and reduce card/summary sizing */
+@media (max-width: 480px) {
+  .bylawsPage {
+    padding: 40px 16px 16px;
+  }
+
+  .bylawsIntroSection {
+    margin-bottom: 32px;
+  }
+
+  .bylawsPowerGrid {
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .bylawsPowerCard {
+    padding: 26px 20px;
+  }
+
+  .bylawsPowerIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+  .bylawsSummaryFocus {
+    padding: 32px 20px;
+    margin: 40px 0 32px;
+  }
+
+  .bylawsFocusContent h2 {
+    font-size: 21px;
+  }
+}

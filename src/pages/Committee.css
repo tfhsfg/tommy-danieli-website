@@ -211,3 +211,48 @@
 @media (max-width: 768px) {
   .meetingsGrid, .cardsRowGrid { grid-template-columns: 1fr; }
 }
+
+/* Phone tier: scale titles/padding and the fixed-size CSS pyramid for phones */
+@media (max-width: 480px) {
+  .ethicsPage {
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+
+  .ethSection {
+    padding: 40px 16px 32px;
+  }
+
+  /* !important כדי לגבור גם על ה-fontSize האינליין של כותרת סקשן 5 */
+  .ethSectionTitle {
+    font-size: 24px !important;
+    margin-bottom: 28px;
+  }
+
+  .pyramidContainer {
+    gap: 24px;
+  }
+
+  /* הקטנת המשולשים הקבועים (היו 250px רוחב) כדי שיהיו נוחים במסך צר */
+  .pyrLayer {
+    border-width: 0 95px 80px 95px;
+  }
+
+  .pyrText {
+    top: 52px;
+    max-width: 160px;
+    font-size: 13px;
+  }
+
+  .meetNum {
+    font-size: 34px;
+  }
+
+  .cardBodyText {
+    font-size: 15px;
+  }
+
+  .ethicsPage .bennettBtn {
+    padding: 13px 40px;
+  }
+}

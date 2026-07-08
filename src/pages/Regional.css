@@ -238,3 +238,23 @@
     font-size: 18px;
   }
 }
+
+/* Phone tier: minor spacing tightening (layout already collapses at 640) */
+@media (max-width: 480px) {
+  .rehabPage {
+    padding: 40px 16px 16px;
+  }
+
+  .rehabSuccessSection {
+    padding: 48px 16px;
+  }
+
+  .rehabGoalItem {
+    gap: 14px;
+  }
+
+  .rehabGoalCheck {
+    width: 26px;
+    height: 26px;
+  }
+}

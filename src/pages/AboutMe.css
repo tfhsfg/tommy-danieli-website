@@ -420,6 +420,10 @@
   }
   
   .aboutGallery {
+    /* flex:none מבטל את flex-basis:0% (מה-flex:0.7 בבסיס) שבפריסת עמודה
+       מאפס את הגובה — בלעדיו המכולה קורסת ל-0 והתמונות ה-absolute
+       גולשות אל תוך כותרת "המסע שלי" והכרטיס הראשון בציר הזמן */
+    flex: 0 0 auto;
     max-width: 360px;
     height: 320px;
     margin: 0 auto;
@@ -448,5 +452,111 @@
   }
   .modalImageThumb {
     height: 80px;
+  }
+}
+
+/* Phone tier: keep the offset timeline + rotated collage, scaled to fit ~375px */
+@media (max-width: 480px) {
+  .aboutMe {
+    padding: 40px 16px;
+  }
+
+  .aboutMeContent h1 {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+
+  .timelineSectionTitle {
+    margin-top: 44px !important;
+  }
+
+  .aboutMainFlex {
+    gap: 32px;
+  }
+
+  /* מבטלים את ה-55px המבוזבזים מימין במובייל */
+  .bodyText {
+    padding-right: 0;
+    font-size: 15px;
+  }
+
+  .bodyText .introParagraph {
+    font-size: 20px;
+  }
+
+  .sectionSubtitle {
+    font-size: 18px;
+    margin: 32px 0 12px;
+  }
+
+  /* קולאז' התמונות: מוקטן ומקורב כדי שהחפיפה המסובבת תיכנס למסך צר */
+  .aboutGallery {
+    max-width: 300px;
+    height: 300px;
+    margin-bottom: 8px;
+  }
+
+  .galleryItem {
+    width: 130px;
+    height: 165px;
+    border-width: 6px;
+  }
+
+  .galleryItem:nth-child(1) { right: 0%; top: 6px; }
+  .galleryItem:nth-child(2) { right: 46%; top: 22px; }
+  .galleryItem:nth-child(3) { right: 22%; top: 108px; }
+
+  /* ציר הזמן: שומרים על ההיסט המתפתל אבל מקטינים אותו כדי שהכרטיס +
+     תווית השנה שלצדו יישארו בתוך רוחב המסך */
+  .timeline {
+    margin-top: 44px;
+    --shift-scale: 0.07;
+  }
+
+  .timelineItem {
+    margin-bottom: 92px;
+  }
+
+  .timelineCardWrap {
+    max-width: 200px;
+  }
+
+  .timelineCard {
+    padding: 20px 18px;
+    min-height: auto;
+  }
+
+  .timelineCard h2 {
+    font-size: 20px;
+  }
+
+  .timelineYear {
+    font-size: 13px;
+  }
+
+  /* 16px ולא 5px: מרווח מספיק כדי שהתווית תעקוף גם את הנקודה האדומה
+     (שבולטת ~10px מהכרטיס) ולא תיראה "בתוך" הכרטיס. יש ~50px פנויים
+     עד קצה המסך, כך שאין סכנת גלישה */
+  .timelineYear.yearLeft {
+    right: calc(100% + 16px);
+  }
+
+  .timelineYear.yearRight {
+    left: calc(100% + 16px);
+  }
+
+  /* מודל: מרווחים וכותרת מוקטנים לפלאפון */
+  .timelineModal {
+    padding: 28px 20px;
+    border-radius: 14px;
+  }
+
+  .modalMainTitle {
+    font-size: 25px;
+    margin-bottom: 18px;
+  }
+
+  .timelineModalOverlay {
+    padding: 16px;
   }
 }

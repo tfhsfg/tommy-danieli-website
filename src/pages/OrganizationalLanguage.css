@@ -152,16 +152,23 @@
   background-color: #002d69;
 }
 
-/* מנגנון פתיחה חלק באנימציה מבוססת מקסימום גובה */
+/* מנגנון פתיחה חלק ללא תלות בגובה קבוע (grid-template-rows: 0fr → 1fr).
+   מחליף את מנגנון ה-max-height:2000px שחתך את התוכן במסכים צרים שבהם
+   התוכן הפתוח גבוה מ-2000px. אותה טכניקה כמו אקורדיון ה-FAQ ב-App.css */
 .orgTimelineCollapseWrap {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease-out;
   background: #ffffff;
 }
 
 .orgTimelineToggleOpen .orgTimelineCollapseWrap {
-  max-height: 2000px; /* גובה מקסימלי מספיק להכיל את התוכן הפתוח */
+  grid-template-rows: 1fr;
+}
+
+.orgTimelineCollapseInner {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .orgTimelineCollapseContent {
@@ -332,5 +339,43 @@
   }
   .solutionCard {
     width: 100%;
+  }
+}
+
+/* Phone tier: tighten spacing/padding for real phone widths */
+@media (max-width: 480px) {
+  .orgLanguagePage {
+    padding: 32px 14px;
+  }
+
+  .orgIntroSection {
+    margin-bottom: 28px;
+  }
+
+  .orgStrategicQuote {
+    padding: 18px;
+    font-size: 16px;
+    margin: 24px 0;
+  }
+
+  .eduSection {
+    padding: 24px 16px;
+  }
+
+  .eduCard {
+    min-height: auto;
+  }
+
+  .strategicSolutionsGrid {
+    gap: 16px;
+  }
+
+  .orgTimelineToggleBtn {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  .orgTimelineCollapseContent {
+    padding: 22px 18px;
   }
 }

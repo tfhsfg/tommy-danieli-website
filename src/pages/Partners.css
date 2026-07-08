@@ -84,3 +84,30 @@
     align-items: center;
   }
 }
+
+/* Phone tier: reduce oversized name/logo and tighten padding */
+@media (max-width: 480px) {
+  .partnersPage {
+    padding: 0 16px 56px;
+  }
+
+  .partnerTextSide {
+    padding: 22px 18px;
+  }
+
+  .partnerName {
+    font-size: 23px;
+  }
+
+  .partnerDesc {
+    font-size: 15px;
+  }
+
+  .partnerLogoSide {
+    padding: 24px;
+  }
+
+  .partnerLogoPlaceholder {
+    font-size: 56px;
+  }
+}
