@@ -110,7 +110,7 @@ export default function Legislation() {
         </h3>
         <div className="ctaButtons">
           <a 
-            href="https://drive.google.com/file/d/1zhVWRE0MYh_mwhkumrlrRp8SjGUtgS1y/view" 
+            href="/documents/הצעת חוק מועצות התלמידים והנוער (מעמד סטטוטורי, עצמאות ותקצוב), התשפ״ו-2026.pdf" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="ctaPrimaryBtn"
