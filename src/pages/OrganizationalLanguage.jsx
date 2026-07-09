@@ -91,7 +91,6 @@ export default function OrganizationalLanguage() {
           <div className="eduGrid">
             <div className="eduCard">
               <div className="eduCardHeader">
-                <span className="eduCardIcon">🏛️</span>
                 <h3 className="eduCardTitle">לגיטימציה מול השלטון המקומי</h3>
               </div>
               <p className="eduCardText">
@@ -101,7 +100,6 @@ export default function OrganizationalLanguage() {
 
             <div className="eduCard">
               <div className="eduCardHeader">
-                <span className="eduCardIcon">🛡️</span>
                 <h3 className="eduCardTitle">הגנה וגיבוי מלא לנציג הבודד</h3>
               </div>
               <p className="eduCardText">
@@ -111,7 +109,6 @@ export default function OrganizationalLanguage() {
 
             <div className="eduCard">
               <div className="eduCardHeader">
-                <span className="eduCardIcon">🔗</span>
                 <h3 className="eduCardTitle">חיבור אמיתי מהארצי ועד לביס"ד</h3>
               </div>
               <p className="eduCardText">
@@ -199,7 +196,7 @@ export default function OrganizationalLanguage() {
               className="orgTimelineToggleBtn"
               onClick={() => setIsTimelineOpen(!isTimelineOpen)}
             >
-              {isTimelineOpen ? "📂 סגור את תוכנית העבודה המלאה וציר שלבי ההתנעה" : "📂 לצפייה בתוכנית העבודה המלאה וציר שלבי ההתנעה המדויק (לחץ לפתיחה)"}
+              {isTimelineOpen ? "סגור את תוכנית העבודה המלאה וציר שלבי ההתנעה" : "לצפייה בתוכנית העבודה המלאה וציר שלבי ההתנעה המדויק (לחץ לפתיחה)"}
             </button>
 
             <div className="orgTimelineCollapseWrap">
@@ -240,7 +237,7 @@ export default function OrganizationalLanguage() {
       {/* כפתור ניווט חזרה */}
       <div className="readMoreContainer">
         <Link to="/plans" className="readMoreButton">
-          לכל התוכניות המנהיגותיות
+          לכל התוכניות
         </Link>
       </div>
     </div>
