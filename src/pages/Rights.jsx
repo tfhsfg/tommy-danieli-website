@@ -56,7 +56,7 @@ export default function Rights() {
       {/* 3. כרטיסי המצב והאתגרים הנוכחיים */}
       <div id="challenges-section" className="eduSection rightsChallengesSection" style={{ paddingTop: "20px" }}>
         <h2 className="eduSectionTitle brand-blue">
-          השטח זועק לשינוי: האתגרים שעומדים בפנינו
+          האתגרים שעומדים בפנינו
         </h2>
         <p style={{ fontBottom: "40px" }}>
           במשך שנים הנוער סובל מחוסר אכיפה ומחוסר מודעות קריטי. הגיע הזמן לשים לזה סוף, לבנות מנגנוני הגנה חזקים ולייצר הרתעה אמיתית.
@@ -75,7 +75,7 @@ export default function Rights() {
 
       {/* 4. תוכנית העבודה והפתרונות */}
       <div className="eduSection rightsPlanSection">
-        <h2 className="eduSectionTitle brand-blue">תוכנית ההגנה: מה נשנה בקדנציה הקרובה?</h2>
+        <h2 className="eduSectionTitle brand-blue">מה ניצור בקדנציה הקרובה?</h2>
         <div className="rightsPlanGrid"> 
           {rightsSteps.map((step) => (
             <div className="rightsPlanCard" key={step.id}>

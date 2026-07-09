@@ -60,8 +60,8 @@ export default function BylawsOpening() {
 
       {/* כפתור חזרה מהיר */}
       <div className="readMoreContainer">
-        <Link to="/" className="readMoreButton">
-          חזרה לעמוד הראשי
+        <Link to="/plans" className="readMoreButton">
+          לכל התוכניות
         </Link>
       </div>
     </div>
