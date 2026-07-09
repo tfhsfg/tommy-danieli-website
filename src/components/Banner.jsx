@@ -10,7 +10,7 @@ export default function Banner({ image = "/images/banner-default.jpg", title, de
     >
       <div className="bannerContent">
         <h1 className="bannerTitle">{title}</h1>
-        <p className="bannerDescription">{description}</p>
+        {/* <p className="bannerDescription">{description}</p> */}
       </div>
     </section>
   );
