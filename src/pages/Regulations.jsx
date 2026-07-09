@@ -56,26 +56,13 @@ export default function BylawsOpening() {
         </div>
       </div>
 
-      {/* סיכום חגיגי המדגיש אחדות */}
-      <div className="eduSection bylawsSummaryFocus">
-        <div className="bylawsFocusContent">
-          <h2>מאשרים יחד את השפה המשותפת בוועידה הארצית</h2>
-          <p>
-            כל התובנות, הרעיונות והסעיפים שנדייק יחד לאורך השנה יתנקזו למעמד המשותף והגדול ביותר שלנו – <strong>הוועידה הארצית</strong>. 
-          </p>
-          <p>
-            שם, מול מאות נציגים וצירים מכל המחוזות, נציג ונאשר יחד תקנון שצומח מהשטח, מדבר בגובה העיניים ומעניק לכולנו את הכלים הטובים ביותר להוביל ולהנהיג.
-          </p>
-          <div className="bylawsBadge">התשתית שלנו. השותפות של כולנו.</div>
-        </div>
-      </div>
-
-      {/* כפתור חזרה מהיר */}
+      
+      {/* כפתור ניווט חזרה */}
       <div className="readMoreContainer">
-        <Link to="/" className="readMoreButton">
-          חזרה לעמוד הראשי
+        <Link to="/plans" className="readMoreButton">
+          לכל התוכניות המנהיגותיות
         </Link>
-      </div>
+      </div>  
     </div>
   );
 }
