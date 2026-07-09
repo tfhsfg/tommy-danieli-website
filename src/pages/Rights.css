@@ -19,13 +19,15 @@
   display: flex;
   gap: 24px;
   justify-content: center;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .rightsChallengeCard {
   flex: 1;
   background: #ffffff;
   border-radius: 8px;
-  padding: 40px 24px;
+  padding: 24px 20px;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
@@ -34,14 +36,14 @@
 }
 
 .rightsChallengeIconWrap {
-  font-size: 44px;
+  font-size: 36px;
   color: var(--primary);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   opacity: 0.85;
 }
 
 .rightsChallengeText {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--text);
   margin: 0;
@@ -175,15 +177,15 @@
   }
 
   .rightsChallengeCard {
-    padding: 30px 20px;
+    padding: 20px 18px;
   }
 
   .rightsChallengeIconWrap {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   .rightsChallengeText {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .rightsPlanSection {
