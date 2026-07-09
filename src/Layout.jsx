@@ -10,7 +10,6 @@ const menuItems = [
   { label: "הבית", to: "/" },
   { label: "עליי", to: "/aboutme" },
   { label: "החזון שלי", to: "/plans" },
-  { label: "כחבר מזכירות", to: "/partners" },
 ];
 
 const dropdownItems = [
@@ -20,6 +19,7 @@ const dropdownItems = [
   { label: "מורחבת יו״רי האתיקה", to: "/regional" },
   { label: "חקיקה בכנסת", to: "/legislation" },
   { label: "יישום מסמך הוועידה ה-30", to: "/conference" },
+  { label: "כחבר מזכירות", to: "/partners" },
   { label: "כל התוכניות", to: "/plans" },
 ];
 

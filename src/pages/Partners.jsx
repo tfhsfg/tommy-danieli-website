@@ -30,7 +30,7 @@ export default function Partners() {
     <section className="partnersPage almoni" dir="rtl">
       <Banner
         image="/images/banner-default.jpg"
-        title="שותפים"
+        title="כחבר מזכירות"
       />
 
       <div className="partnersList">
