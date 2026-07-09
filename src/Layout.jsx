@@ -28,6 +28,11 @@ export default function Layout() {
   const { pathname } = useLocation();
   const currentRoute = routes.find((route) => route.path === pathname);
 
+  // בכל מעבר עמוד גוללים חזרה לראש הדף, כדי שהעמוד החדש יתחיל מלמעלה
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   // מריצים את טעינת התמונות ברקע אחרי שהעמוד הראשון כבר נטען,
   // כדי לא להתחרות על רוחב פס עם התוכן הקריטי של הטעינה הראשונה
   useEffect(() => {
