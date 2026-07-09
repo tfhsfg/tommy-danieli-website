@@ -44,11 +44,11 @@ export default function Rights() {
       />
 
       {/* 2. פתיח וחזון מנהיגותי */}
-      <div className="eduSection rightsIntroSection" style={{ padding: "56px 0 20px" }}>
+      <div className="eduSection rightsIntroSection" style={{ padding: "48px 28px 24px" }}>
         <h2 className="eduSectionTitle brand-blue" style={{ textAlign: "center", marginBottom: "20px" }}>
           הזרוע המגינה של מיליון בני נוער
         </h2>
-        <p style={{ maxWidth: "850px", margin: "0 auto 30px", textAlign: "justify", fontSize: "18px", lineHeight: "1.6" }}>
+        <p style={{ maxWidth: "850px", margin: "0 auto 30px", textAlign: "right", fontSize: "18px", lineHeight: "1.6" }}>
           הוועדה האתית-משפטית בראשותי לא תהיה ועדה אקדמית של ניסוח ניירות עמדה בלבד, אלא <strong>המגן המשפטי החי והנושם של הנוער בשטח</strong>. זכויות הן לא המלצה – לא בבית הספר מול הנהלות ומורים, ולא במקומות העבודה מול מעסיקים שמנצלים את תמימותם של בני נוער. התפקיד שלנו הוא לוודא שכל תלמיד עובד ונציג יודע בדיוק מה מגיע לו, ומקבל את הגיבוי הבלתי מתפשר של המועצה הארצית כדי לעמוד על שלו.
         </p>
       </div>

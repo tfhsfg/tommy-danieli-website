@@ -127,19 +127,7 @@ export default function Home() {
             לקריאה עוד
           </Link>
         </div>
-      </section>
-      {/* אזור הוידאו המעודכן עם נגן יוטיוב המוטמע כהלכה */}
-      <section className="videoPlaceholder">
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/QW0lPSt4LuI"
-          title="סרטון מיישרים קו - תומי דניאלי"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      </section>
+      </section>  
     </>
   );
 }

@@ -15,6 +15,14 @@
   text-align: center;
 }
 
+/* מבטלים את רקע ה"כרטיס הלבן" שדולף מ-.eduSection הגלובלי, כדי שכרטיסי האתגרים
+   יעמדו לבד על רקע העמוד (למניעת כרטיס בתוך כרטיס) */
+.rightsPageContainer .rightsChallengesSection {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
 .rightsChallengesGrid {
   display: flex;
   gap: 24px;
@@ -32,6 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
