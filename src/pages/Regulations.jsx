@@ -25,7 +25,8 @@ const connectionPrinciples = [
 export default function BylawsOpening() {
   return (
     <div className="bylawsPage">
-      <Banner 
+      <Banner         
+        image="/images/student-writing-blackboard.jpg"
         title="פתיחת תקנון העל" 
         subtitle="מבינים את העקרונות, מחברים את השטח ומחזקים את השותפות – תשפ״ז" 
       />

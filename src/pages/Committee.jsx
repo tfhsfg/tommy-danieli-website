@@ -8,7 +8,7 @@ export default function Committee() {
       
       {/* 1. באנר עליון – ממוקד שותפות ותיקון */}
       <Banner
-        image="/images/banner-default.jpg"
+        image="/images/antoine-gravier-KhlmmD0ivN0-unsplash.jpg"
         title="הוועדה האתית-משפטית"
       />
 

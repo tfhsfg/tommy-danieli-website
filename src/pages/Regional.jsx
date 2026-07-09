@@ -72,7 +72,7 @@ export default function Regional() {
     <div className="rehabPage">
       {/* 1. באנר עליון */}
       <Banner
-        image="/images/banner-default.jpg"
+        image="/images/matheus-ferrero-TkrRvwxjb_8-unsplash.jpg"
         title="פורום מורחבת אתיקה"
         description="מובילים שינויי עומק אמיתיים – מחברים את המדיניות הארצית לשטח בצורה מקצועית, עקבית ובלתי מסורבלת."
       />

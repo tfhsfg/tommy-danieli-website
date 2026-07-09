@@ -29,7 +29,7 @@ export default function Partners() {
   return (
     <section className="partnersPage almoni" dir="rtl">
       <Banner
-        image="/images/banner-default.jpg"
+        image="/images/justin-morgan--q_lg2uUTjk-unsplash.jpg"
         title="כחבר מזכירות"
       />
 

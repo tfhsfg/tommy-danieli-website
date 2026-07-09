@@ -70,6 +70,8 @@ export default function Plans() {
       <Banner
         title="תוכניות העבודה"
         description="כל התחומים שאוביל כיו״ר הוועדה האתית-משפטית הארצית – לחצו למידע המלא"
+        image="/images/giorgio-trovato-EzoWfKqTaxk-unsplash.jpg"
+
       />
 
       <div className="plansContainer">

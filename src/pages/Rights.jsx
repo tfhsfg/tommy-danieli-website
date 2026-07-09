@@ -36,7 +36,7 @@ export default function Rights() {
 
       {/* 1. באנר עליון */}
       <Banner
-        image="/images/banner-rights.jpg" 
+        image="/images/osarodion-amenze-9CZKaFEclHg-unsplash.jpg" 
         title="הגנת זכויות הנוער והתלמיד"
         description={"מפסיקים לשתוק על פגיעה בזכויות -\nמחזירים את הכוח לתלמידים בבתי הספר וממגרים את הניצול בשוק העבודה!"}
       />

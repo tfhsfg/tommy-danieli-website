@@ -8,7 +8,7 @@ export default function Conference() {
     <div className="confPageContainer almoni">
       {/* 1. באנר עליון */}
       <Banner
-        image="/images/banner-default.jpg"
+        image="/images/asia-culturecenter-COWf-5ZtZ6w-unsplash.jpg"
         title="יישום מסמך הוועידה"
         description="בלי הבטחות ריקות וקלישאות: מחזקים את המבנה הפנימי, מטמיעים שפה ארגונית אחידה ומיישמים את החלטות הוועידה ה-30 דרך שומרי הסף של הארגון."
       />
