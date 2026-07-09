@@ -1,0 +1,167 @@
+/* ==========================================
+   דף יישום החלטות הוועידה ה-30 - זווית אתית-משפטית
+   ========================================== */
+
+.confPageContainer {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px 20px;
+}
+
+.confIntro {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.confIntroText {
+  color: var(--text);
+  font-size: 16.5px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+/* --- גריד סעיפי הליבה 6 ו-7 --- */
+.confCoreGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 40px;
+  text-align: right;
+}
+
+@media (min-width: 850px) {
+  .confCoreGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.confCoreCard {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.confCoreCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.confCoreHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f4f7fa;
+  padding-bottom: 15px;
+}
+
+.confCoreNum {
+  background: var(--primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.confCoreHeader h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.confCoreDesc {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0 0 15px 0;
+}
+
+.confCoreBullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.confCoreBullets li {
+  font-size: 14.5px;
+  color: #4b5563;
+  position: relative;
+  padding-right: 18px;
+  line-height: 1.5;
+}
+
+.confCoreBullets li::before {
+  content: "•";
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  top: -2px;
+}
+
+/* --- מפת הפמפום וההטמעה --- */
+.confSectionSubtitle {
+  text-align: center;
+  max-width: 750px;
+  margin: -15px auto 35px;
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.confDeploymentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.confDeployCard {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: right;
+}
+
+.confDeployCard h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 10px 0;
+}
+
+.confDeployCard p {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- התייחסות כללית לשאר הסעיפים --- */
+.confGeneralSection {
+  max-width: 850px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.generalText {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}

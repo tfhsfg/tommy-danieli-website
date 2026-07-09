@@ -8,6 +8,7 @@ import Regional from "../pages/Regional";
 import OrganizationalLanguage from "../pages/OrganizationalLanguage";
 import Regulations from "../pages/Regulations";
 import Partners from "../pages/Partners";
+import Conference from "../pages/Conference";
 import { SITE_URL, DEFAULT_IMAGE, SOCIAL_LINKS } from "./site";
 
 const personJsonLd = {
@@ -107,5 +108,12 @@ export const routes = [
     priority: 0.5,
     // התוכן בעמוד הזה עדיין placeholder (שמות ותיאורים גנריים) - נשאר לא-מאונדקס עד שיתעדכן
     noindex: true,
+  },
+  {
+  path: "/conference",
+  component: Conference,
+  title: "יישום החלטות הוועידה ה-30 | מתחברים",
+  description: "מתמקדים בתכלס ובבניית הכוח הפנימי של הארגון: מיסוד מנגנוני תקשורת, שיפור תדמית המועצה וחיזוק השטח והגלגלים.",
+  priority: 0.8,
   },
 ];
