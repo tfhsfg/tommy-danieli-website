@@ -90,7 +90,7 @@ export default function Home() {
     <>
       <section className="hero">
         <img
-          src="/images/hero-banner.png"
+          src="/images/new hero.png"
           draggable={false}
           alt="תומי דניאלי - מיישרים קו"
           fetchPriority="high"
