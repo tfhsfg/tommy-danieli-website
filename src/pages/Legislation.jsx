@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
 import "./Legislation.css";
 
-// 3 נקודות המצב / האתגרים הנוכחיים
+// 3 נקודות המצב / האתגרים הנוכחיים (נשאר בדיוק כמו שהיה)
 const infoCards = [
   { id: 1, icon: "fa-solid fa-scale-unbalanced", text: "מעמד משפטי חלש הנשען על חוזרי מנכ\"ל משתנים" },
   { id: 2, icon: "fa-solid fa-shield-halved", text: "כוח הנציגות פגיע ותלוי ברצונם הטוב של מבוגרים" },
   { id: 3, icon: "fa-solid fa-hand-holding-dollar", text: "פעילות המועצות מותנית בתקציבים מזדמנים" }
 ];
 
-// 4 עמודי התווך של החוק שייכתב
+// 4 עמודי התווך של החוק שייכתב (נשאר בדיוק כמו שהיה)
 const lawSteps = [
   {
     id: "01",
@@ -57,8 +57,17 @@ export default function Legislation() {
         description={"עושים סוף לתלות ומקבעים מעמד עצמאי -\nמעגנים את כוחן של המועצות בספר החוקים של מדינת ישראל!"}
       />
 
-      {/* 2. כרטיסי המידע והסטטיסטיקה */}
-      <div id="stats-section" className="eduSection lawStatsSection">
+      {/* 2. פתיח העמוד: יישום מצע לנוער דרך חקיקה בכנסת */}
+      <div className="eduSection lawPlatformSection" style={{ padding: "56px 0 20px" }}>
+        <h2 className="eduSectionTitle brand-blue" style={{ textAlign: "center", marginBottom: "20px" }}>
+          יישום ״מצע לנוער״
+        </h2>
+        <p style={{ maxWidth: "850px", margin: "0 auto", textAlign: "justify", fontSize: "18px", lineHeight: "1.6" }}>
+        בשנה הקרובה נדאג לקדם ולדחוף את עקרונות ״מצע לנוער״ שהתחלנו להחתים עליו פוליטיקאים בקדנציה האחרונה. נהיה חלק בלתי נפרד ממהלכי חקיקה, כתיבת ניירות עמדה והשתתפות בפגישות עם נבחרי ציבור ובוועדות הכנסת, על מנת לוודא שהאינטרסים והזכויות של מיליון בני נוער מעוגנים בחוקיה הראשיים של המדינה        </p>
+      </div>
+
+      {/* 3. כרטיסי המידע והסטטיסטיקה (המלל המקורי שלך) */}
+      <div id="stats-section" className="eduSection lawStatsSection" style={{ paddingTop: "20px" }}>
         <h2 className="eduSectionTitle brand-blue">
           מועצת התלמידים והנוער הארצית היא הריבון המייצג של מיליון בני נוער,<br />
           אך מעמדה המשפטי פגיע <span className="dangerText">ולא מעוגן בחוק!</span>
@@ -80,7 +89,7 @@ export default function Legislation() {
         </div>
       </div>
 
-      {/* 3. תוכנית החוק */}
+      {/* 4. תוכנית החוק (המלל המקורי שלך) */}
       <div className="eduSection lawPlanSection">
         <h2 className="eduSectionTitle brand-blue">מה יכלול החוק שננסח?</h2>
         <div className="lawPlanGrid"> 
@@ -98,14 +107,14 @@ export default function Legislation() {
         </div>
       </div>
 
-      {/* 4. קריאה לפעולה + כפתור קישור מעודכן */}
+      {/* 5. קריאה לפעולה + כפתור קישור מעודכן (המלל המקורי שלך) */}
       <div className="eduSection lawCallToAction" style={{ marginBottom: "60px" }}>
         <h2 className="ctaMain">
           ננצל את הליווי המקצועי של עורך הדין של הוועדה לניסוח הצעת חוק מוגמרת,
           נרתום חברי כנסת, נקיים שדולות ונפעיל לחץ ציבורי ותקשורתי נרחב!
         </h2>
         <h3 style={{ maxWidth: "850px", margin: "0 auto 30px", fontSize: "16px", lineHeight: "1.6", color: "var(--text)" }}>
-          חוק לבדו, חזק ככל שיהיה, לא שווה כלום אם הוא נשאר רק על הנייר. מהלך החיקוק בכנסת לא יקרה בוואקום – הוא יתבצע במקביל ובסנכרון מלא עם חיזוק הגלגלים בשטח. 
+          חוק לבדו, חזק ככל שיהיה, לא שווה כלום אם הוא נשאר רק על הנייר. מהלך החיקוק בכנסת לא יקרה בוואקום – הוא יתבצע במקביל ובסנכרון מלא WITH חיזוק הגלגלים בשטח. 
           הכוח האמיתי של הוועדה האתית-משפטית מגיע מהלגיטימציה והאמון שלכם. אנחנו נחוקק את המועצה, אך במקביל נחזק את המחוזות, הרשויות ובתי הספר כדי לוודא שברגע האמת כולנו עומדים כאיש אחד.
         </h3>
         <div className="ctaButtons">
@@ -121,7 +130,7 @@ export default function Legislation() {
         </div>
       </div>
 
-      {/* 5. כפתור מעבר לכל התוכניות */}
+      {/* 6. כפתור מעבר לכל התוכניות */}
       <div className="readMoreContainer">
         <Link to="/plans" className="readMoreButton">
           לכל התוכניות המנהיגותיות
