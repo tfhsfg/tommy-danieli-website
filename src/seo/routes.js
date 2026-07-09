@@ -9,7 +9,9 @@ import OrganizationalLanguage from "../pages/OrganizationalLanguage";
 import Regulations from "../pages/Regulations";
 import Partners from "../pages/Partners";
 import Conference from "../pages/Conference";
+import Rights from "../pages/Rights";
 import { SITE_URL, DEFAULT_IMAGE, SOCIAL_LINKS } from "./site";
+import { ImageOff, Import } from "lucide-react";
 
 const personJsonLd = {
   "@context": "https://schema.org",
@@ -114,6 +116,14 @@ export const routes = [
   component: Conference,
   title: "יישום החלטות הוועידה ה-30 | מתחברים",
   description: "מתמקדים בתכלס ובבניית הכוח הפנימי של הארגון: מיסוד מנגנוני תקשורת, שיפור תדמית המועצה וחיזוק השטח והגלגלים.",
+  priority: 0.8,
+  },
+   {
+  path: "/rights",
+  aliases: ["/right"],
+  component: Rights,
+  title: "קידום זכויות התלמידים והנוער",
+    description: "מלל",
   priority: 0.8,
   },
 ];

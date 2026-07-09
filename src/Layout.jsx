@@ -19,6 +19,7 @@ const dropdownItems = [
   { label: "מורחבת יו״רי האתיקה", to: "/regional" },
   { label: "חקיקה בכנסת", to: "/legislation" },
   { label: "יישום מסמך הוועידה ה-30", to: "/conference" },
+  { label: "זכויות התלמידים והנוער", to: "/rights"},
   { label: "כחבר מזכירות", to: "/partners" },
   { label: "כל התוכניות", to: "/plans" },
 ];
@@ -27,7 +28,9 @@ export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { pathname } = useLocation();
-  const currentRoute = routes.find((route) => route.path === pathname);
+  const currentRoute = routes.find(
+    (route) => route.path === pathname || route.aliases?.includes(pathname)
+  );
 
   // בכל מעבר עמוד גוללים חזרה לראש הדף, כדי שהעמוד החדש יתחיל מלמעלה
   useEffect(() => {

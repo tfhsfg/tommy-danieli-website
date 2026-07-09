@@ -1,0 +1,204 @@
+/* ==========================================
+   תבנית דף הגנת זכויות נוער ותלמיד
+   ========================================== */
+
+.rightsPageContainer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 20px;
+}
+
+/* --- כרטיסי האתגרים והמצב --- */
+.rightsChallengesSection {
+  padding: 56px 0;
+  text-align: center;
+}
+
+.rightsChallengesGrid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.rightsChallengeCard {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rightsChallengeIconWrap {
+  font-size: 44px;
+  color: var(--primary);
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.rightsChallengeText {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* --- חלק לבן - תוכנית הזכויות --- */
+.rightsPlanSection {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-color: #ffffff;
+  padding: 56px 20px;
+}
+
+.rightsPlanSection .eduSectionTitle {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rightsPlanGrid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.rightsPlanCard {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px 30px;
+  box-shadow: var(--shadow);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightsPlanNumber {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--placeholder);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.rightsPlanCardTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+}
+
+.rightsPlanBullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rightsPlanBullets li {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  position: relative;
+  padding-right: 14px;
+}
+
+.rightsPlanBullets li::before {
+  content: "–";
+  position: absolute;
+  right: 0;
+  color: var(--primary);
+}
+
+/* --- קריאה לפעולה --- */
+.rightsCallToAction {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaMain {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.4;
+  margin: 0 0 30px 0;
+}
+
+/* פסקאות והסברים */
+.rightsPageContainer p {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.rightsChallengesSection p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* ==========================================
+   רספונסיביות למובייל
+   ========================================== */
+@media (max-width: 900px) {
+  .rightsChallengesGrid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ctaMain {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rightsPageContainer {
+    padding: 40px 16px 16px;
+  }
+
+  .rightsChallengesSection {
+    padding: 40px 0;
+  }
+
+  .rightsChallengeCard {
+    padding: 30px 20px;
+  }
+
+  .rightsChallengeIconWrap {
+    font-size: 38px;
+  }
+
+  .rightsChallengeText {
+    font-size: 16px;
+  }
+
+  .rightsPlanSection {
+    padding: 44px 16px;
+  }
+
+  .rightsPlanCard {
+    padding: 30px 22px;
+  }
+
+  .rightsPlanNumber {
+    font-size: 40px;
+  }
+
+  .rightsPlanCardTitle {
+    font-size: 20px;
+  }
+}
