@@ -14,11 +14,12 @@ const menuItems = [
 ];
 
 const dropdownItems = [
-  { label: "מיישרים קו בשפה הארגונית", to: "/organizationallanguage" },
-  { label: "מיישרים קו בתקנון העל", to: "/regulations" },
-  { label: "מיישרים קו בוועדה", to: "/committee" },
-  { label: "מיישרים קו במורחבת", to: "/regional" },
-  { label: "מיישרים קו בחקיקה", to: "/legislation" },
+  { label: "הטמעת השפה הארגונית", to: "/organizationallanguage" },
+  { label: "תקנון על", to: "/regulations" },
+  { label: "הוועדה האתית-משפטית", to: "/committee" },
+  { label: "מורחבת יו״רי האתיקה", to: "/regional" },
+  { label: "חקיקה בכנסת", to: "/legislation" },
+  { label: "מסמך הוועידה ה-30", to: "/conference" },
   { label: "כל התוכניות", to: "/plans" },
 ];
 
