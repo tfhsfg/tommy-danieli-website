@@ -89,12 +89,16 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <img
-          src="/images/new hero.png"
-          draggable={false}
-          alt="תומי דניאלי - מיישרים קו"
-          fetchPriority="high"
-        />
+        <picture>
+          {/* במסכי טלפון מוצג באנר ייעודי לפורמט צר; במסכים רחבים – הבאנר הרגיל */}
+          <source media="(max-width: 900px)" srcSet="/images/phone%20banner.jpg" />
+          <img
+            src="/images/new hero.png"
+            draggable={false}
+            alt="תומי דניאלי - מיישרים קו"
+            fetchPriority="high"
+          />
+        </picture>
       </section>
 
       <section className="almoni">
