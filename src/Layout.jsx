@@ -9,13 +9,13 @@ import Seo from "./components/Seo";
 const menuItems = [
   { label: "הבית", to: "/" },
   { label: "עליי", to: "/aboutme" },
-  { label: "מיישרים קו", to: "/plans" },
+  { label: "החזון שלי", to: "/plans" },
   { label: "כחבר מזכירות", to: "/partners" },
 ];
 
 const dropdownItems = [
   { label: "הטמעת השפה הארגונית", to: "/organizationallanguage" },
-  { label: "תקנון על", to: "/regulations" },
+  { label: "פתיחת תקנון העל", to: "/regulations" },
   { label: "הוועדה האתית-משפטית", to: "/committee" },
   { label: "מורחבת יו״רי האתיקה", to: "/regional" },
   { label: "חקיקה בכנסת", to: "/legislation" },
@@ -104,7 +104,7 @@ export default function Layout() {
           <ul className={`menu ${isMenuOpen ? "menuActive" : ""}`}>
             {menuItems.map((item) => (
               <li key={item.label} className="menuItem">
-                {item.label === "מיישרים קו" ? (
+                {item.label === "החזון שלי" ? (
                   <div className={`dropdownWrap ${isDropdownOpen ? "dropdownActive" : ""}`}>
                     <Link
                       to={item.to}
