@@ -86,7 +86,7 @@ export default function Conference() {
 
       {/* 5. התייחסות כללית לשאר סעיפי המסמך מהזווית המשפטית */}
       <div className="eduSection confGeneralSection">
-        <h2 className="eduSectionTitle brand-blue">מקומו של שאר מסמך הוועידה</h2>
+        <h2 className="eduSectionTitle brand-blue">יישום שאר סעיפי המסמך</h2>
         <p className="generalText">
           מסמך הוועידה הארצית כולל קריאות חשובות ביותר בנושאים אזרחיים וחינוכיים רחבים, כגון סובלנות מגזרית, מיגור אלימות, חוסן נפשי ותחבורה ציבורית. הוועדה האתית-משפטית מכירה בחשיבותם העצומה של היגדים אלו ותפעל באופן אקטיבי לקידומם בשטח.
         </p>

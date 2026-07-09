@@ -94,7 +94,7 @@ export default function Regional() {
 
       {/* 3. עקרונות הליבה ודרכי עבודה חדשות */}
       <div className="eduSection">
-        <h2 className="eduSectionTitle brand-blue">עקרונות הליבה ודרכי עבודה חדשות ליישום המצע</h2>
+        <h2 className="eduSectionTitle brand-blue">עקרונות הליבה ודרכי העבודה</h2>
         <div className="rehabFactsGrid">
           {coreFacts.map((fact, index) => (
             <div className="rehabFactCard" key={index}>
@@ -109,7 +109,7 @@ export default function Regional() {
 
       {/* 4. מודל המפגש המובנה (ארבעת העוגנים) */}
       <div className="eduSection">
-        <h2 className="eduSectionTitle brand-blue">מודל המפגש המובנה (ארבעת העוגנים)</h2>
+        <h2 className="eduSectionTitle brand-blue">מודל המפגש</h2>
         <p style={{ textAlign: "center", color: "var(--text)", opacity: 0.8, maxWidth: "700px", margin: "0 auto 30px" }}>
           כל מפגש של הפורום ייבנה על פי מודל קבוע וסדור, המבטיח שילוב בין למידה מקצועית, מעקב הדוק, אסטרטגיה ותמיכת עמיתים:
         </p>

@@ -41,7 +41,7 @@ export default function Committee() {
 
       {/* 3. שכתוב המבוא והעוגנים – מתוכן תיאורטי לתוצרים מעשיים */}
       <section className="ethSection" style={{ backgroundColor: "#eaeaea11", padding: "40px 20px", borderRadius: "12px" }}>
-        <h2 className="ethSectionTitle">משנים את הגישה: ועדה של פרויקטים ומדיניות עבורכם</h2>
+        <h2 className="ethSectionTitle">ועדה של פרויקטים ומדיניות</h2>
         <div className="pyramidContainer">
           
           <div className="pyramidTextZone">
@@ -76,7 +76,7 @@ export default function Committee() {
 
       {/* 4. מבנה הפגישות – עשייה ותפוקה לשטח */}
       <section className="ethSection" id="meetings-section" style={{ backgroundColor: "#eaeaea22" }}>
-        <h2 className="ethSectionTitle">מבנה פגישות הוועדה: מיישרים קו עם תפוקה ועשייה</h2>
+        <h2 className="ethSectionTitle">מבנה הפגישות</h2>
         
         <div className="meetingsGrid">
           <div className="meetCard">
@@ -119,7 +119,7 @@ export default function Committee() {
 
       {/* 5. החלפת כרטיסי האיקס השליליים בתוכנית חיובית של אפיון צרכים וצוותי משימה */}
       <section className="ethSection" style={{ backgroundColor: "#ffffff", borderRadius: "8px", margin: "0 8% 40px", padding: "5px 20px 50px" }}>
-        <h2 className="ethSectionTitle" style={{ fontSize: "28px", paddingTop: "30px" }}>מרחיבים את הפעילות ומאבחנים את הצרכים יחד עם השטח:</h2>
+        <h2 className="ethSectionTitle" style={{ fontSize: "28px", paddingTop: "30px" }}>מרחיבים את הפעילות</h2>
         <p style={{ textAlign: "center", maxWidth: "750px", margin: "-10px auto 30px", fontSize: "15.5px", lineHeight: "1.65", color: "var(--text)" }}>
           אנחנו לא נכתיב פתרונות מלמעלה ולא נרצה לייצר תוכניות מגירה מנותקות. העבודה שלנו השנה תתבסס על שותפות מלאה ובנייה משותפת של המענה האתי-משפטי הנכון ביותר עבורכם.
         </p>
