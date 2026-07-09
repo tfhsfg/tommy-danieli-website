@@ -61,7 +61,7 @@ export default function Plans() {
   return (
     <div className="plansPage almoni">
       <Banner
-        title="תוכניות העבודה – מיישרים קו"
+        title="תוכניות העבודה"
         description="כל התחומים שאוביל כיו״ר הוועדה האתית-משפטית הארצית – לחצו למידע המלא"
       />
 
