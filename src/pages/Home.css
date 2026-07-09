@@ -108,10 +108,22 @@
 
   .cardsGrid {
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 520px;
+    gap: 14px;
+    padding: 0 20px;
   }
 
   .card {
     grid-template-columns: 76px 1fr;
+    min-height: auto;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 59, 137, 0.2);
+  }
+
+  .card:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 10px rgba(0, 59, 137, 0.2);
   }
 
   .scaleIcon {
