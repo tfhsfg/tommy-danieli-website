@@ -10,7 +10,7 @@ const menuItems = [
   { label: "הבית", to: "/" },
   { label: "עליי", to: "/aboutme" },
   { label: "מיישרים קו", to: "/plans" },
-  { label: "שותפים", to: "/partners" },
+  { label: "כחבר מזכירות", to: "/partners" },
 ];
 
 const dropdownItems = [
@@ -19,7 +19,7 @@ const dropdownItems = [
   { label: "הוועדה האתית-משפטית", to: "/committee" },
   { label: "מורחבת יו״רי האתיקה", to: "/regional" },
   { label: "חקיקה בכנסת", to: "/legislation" },
-  { label: "מסמך הוועידה ה-30", to: "/conference" },
+  { label: "יישום מסמך הוועידה ה-30", to: "/conference" },
   { label: "כל התוכניות", to: "/plans" },
 ];
 
