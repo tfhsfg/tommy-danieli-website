@@ -64,7 +64,7 @@ export default function OrganizationalLanguage() {
       {/* 1. באנר עליון – ניסוח ממוקד שותפות, כוח והעצמה */}
       <Banner
         image="/images/room-business-meeting.jpg"
-        title="מיישרים קו בשפה הארגונית"
+        title="המטמעת השפה הארגונית"
         description="מחזירים את הכוח והסמכות לשטח – מטמיעים סטנדרט מקצועי, אחיד וחזק שמגן על הנציגים וממצב את המועצה כגוף שלטוני מוערך!"
       />
 

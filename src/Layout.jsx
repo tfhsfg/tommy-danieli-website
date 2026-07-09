@@ -18,7 +18,7 @@ const dropdownItems = [
   { label: "הוועדה האתית-משפטית", to: "/committee" },
   { label: "מורחבת יו״רי האתיקה", to: "/regional" },
   { label: "חקיקה בכנסת", to: "/legislation" },
-  { label: "יישום מסמך הוועידה ה-30", to: "/conference" },
+  { label: "יישום מסמך הוועידה", to: "/conference" },
   { label: "זכויות התלמידים והנוער", to: "/rights"},
   { label: "כחבר מזכירות", to: "/partners" },
   { label: "כל התוכניות", to: "/plans" },

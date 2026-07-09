@@ -73,7 +73,7 @@ export default function Regional() {
       {/* 1. באנר עליון */}
       <Banner
         image="/images/matheus-ferrero-TkrRvwxjb_8-unsplash.jpg"
-        title="פורום מורחבת אתיקה"
+        title="מורחבת יו״רי האתיקה"
         description="מובילים שינויי עומק אמיתיים – מחברים את המדיניות הארצית לשטח בצורה מקצועית, עקבית ובלתי מסורבלת."
       />
 

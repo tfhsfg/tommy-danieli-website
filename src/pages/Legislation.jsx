@@ -53,7 +53,7 @@ export default function Legislation() {
       {/* 1. באנר עליון */}
       <Banner
         image="/images/Artboard-1.png"
-        title="חיקוק המועצה הארצית"
+        title="חקיקה בכנסת"
         description={"עושים סוף לתלות ומקבעים מעמד עצמאי -\nמעגנים את כוחן של המועצות בספר החוקים של מדינת ישראל!"}
       />
 
