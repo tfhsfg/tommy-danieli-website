@@ -58,7 +58,7 @@ export default function Legislation() {
       />
 
       {/* 2. פתיח העמוד: יישום מצע לנוער דרך חקיקה בכנסת */}
-      <div className="eduSection lawPlatformSection" style={{ padding: "56px 0 20px" }}>
+      <div className="eduSection lawPlatformSection" style={{ padding: "10px 0 20px" }}>
         <h2 className="eduSectionTitle brand-blue" style={{ textAlign: "center", marginBottom: "20px" }}>
           יישום ״מצע לנוער״
         </h2>
@@ -104,17 +104,9 @@ export default function Legislation() {
               </ul>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* 5. קריאה לפעולה + כפתור קישור מעודכן (המלל המקורי שלך) */}
-      <div className="eduSection lawCallToAction" style={{ marginBottom: "60px" }}>
-        <h2 className="ctaMain">
-          ננצל את הליווי המקצועי של עורך הדין של הוועדה לניסוח הצעת חוק מוגמרת,
-          נרתום חברי כנסת, נקיים שדולות ונפעיל לחץ ציבורי ותקשורתי נרחב!
-        </h2>
+        </div><br></br><br></br>
         <h3 style={{ maxWidth: "850px", margin: "0 auto 30px", fontSize: "16px", lineHeight: "1.6", color: "var(--text)" }}>
-          חוק לבדו, חזק ככל שיהיה, לא שווה כלום אם הוא נשאר רק על הנייר. מהלך החיקוק בכנסת לא יקרה בוואקום – הוא יתבצע במקביל ובסנכרון מלא WITH חיזוק הגלגלים בשטח. 
+          חוק לבדו, חזק ככל שיהיה, לא שווה כלום אם הוא נשאר רק על הנייר. מהלך החיקוק בכנסת לא יקרה בוואקום – הוא יתבצע במקביל ובסנכרון מלא עם חיזוק הגלגלים בשטח. 
           הכוח האמיתי של הוועדה האתית-משפטית מגיע מהלגיטימציה והאמון שלכם. אנחנו נחוקק את המועצה, אך במקביל נחזק את המחוזות, הרשויות ובתי הספר כדי לוודא שברגע האמת כולנו עומדים כאיש אחד.
         </h3>
         <div className="ctaButtons">
@@ -130,10 +122,11 @@ export default function Legislation() {
         </div>
       </div>
 
+
       {/* 6. כפתור מעבר לכל התוכניות */}
       <div className="readMoreContainer">
         <Link to="/plans" className="readMoreButton">
-          לכל התוכניות המנהיגותיות
+          לכל התוכניות
         </Link>
       </div>
 
